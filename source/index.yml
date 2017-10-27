@@ -1,0 +1,16 @@
+title: API Reference
+
+language_tabs:
+  - javascript
+
+toc_footers:
+  - <a href='https://app.convictional.com'>Sign up to get your API key</a>
+  - <a href='http://www.convictional.com'>Learn more about Convictional</a>
+
+includes:
+  - main
+  - _errors
+
+search: true
+
+highlight_theme: monokai
