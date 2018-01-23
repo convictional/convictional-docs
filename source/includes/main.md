@@ -204,3 +204,37 @@ stock | Number of units in stock if no variants setup
 variant_id | The ID for the variant(s)
 variant_stock | Number of units in stock for each variant of the product
 
+## POST - X12 EDI Translate
+
+> This command returns JSON structured like this:
+
+```json
+{
+  "segmentID": {
+    "0": "value",
+    "1": "value"
+  },
+  "segmentID": [
+    {
+      "0": "value",
+      "1": "value"
+    },
+    {
+      "0": "value",
+      "1": "value"
+    }
+  ]
+}
+```
+
+This endpoint allows you to convert an X12 EDI document in plain text into JSON.
+
+### Endpoint URL
+
+`POST https://api.convictional.com/translate`
+
+### Properties
+Property | Description
+--------- | -----------
+body | The body of the request must contain an X12 EDI document in plain text.
+

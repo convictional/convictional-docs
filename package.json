@@ -21,13 +21,13 @@
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",
-    "gulp-clean-css": "^3.7.0",
+    "gulp-clean-css": "^3.9.2",
     "gulp-cli": "^1.2.1",
     "gulp-concat": "^2.6.0",
-    "gulp-ejs": "^3.0.1",
+    "gulp-ejs": "^3.1.1",
     "gulp-if": "^2.0.0",
     "gulp-live-server": "^0.0.31",
-    "gulp-open": "^2.0.0",
+    "gulp-open": "^2.1.0",
     "gulp-prettify": "^0.5.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
@@ -35,7 +35,7 @@
     "gulp-util": "^3.0.7",
     "highlight.js": "^9.2.0",
     "js-yaml": "^3.5.5",
-    "marked": "^0.3.5",
-    "node-sass": "^4.5.3"
+    "marked": "^0.3.12",
+    "node-sass": "^4.7.2"
   }
 }
