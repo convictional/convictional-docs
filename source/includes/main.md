@@ -227,11 +227,19 @@ variant_stock | Number of units in stock for each variant of the product
 }
 ```
 
-This endpoint allows you to convert an X12 EDI document in plain text into JSON.
+This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 
 ### Endpoint URL
 
+`https://api.convictional.com/translate`
+
+### HTTP Request example
+
 `POST https://api.convictional.com/translate`
+
+<aside class="notice">
+Include your API key in the "Authorization" header to authenticate your request.
+</aside>
 
 ### Properties
 Property | Description
