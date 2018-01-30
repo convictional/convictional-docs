@@ -16,7 +16,7 @@ Our API is still on the first version. When version changes happen in the future
 Convictional uses API keys to authenticate your requests. When you register your account, we generate an API key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request.
 
 # Errors
-> Example response: 
+> Returns (JSON): 
 
 ```json
 {
@@ -27,10 +27,10 @@ Convictional uses API keys to authenticate your requests. When you register your
 
 The Convictional API uses the following error codes:
 
-Code | Description
----------- | -------
-401 | Not authorized
-500 | Bad request
+| Code      | Description                              |
+| --------- | ---------------------------------------- |
+| 401       | Not authorized                           |
+| 500       | Bad request                              |
 
 # Orders
 The orders endpoints are REST endpoints that allow you to create, retrieve, update and delete orders.
@@ -53,7 +53,7 @@ companyId | String | Your company ID in Convictional | Automatic
 
 ## GET - Order
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
@@ -68,7 +68,7 @@ companyId | String | Your company ID in Convictional | Automatic
   "fulfillments": [],
   "addresses": [],
   "returns": [],
-  "companyId": "my-company"
+  "companyId": "convictional-wholesale"
 }
 ```
 This endpoint returns a single order by ID.
@@ -80,8 +80,40 @@ This endpoint returns a single order by ID.
 `GET https://api.convictional.com/orders/5a692f658f6d524e8282dac7`
 
 ## GET - Orders
-```json
 
+> Returns (JSON):
+
+```json
+[
+  {
+    "_id": "5a692f658f6d524e8282dac7",
+    "code": "12345",
+    "billed": true,
+    "complete": true,
+    "posted": true,
+    "partner": "convictional-dropshipper-us",
+    "date": "2018-01-28 16:46:13",
+    "items": [],
+    "fulfillments": [],
+    "addresses": [],
+    "returns": [],
+    "companyId": "convictional-wholesale"
+  },
+  {
+    "_id": "5a692f658f6d524e8282dac8",
+    "code": "12346",
+    "billed": true,
+    "complete": false,
+    "posted": false,
+    "partner": "convictional-dropshipper-ca",
+    "date": "2018-01-31 13:23:13",
+    "items": [],
+    "fulfillments": [],
+    "addresses": [],
+    "returns": [],
+    "companyId": "convictional-wholesale"
+  }
+]
 ```
 This endpoint returns all your orders.
 
@@ -92,8 +124,35 @@ This endpoint returns all your orders.
 `GET https://api.convictional.com/orders`
 
 ## POST - Order
-```json
 
+> Request Body (JSON):
+
+```json
+{
+  "code": "12345",
+  "partner": "convictional-dropshipper-us",
+  "date": "2018-01-28 16:46:13",
+  "items": [],
+  "addresses": [],
+}
+```
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac7",
+  "code": "12345",
+  "billed": false,
+  "complete": false,
+  "posted": false,
+  "partner": "convictional-dropshipper-us",
+  "date": "2018-01-28 16:46:13",
+  "items": [],
+  "fulfillments": [],
+  "addresses": [],
+  "returns": [],
+  "companyId": "convictional-wholesale"
+}
 ```
 
 This endpoint creates a new order.
@@ -105,8 +164,32 @@ This endpoint creates a new order.
 `POST https://api.convictional.com/orders`
 
 ## PUT - Order
-```json
 
+> Request Body (JSON):
+
+```json
+{
+  "complete": true
+}
+```
+
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac7",
+  "code": "12345",
+  "billed": true,
+  "complete": true,
+  "posted": true,
+  "partner": "convictional-dropshipper-us",
+  "date": "2018-01-28 16:46:13",
+  "items": [],
+  "fulfillments": [],
+  "addresses": [],
+  "returns": [],
+  "companyId": "convictional-wholesale"
+}
 ```
 This endpoint updates a single order by ID.
 
@@ -118,7 +201,7 @@ This endpoint updates a single order by ID.
 
 ## DELETE - Order
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
@@ -144,7 +227,7 @@ code | String | The product code in your system of record | Required
 active | Boolean | Is this product active currently? | Required
 bodyHtml | String | The HTML for the ecommerce pages | Optional
 images | Array | An array of image information | Optional
-tags | String | Comma separated tags ('summer, beauty, toronto') | Optional
+tags | Array | An array of tags ['summer', 'beauty'] | Optional
 title | String | The product title | Required
 type | String | The product type ('item', 'tax', 'shipping') | Required
 variants | Array | An array of variants of the product | Required
@@ -152,8 +235,23 @@ vendor | String | The brand (or your company name if you are a brand) | Optional
 companyId | String | Your company ID in Convictional | Automatic
 
 ## GET - Product
-```json
 
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac7",
+  "code": "12345",
+  "active": true,
+  "bodyHtml": "<p>Great product!</p>",
+  "images": [],
+  "tags": [],
+  "title": "Great product",
+  "type": "item",
+  "variants": [],
+  "vendor": "Convictional Wholesale",
+  "companyId": "convictional-wholesale"
+}
 ```
 This endpoint returns a single product by ID.
 
@@ -164,8 +262,38 @@ This endpoint returns a single product by ID.
 `GET https://api.convictional.com/products/5a692f658f6d524e8282dac7`
 
 ## GET - Products
-```json
 
+> Returns (JSON):
+
+```json
+[
+  {
+    "_id": "5a692f658f6d524e8282dac7",
+    "code": "12345",
+    "active": true,
+    "bodyHtml": "<p>Great product!</p>",
+    "images": [],
+    "tags": [],
+    "title": "Great product",
+    "type": "item",
+    "variants": [],
+    "vendor": "Convictional Wholesale",
+    "companyId": "convictional-wholesale"
+  },
+  {
+    "_id": "5a692f658f6d524e8282dac8",
+    "code": "12346",
+    "active": true,
+    "bodyHtml": "<p>Greatest product!</p>",
+    "images": [],
+    "tags": [],
+    "title": "Greatest product",
+    "type": "item",
+    "variants": [],
+    "vendor": "Convictional Wholesale",
+    "companyId": "convictional-wholesale"
+  }
+]
 ```
 This endpoint returns all your products.
 
@@ -176,8 +304,39 @@ This endpoint returns all your products.
 `GET https://api.convictional.com/products`
 
 ## POST - Product
-```json
 
+> Request Body (JSON):
+
+```json
+{
+  "code": "12345",
+  "active": true,
+  "bodyHtml": "<p>Great product!</p>",
+  "images": [],
+  "tags": [],
+  "title": "Great product",
+  "type": "item",
+  "variants": [],
+  "vendor": "Convictional Wholesale"
+}
+```
+
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac7",
+  "code": "12345",
+  "active": true,
+  "bodyHtml": "<p>Great product!</p>",
+  "images": [],
+  "tags": [],
+  "title": "Great product",
+  "type": "item",
+  "variants": [],
+  "vendor": "Convictional Wholesale",
+  "companyId": "convictional-wholesale"
+}
 ```
 
 This endpoint creates a new product.
@@ -189,8 +348,33 @@ This endpoint creates a new product.
 `POST https://api.convictional.com/products`
 
 ## PUT - Product
-```json
 
+> Request Body (JSON):
+
+```json
+{
+  "active": false,
+  "bodyHtml": "<p>Greater product!</p>",
+  "title": "Greater product"
+}
+```
+
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac7",
+  "code": "12345",
+  "active": false,
+  "bodyHtml": "<p>Greater product!</p>",
+  "images": [],
+  "tags": [],
+  "title": "Greater product",
+  "type": "item",
+  "variants": [],
+  "vendor": "Convictional Wholesale",
+  "companyId": "convictional-wholesale"
+}
 ```
 This endpoint updates a single product by ID.
 
@@ -202,7 +386,7 @@ This endpoint updates a single product by ID.
 
 ## DELETE - Product
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
@@ -235,8 +419,22 @@ shopName | String | Their ecommerce platform shop name | Required
 companyId | String | Your company ID in Convictional | Automatic
 
 ## GET - Partner
-```json
 
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac7",
+  "code": "12345",
+  "active": true,
+  "email": "capartner@example.com",
+  "invited": true,
+  "itemLookup": [],
+  "priceList": "Price List for Canada",
+  "relationship": "child",
+  "shopName": "convictional-dropshipper-ca",
+  "companyId": "convictional-wholesale"
+}
 ```
 This endpoint returns a single partner by ID.
 
@@ -247,8 +445,36 @@ This endpoint returns a single partner by ID.
 `GET https://api.convictional.com/partners/5a692f658f6d524e8282dac7`
 
 ## GET - Partners
-```json
 
+> Returns (JSON):
+
+```json
+[
+  {
+    "_id": "5a692f658f6d524e8282dac7",
+    "code": "12345",
+    "active": true,
+    "email": "capartner@example.com",
+    "invited": true,
+    "itemLookup": [],
+    "priceList": "Price List for Canada",
+    "relationship": "child",
+    "shopName": "convictional-dropshipper-ca",
+    "companyId": "convictional-wholesale"
+  },
+  {
+    "_id": "5a692f658f6d524e8282dac7",
+    "code": "12346",
+    "active": false,
+    "email": "uspartner@example.com",
+    "invited": true,
+    "itemLookup": [],
+    "priceList": "Price List for USA",
+    "relationship": "child",
+    "shopName": "convictional-dropshipper-us",
+    "companyId": "convictional-wholesale"
+  }
+]
 ```
 This endpoint returns all your partners.
 
@@ -259,10 +485,38 @@ This endpoint returns all your partners.
 `GET https://api.convictional.com/partners`
 
 ## POST - Partner
-```json
 
+> Request Body (JSON):
+
+```json
+{
+  "code": "12345",
+  "active": true,
+  "email": "capartner@example.com",
+  "invited": true,
+  "itemLookup": [],
+  "priceList": "Price List for Canada",
+  "relationship": "child",
+  "shopName": "convictional-dropshipper-ca",
+}
 ```
 
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac7",
+  "code": "12345",
+  "active": true,
+  "email": "capartner@example.com",
+  "invited": true,
+  "itemLookup": [],
+  "priceList": "Price List for Canada",
+  "relationship": "child",
+  "shopName": "convictional-dropshipper-ca",
+  "companyId": "convictional-wholesale"
+}
+```
 This endpoint creates a new partner.
 
 ### Endpoint
@@ -272,8 +526,30 @@ This endpoint creates a new partner.
 `POST https://api.convictional.com/partners`
 
 ## PUT - Partner
-```json
 
+> Request Body (JSON):
+
+```json
+{
+  "active": false
+}
+```
+
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac7",
+  "code": "12345",
+  "active": false,
+  "email": "capartner@example.com",
+  "invited": true,
+  "itemLookup": [],
+  "priceList": "Price List for Canada",
+  "relationship": "child",
+  "shopName": "convictional-dropshipper-ca",
+  "companyId": "convictional-wholesale"
+}
 ```
 This endpoint updates a single partner by ID.
 
@@ -285,7 +561,7 @@ This endpoint updates a single partner by ID.
 
 ## DELETE - Partner
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
@@ -319,8 +595,23 @@ list | Array | The price list: sku, base price, markup, markup type | Required
 companyId | String | Your company ID in Convictional, auto generated | Automatic
 
 ## GET - Price
-```json
 
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac7",
+  "code": "12345",
+  "listName": "Price List for USA",
+  "startDate": "2018/01/01 00:00:00",
+  "endDate": "2018/01/31 23:59:59",
+  "currencyName": "USD",
+  "conversion": 1.2,
+  "markup": 120,
+  "rounding": "99",
+  "list": [],
+  "companyId": "convictional-wholesale"
+}
 ```
 This endpoint returns a single price by ID.
 
@@ -331,8 +622,38 @@ This endpoint returns a single price by ID.
 `GET https://api.convictional.com/prices/5a692f658f6d524e8282dac7`
 
 ## GET - Prices
-```json
 
+> Returns (JSON):
+
+```json
+[
+  {
+    "_id": "5a692f658f6d524e8282dac7",
+    "code": "12345",
+    "listName": "Price List for USA",
+    "startDate": "2018/01/01 00:00:00",
+    "endDate": "2018/01/31 23:59:59",
+    "currencyName": "USD",
+    "conversion": 1.2,
+    "markup": 120,
+    "rounding": "99",
+    "list": [],
+    "companyId": "convictional-wholesale"
+  },
+  {
+    "_id": "5a692f658f6d524e8282dac8",
+    "code": "12346",
+    "listName": "Price List for Canada",
+    "startDate": "2018/01/01 00:00:00",
+    "endDate": "2018/01/31 23:59:59",
+    "currencyName": "CAD",
+    "conversion": 1,
+    "markup": 100,
+    "rounding": "99",
+    "list": [],
+    "companyId": "convictional-wholesale"
+  }
+]
 ```
 This endpoint returns all your prices.
 
@@ -343,8 +664,39 @@ This endpoint returns all your prices.
 `GET https://api.convictional.com/prices`
 
 ## POST - Price
-```json
 
+> Request Body (JSON):
+
+```json
+{
+  "code": "12346",
+  "listName": "Price List for Canada",
+  "startDate": "2018/01/01 00:00:00",
+  "endDate": "2018/01/31 23:59:59",
+  "currencyName": "CAD",
+  "conversion": 1,
+  "markup": 100,
+  "rounding": "99",
+  "list": [],
+}
+```
+
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac8",
+  "code": "12346",
+  "listName": "Price List for Canada",
+  "startDate": "2018/01/01 00:00:00",
+  "endDate": "2018/01/31 23:59:59",
+  "currencyName": "CAD",
+  "conversion": 1,
+  "markup": 100,
+  "rounding": "99",
+  "list": [],
+  "companyId": "convictional-wholesale"
+}
 ```
 
 This endpoint creates a new price.
@@ -356,8 +708,32 @@ This endpoint creates a new price.
 `POST https://api.convictional.com/prices`
 
 ## PUT - Price
-```json
 
+> Request Body (JSON):
+
+```json
+{
+  "markup": 110,
+  "rounding": "00",
+}
+```
+
+> Returns (JSON):
+
+```json
+{
+  "_id": "5a692f658f6d524e8282dac8",
+  "code": "12346",
+  "listName": "Price List for Canada",
+  "startDate": "2018/01/01 00:00:00",
+  "endDate": "2018/01/31 23:59:59",
+  "currencyName": "CAD",
+  "conversion": 1,
+  "markup": 110,
+  "rounding": "00",
+  "list": [],
+  "companyId": "convictional-wholesale"
+}
 ```
 This endpoint updates a single price by ID.
 
@@ -365,11 +741,11 @@ This endpoint updates a single price by ID.
 `https://api.convictional.com/prices/:id`
 
 ### Request example
-`PUT https://api.convictional.com/prices/5a692f658f6d524e8282dac7`
+`PUT https://api.convictional.com/prices/5a692f658f6d524e8282dac8`
 
 ## DELETE - Price
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
@@ -397,7 +773,7 @@ companyId | String | Your company ID in Convictional | Automatic
 
 ## GET - Log
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
@@ -417,7 +793,7 @@ This endpoint returns a single log by ID.
 
 ## GET - Logs
 
-> Returns JSON: 
+> Returns (JSON): 
 
 ```json
 [
@@ -453,7 +829,7 @@ This endpoint returns all your logs.
 }
 ```
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
@@ -481,7 +857,7 @@ This endpoint creates a new log.
 }
 ```
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
@@ -502,7 +878,7 @@ This endpoint updates a single log by ID.
 
 ## DELETE - Order
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
