@@ -8,5 +8,11 @@ toc_footers:
   - <a target="_blank" href='https://convictional.com'>Learn more about Convictional</a>
 includes:
   - main
+  - orders
+  - products
+  - partners
+  - prices
+  - logs
+  - translate
 search: true
 highlight_theme: monokai
