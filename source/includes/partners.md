@@ -1,18 +1,18 @@
 # Partners
-The partners endpoints are REST endpoints that allow you to create, retrieve, update and delete partners.
+REST endpoints that allow you to create, retrieve, update and delete partners.
 
 ## Partner Properties
-Property | Type | Description | Required Field
------------ | ----------- |  -----------  |  -----------
-\_id | String | ID of this record in Convictional | Automatic
-code | String | The partner code in your system of record | Required
-email | String | The main contact email for this partner | Required
-active | Boolean | Do you want to sync with this partner? | Required
-invited | Boolean | Have they been invited? | Automatic
-itemLookup | Array | A reference of your item codes and theirs | Optional
-priceList | String | The name of their price list | Optional
-relationship | String | Your relationship. 'parent', 'child' or 'self' | Optional
-companyId | String | Your company ID in Convictional | Automatic
+| Property     | Type     | Required   | Description                                 |
+| ------------ | ---------| -----------| ------------------------------------------- |
+| \_id         | String   | Automatic  <td style="width:100%;"> ID of this record </td>
+| code         | String   | Required   | The partner code in your system             |
+| email        | String   | Required   | The business email for this partner         |
+| active       | Boolean  | Required   | Do you want to sync with them?      |
+| invited      | Boolean  | Automatic  | Have they been invited?                     |
+| priceList    | String   | Optional   | The name of their price list                |
+| relationship | String   | Required   | Relation to you 'parent', 'child' or 'self' |
+| itemLookup   | Array    | Optional   | A reference of your item codes and theirs   |
+| companyId    | String   | Automatic  | Your company ID                             |
 
 ## GET - Partner
 
@@ -25,7 +25,10 @@ companyId | String | Your company ID in Convictional | Automatic
   "active": true,
   "email": "capartner@example.com",
   "invited": true,
-  "itemLookup": [],
+  "itemLookup": [
+    {"12345": "ABC123"},
+    {"56789": "XYZ098"}
+  ],
   "priceList": "Price List for Canada",
   "relationship": "child",
   "companyId": "convictional-wholesale"
@@ -51,7 +54,10 @@ This endpoint returns a single partner by ID.
     "active": true,
     "email": "capartner@example.com",
     "invited": true,
-    "itemLookup": [],
+    "itemLookup": [
+      {"12345": "ABC123"},
+      {"56789": "XYZ098"}
+    ],
     "priceList": "Price List for Canada",
     "relationship": "child",
     "companyId": "convictional-wholesale"
@@ -62,7 +68,10 @@ This endpoint returns a single partner by ID.
     "active": false,
     "email": "uspartner@example.com",
     "invited": true,
-    "itemLookup": [],
+    "itemLookup": [
+      {"12345": "ABC123"},
+      {"56789": "XYZ098"}
+    ],
     "priceList": "Price List for USA",
     "relationship": "child",
     "companyId": "convictional-wholesale"
@@ -84,10 +93,7 @@ This endpoint returns all your partners.
 ```json
 {
   "code": "12345",
-  "active": true,
   "email": "capartner@example.com",
-  "invited": true,
-  "itemLookup": [],
   "priceList": "Price List for Canada",
   "relationship": "child",
 }
@@ -102,7 +108,10 @@ This endpoint returns all your partners.
   "active": true,
   "email": "capartner@example.com",
   "invited": true,
-  "itemLookup": [],
+  "itemLookup": [
+    {"12345": "ABC123"},
+    {"56789": "XYZ098"}
+  ],
   "priceList": "Price List for Canada",
   "relationship": "child",
   "companyId": "convictional-wholesale"
@@ -135,7 +144,10 @@ This endpoint creates a new partner.
   "active": false,
   "email": "capartner@example.com",
   "invited": true,
-  "itemLookup": [],
+  "itemLookup": [
+    {"12345": "ABC123"},
+    {"56789": "XYZ098"}
+  ],
   "priceList": "Price List for Canada",
   "relationship": "child",
   "companyId": "convictional-wholesale"
@@ -158,19 +170,13 @@ This endpoint updates a single partner by ID.
   "partners": [
     {
       "code": "12345",
-      "active": true,
       "email": "capartner@example.com",
-      "invited": true,
-      "itemLookup": [],
       "priceList": "Price List for Canada",
       "relationship": "child",
     },
     {
       "code": "12346",
-      "active": false,
       "email": "uspartner@example.com",
-      "invited": true,
-      "itemLookup": [],
       "priceList": "Price List for USA",
       "relationship": "child",
     }
@@ -188,7 +194,10 @@ This endpoint updates a single partner by ID.
     "active": true,
     "email": "capartner@example.com",
     "invited": true,
-    "itemLookup": [],
+    "itemLookup": [
+      {"12345": "ABC123"},
+      {"56789": "XYZ098"}
+    ],
     "priceList": "Price List for Canada",
     "relationship": "child",
     "companyId": "convictional-wholesale"
@@ -199,13 +208,17 @@ This endpoint updates a single partner by ID.
     "active": false,
     "email": "uspartner@example.com",
     "invited": true,
-    "itemLookup": [],
+    "itemLookup": [
+      {"12345": "ABC123"},
+      {"56789": "XYZ098"}
+    ],
     "priceList": "Price List for USA",
     "relationship": "child",
     "companyId": "convictional-wholesale"
   }
 ]
 ```
+This endpoint updates (or creates) partners.
 
 ### Endpoint
 `https://api.convictional.com/partners`
@@ -218,9 +231,7 @@ This endpoint updates a single partner by ID.
 > Returns (JSON):
 
 ```json
-{
-  "5a692f658f6d524e8282dac7"
-}
+OK
 ```
 This endpoint deletes a single partner by ID.
 

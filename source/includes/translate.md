@@ -1,5 +1,5 @@
 # EDI
-The EDI endpoints are RPC endpoints that allow you to translate and transmit EDI documents.
+RPC endpoints that allow you to translate and transmit EDI documents.
 
 ## POST - Translate
 
@@ -38,6 +38,6 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 `POST https://api.convictional.com/translate`
 
 ### Translate Properties
-Property | Description
---------- | -----------
-body | The body of the request must contain an X12 EDI document in plain text.
+| Property | Description                                                                           |
+| -------- | ------------------------------------------------------------------------------------- |
+| body     <td style="width:100%;"> The request body must contain an X12 EDI document in text </td>

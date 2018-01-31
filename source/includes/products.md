@@ -1,20 +1,20 @@
 # Products
-The products endpoints are REST endpoints that allow you to create, retrieve, update and delete products.
+REST endpoints that allow you to create, retrieve, update and delete products.
 
 ## Product Properties
-Property | Type | Description | Required Field
------------ | ----------- |  -----------  |  -----------
-\_id | String | ID of this record in Convictional | Automatic
-code | String | The product code in your system of record | Required
-active | Boolean | Is this product active currently? | Required
-bodyHtml | String | The HTML for the ecommerce pages | Optional
-images | Array | An array of image information | Optional
-tags | Array | An array of tags ['summer', 'beauty'] | Optional
-title | String | The product title | Required
-type | String | The product type ('item', 'tax', 'shipping') | Required
-variants | Array | An array of variants of the product | Required
-vendor | String | The brand (or your company name if you are a brand) | Optional
-companyId | String | Your company ID in Convictional | Automatic
+| Property    | Type    | Required    | Description                                   |
+| ----------- | ------- | ----------- | --------------------------------------------  |
+| \_id        | String  | Automatic   <td style="width:100%;"> ID of this record </td>
+| code        | String  | Required    | The product code in your system               |
+| title       | String  | Required    | The name of the product                       |
+| active      | Boolean | Required    | Is this product active?                       |
+| bodyHtml    | String  | Optional    | HTML for consuming-facing pages               |
+| images      | Array   | Optional    | Contains image source URLs                    |
+| tags        | Array   | Optional    | Contains tags ie. ['summer', 'beauty']        |
+| type        | String  | Required    | 'item', 'shipping', 'tax' or 'custom'         |
+| variants    | Array   | Required    | All the variations of the product             |
+| vendor      | String  | Optional    | The brand of the product                      |
+| companyId   | String  | Automatic   | Your company ID                               |
 
 ## GET - Product
 
@@ -231,8 +231,7 @@ This endpoint updates a single product by ID.
   }
 ]
 ```
-
-This endpoint bulk updates (or creates) products.
+This endpoint updates (or creates) products.
 
 ### Endpoint
 `https://api.convictional.com/products`

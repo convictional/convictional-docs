@@ -15,30 +15,45 @@ Our goal providing an API for our service is to allow technically inclined custo
 > Last Updated:
 
 ```json
-2018-01-29
+2018-01-31
 ```
 
-Our API is still on the first version. When version changes happen in the future, we will notify users and migrate you to the new version with an appropriate grace period. If you have any feedback, please get in touch and let us know. We are always open to adding new endpoints to make it as easy as possible for our customers to trade with their partners. 
+Our API is still on the first version. When breaking changes happen in the future, we will notify users and migrate you to the new version. If you have any feedback, please get in touch. We are always open to adding new endpoints to make it as easy as possible for our customers to trade with their partners. 
 
 # Authentication
 Convictional uses API keys to authenticate your requests. When you register your account, we generate an API key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request.
 
 # Responses
-> Returns (JSON): 
+
+> 200: Returns (String):
 
 ```json
-{
-  "Not authorized"
-}
+OK
+```
 
+> 400: Returns (String):
+
+```json
+Not found
+```
+
+> 401: Returns (String): 
+
+```json
+Not authorized
+```
+
+> 500: Returns (String):
+
+```json
+Bad request
 ```
 
 The Convictional API uses the following response codes:
 
-
-Code | Description
---------- | -------------
-200 | OK
-400 | Not found
-401 | Not authorized
-500 | Bad request
+| Code      | Description     |
+| --------- | --------------- |
+| 200       <td style="width:100%;">OK</td> |
+| 400       | Not found       |
+| 401       | Not authorized  |
+| 500       | Bad request     |

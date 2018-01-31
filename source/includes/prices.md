@@ -1,20 +1,20 @@
 # Prices
-The prices endpoints are REST endpoints that allow you to create, retrieve, update and delete prices.
+REST endpoints that allow you to create, retrieve, update and delete prices.
 
 ## Price Properties
-Property | Type | Description | Required Field
------------ | ----------- |  -----------  |  -----------
-\_id | String | ID of this record in Convictional | Automatic
-code | String | The price list code in your system of record | Required
-listName | String | The name of this price list | Required
-startDate | String | The start date (YY/MM/DD hh:mm:ss) | Optional
-endDate | String | The end date (YY/MM/DD hh:mm:ss) | Optional
-currencyName | String | The name of the currency | Optional
-conversion | Number | The conversion rate from base currency ("1" for same) | Optional
-markup | Number | The markup percentage ("200" is 200%) | Optional
-rounding | String | The decimals on the price ("00" is $10.00) | Optional
-list | Array | The price list: sku, base price, markup, markup type | Required
-companyId | String | Your company ID in Convictional, auto generated | Automatic
+| Property      | Type      | Required  | Description                                   |
+| ------------  | --------- | ----------| --------------------------------------------- |
+| \_id          | String    | Automatic <td style="width:100%;"> ID of this record  </td>
+| code          | String    | Required  | Code in your system                           |
+| listName      | String    | Required  | Name of this price list                       |
+| startDate     | String    | Optional  | Start date (YY/MM/DD hh:mm:ss)                |
+| endDate       | String    | Optional  | End date (YY/MM/DD hh:mm:ss)                  |
+| currencyName  | String    | Optional  | Name of the currency                          |
+| conversion    | Number    | Optional  | Conversion rate from base (default "1")       |
+| markup        | Number    | Optional  | Markup percentage (default "100")             |
+| rounding      | String    | Optional  | Decimals on the prices ("00" is $10.00)       |
+| list          | Array     | Required  | sku, base price, markup, markup type          |
+| companyId     | String    | Automatic | Your company ID                               |
 
 ## GET - Price
 
@@ -230,6 +230,7 @@ This endpoint updates a single price by ID.
   }
 ]
 ```
+This endpoint updates (or creates) prices.
 
 ### Endpoint
 `https://api.convictional.com/prices`

@@ -1,13 +1,13 @@
 # Logs
-The logs endpoints are REST endpoints that allow you to create, retrieve, update and delete logs.
+REST endpoints that allow you to create, retrieve, update and delete logs.
 
 ## Log Properties
-Property | Type | Description | Required Field
------------ | ----------- |  -----------  |  -----------
-\_id | String | ID of this record in Convictional | Automatic
-createDate | String | The date of the log (YY/MM/DD hh:mm:ss) | Automatic
-description | String | A description of what happened | Required
-companyId | String | Your company ID in Convictional | Automatic
+| Property    | Type   | Required  | Description                                  |
+| ----------- | ------ | --------- | -------------------------------------------- |
+| \_id        | String | Automatic <td style="width:100%;"> ID of this record </td>
+| createDate  | String | Automatic | Date of the log (YY/MM/DD hh:mm:ss)          |
+| description | String | Required  | A description                                |
+| companyId   | String | Automatic | Your company ID                              |
 
 ## GET - Log
 
@@ -17,7 +17,7 @@ companyId | String | Your company ID in Convictional | Automatic
 {
   "_id": "5a692f658f6d524e8282dac7",
   "createDate": "01/24/18 20:13:05",
-  "description": "Welcome to Convictional, convictional-wholesale",
+  "description": "Welcome to Convictional",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -38,13 +38,13 @@ This endpoint returns a single log by ID.
   {
     "_id": "5a692f658f6d524e8282dac7",
     "createDate": "01/24/18 20:13:05",
-    "description": "Welcome to Convictional, convictional-wholesale",
+    "description": "Welcome to Convictional",
     "companyId": "convictional-wholesale"
   },
   {
     "_id": "5a692f658f6d524e8282dac8",
     "createDate": "01/24/18 20:13:06",
-    "description": "Successfully created partner from: convictional-wholesale",
+    "description": "Successful request",
     "companyId": "convictional-wholesale"
   }
 ]
@@ -63,7 +63,7 @@ This endpoint returns all your logs.
 
 ```json
 {
-  "description": "Welcome to Convictional, convictional-wholesale"
+  "description": "Welcome to Convictional"
 }
 ```
 
@@ -73,7 +73,7 @@ This endpoint returns all your logs.
 {
   "_id": "5a692f658f6d524e8282dac7",
   "createDate": "01/24/18 20:13:05",
-  "description": "Welcome to Convictional, convictional-wholesale",
+  "description": "Welcome to Convictional",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -122,10 +122,10 @@ This endpoint updates a single log by ID.
 {
   "logs": [
     {
-      "description": "Welcome to Convictional, convictional-wholesale"
+      "description": "Welcome to Convictional"
     },
     {
-      "description": "Successfully created partner from: convictional-wholesale"
+      "description": "Successful request"
     }
   ]
 }
@@ -138,18 +138,18 @@ This endpoint updates a single log by ID.
   {
     "_id": "5a692f658f6d524e8282dac7",
     "createDate": "01/24/18 20:13:05",
-    "description": "Welcome to Convictional, convictional-wholesale",
+    "description": "Welcome to Convictional",
     "companyId": "convictional-wholesale"
   },
   {
     "_id": "5a692f658f6d524e8282dac8",
     "createDate": "01/24/18 20:13:06",
-    "description": "Successfully created partner from: convictional-wholesale",
+    "description": "Successful request",
     "companyId": "convictional-wholesale"
   }
 ]
 ```
-
+This endpoint updates (or creates) logs.
 
 ### Endpoint
 `https://api.convictional.com/logs`

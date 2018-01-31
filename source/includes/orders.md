@@ -1,21 +1,21 @@
 # Orders
-The orders endpoints are REST endpoints that allow you to create, retrieve, update and delete orders.
+REST endpoints that allow you to create, retrieve, update and delete orders.
 
 ## Order Properties
-Property | Type | Description | Required Fields
------------ | ----------- |  -----------  |  -----------
-\_id | String | ID of this record in Convictional | Automatic
-code | String | Order number in the source ecommerce system | Automatic
-billed | Boolean | Has this order been invoiced? | Automatic
-complete | Boolean | Is this order shipped and billed? | Automatic
-posted | Boolean | Has this order been synced with your system of record? | Automatic
-partner | String | The partner code that sent this order | Required
-date | String | The date of the order (YY/MM/DD hh:mm:ss) | Required
-items | Array | Contains all order items (products, tax, shipping) | Optional
-fulfillments | Array | Contains all the shipments and tracking information | Optional
-addresses | Array | Contains all the customer addresses | Optional
-returns | Array | Contains any returns associated with this order | Optional
-companyId | String | Your company ID in Convictional | Automatic
+| Property      | Type      | Required  | Description                                         |
+| -----------   | ------    | --------- | --------------------------------------------------- |
+| \_id          | String    | Automatic <td style="width:100%;"> ID of this record        </td>
+| code          | String    | Required  | Order number in the source ecommerce system         |
+| billed        | Boolean   | Automatic | Has this order been invoiced?                       |
+| complete      | Boolean   | Automatic | Is this order shipped and billed?                   |
+| posted        | Boolean   | Automatic | Has this order been synced with your system?        |
+| partner       | String    | Required  | The partner code that sent this order               |
+| date          | String    | Required  | The date of the order (YY/MM/DD hh:mm:ss)           |
+| items         | Array     | Required  | Contains all order items (products, tax, shipping)  |
+| fulfillments  | Array     | Optional  | Contains all the tracking information               |
+| addresses     | Array     | Optional  | Contains all the customer addresses                 |
+| returns       | Array     | Optional  | Contains any returns for this order                 |
+| companyId     | String    | Automatic | Your company ID                                     |
 
 ## GET - Order
 
@@ -235,7 +235,7 @@ This endpoint updates a single order by ID.
 ]
 ```
 
-This endpoint bulk updates (or creates) orders.
+This endpoint updates (or creates) orders.
 
 ### Endpoint
 `https://api.convictional.com/orders`
