@@ -31,7 +31,10 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
   "conversion": 1.2,
   "markup": 120,
   "rounding": "99",
-  "list": [],
+  "list": [
+    { "code": "123", "price": 9.99, "markup": 10, "type": "fixed" },
+    { "code": "321", "price": 19.99, "markup": 120, "type": "percent" },
+  ],
   "companyId": "convictional-wholesale"
 }
 ```
@@ -59,7 +62,10 @@ This endpoint returns a single price by ID.
     "conversion": 1.2,
     "markup": 120,
     "rounding": "99",
-    "list": [],
+    "list": [
+      { "code": "123", "price": 9.99, "markup": 10, "type": "fixed" },
+      { "code": "321", "price": 19.99, "markup": 120, "type": "percent" },
+    ],
     "companyId": "convictional-wholesale"
   },
   {
@@ -72,7 +78,10 @@ This endpoint returns a single price by ID.
     "conversion": 1,
     "markup": 100,
     "rounding": "99",
-    "list": [],
+    "list": [
+      { "code": "456", "price": 9.99, "markup": 10, "type": "fixed" },
+      { "code": "678", "price": 19.99, "markup": 120, "type": "percent" },
+    ],
     "companyId": "convictional-wholesale"
   }
 ]
@@ -99,7 +108,10 @@ This endpoint returns all your prices.
   "conversion": 1,
   "markup": 100,
   "rounding": "99",
-  "list": [],
+  "list": [
+    { "code": "123", "price": 9.99, "markup": 10, "type": "fixed" },
+    { "code": "321", "price": 19.99, "markup": 120, "type": "percent" },
+  ]
 }
 ```
 
@@ -116,7 +128,10 @@ This endpoint returns all your prices.
   "conversion": 1,
   "markup": 100,
   "rounding": "99",
-  "list": [],
+  "list": [
+    { "code": "123", "price": 9.99, "markup": 10, "type": "fixed" },
+    { "code": "321", "price": 19.99, "markup": 120, "type": "percent" },
+  ],
   "companyId": "convictional-wholesale"
 }
 ```
@@ -153,7 +168,10 @@ This endpoint creates a new price.
   "conversion": 1,
   "markup": 110,
   "rounding": "00",
-  "list": [],
+  "list": [
+    { "code": "123", "price": 9.99, "markup": 10, "type": "fixed" },
+    { "code": "321", "price": 19.99, "markup": 120, "type": "percent" },
+  ],
   "companyId": "convictional-wholesale"
 }
 ```
@@ -181,7 +199,10 @@ This endpoint updates a single price by ID.
       "conversion": 1.2,
       "markup": 120,
       "rounding": "99",
-      "list": [],
+      "list": [
+        { "code": "123", "price": 9.99, "markup": 10, "type": "fixed" },
+        { "code": "321", "price": 19.99, "markup": 120, "type": "percent" },
+      ]
     },
     {
       "code": "12346",
@@ -192,7 +213,10 @@ This endpoint updates a single price by ID.
       "conversion": 1,
       "markup": 100,
       "rounding": "99",
-      "list": [],
+      "list": [
+        { "code": "456", "price": 9.99, "markup": 10, "type": "fixed" },
+        { "code": "678", "price": 19.99, "markup": 120, "type": "percent" },
+      ]
     }
   ]
 }
@@ -212,7 +236,10 @@ This endpoint updates a single price by ID.
     "conversion": 1.2,
     "markup": 120,
     "rounding": "99",
-    "list": [],
+    "list": [
+      { "code": "123", "price": 9.99, "markup": 10, "type": "fixed" },
+      { "code": "321", "price": 19.99, "markup": 120, "type": "percent" },
+    ],
     "companyId": "convictional-wholesale"
   },
   {
@@ -225,7 +252,10 @@ This endpoint updates a single price by ID.
     "conversion": 1,
     "markup": 100,
     "rounding": "99",
-    "list": [],
+    "list": [
+      { "code": "456", "price": 9.99, "markup": 10, "type": "fixed" },
+      { "code": "678", "price": 19.99, "markup": 120, "type": "percent" },
+    ],
     "companyId": "convictional-wholesale"
   }
 ]
@@ -243,9 +273,7 @@ This endpoint updates (or creates) prices.
 > Returns (JSON):
 
 ```json
-{
-  "5a692f658f6d524e8282dac7"
-}
+OK
 ```
 This endpoint deletes a single price by ID.
 

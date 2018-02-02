@@ -162,9 +162,7 @@ This endpoint updates (or creates) logs.
 > Returns (JSON):
 
 ```json
-{
-  "5a692f658f6d524e8282dac7"
-}
+OK
 ```
 This endpoint deletes a single log by ID.
 

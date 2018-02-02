@@ -248,9 +248,7 @@ This endpoint updates (or creates) orders.
 > Returns (JSON):
 
 ```json
-{
-  "5a692f658f6d524e8282dac7"
-}
+OK
 ```
 This endpoint deletes a single order by ID.
 
