@@ -30,12 +30,22 @@ REST endpoints that allow you to create, retrieve, update and delete products.
     { "src": "https://cdn.convictional.com/123abc" },
     { "src": "https://cdn.convictional.com/987zyx" },
   ],
-  "tags": ["Tag", "Another Tag", "Toronto", "Beauty", "Mens"],
+  "tags": ["Toronto", "Beauty", "Mens"],
   "title": "Great product",
   "type": "item",
   "variants": [
-    { "sku": "123", "title": "Great variant", "inventory_quantity": "8", "price": 9.99 },
-    { "sku": "321", "title": "Great variant", "inventory_quantity": "3", "price": 19.99 }
+    { 
+      "sku": "123", 
+      "title": "Great variant", 
+      "inventory_quantity": "8", 
+      "price": 9.99 
+    },
+    { 
+      "sku": "321", 
+      "title": "Great variant", 
+      "inventory_quantity": "3", 
+      "price": 19.99 
+    }
   ],
   "vendor": "Convictional Wholesale",
   "companyId": "convictional-wholesale"
@@ -64,12 +74,22 @@ This endpoint returns a single product by ID.
       { "src": "https://cdn.convictional.com/123abc" },
       { "src": "https://cdn.convictional.com/987zyx" },
     ],
-    "tags": ["Tag", "Another Tag", "Toronto", "Beauty", "Mens"],
+    "tags": ["Toronto", "Beauty", "Mens"],
     "title": "Great product",
     "type": "item",
     "variants": [
-      { "sku": "123", "title": "Great variant", "inventory_quantity": "8", "price": 9.99 },
-      { "sku": "321", "title": "Great variant", "inventory_quantity": "3", "price": 19.99 }
+      { 
+        "sku": "123", 
+        "title": "Great variant", 
+        "inventory_quantity": "8", 
+        "price": 9.99 
+      },
+      { 
+        "sku": "321", 
+        "title": "Great variant", 
+        "inventory_quantity": "3", 
+        "price": 19.99 
+      }
     ],
     "vendor": "Convictional Wholesale",
     "companyId": "convictional-wholesale"
@@ -83,12 +103,22 @@ This endpoint returns a single product by ID.
       { "src": "https://cdn.convictional.com/456bec" },
       { "src": "https://cdn.convictional.com/111qwe" },
     ],
-    "tags": ["Tag", "Another Tag", "Waterloo", "Fashion", "Womens"],
+    "tags": ["Waterloo", "Fashion", "Womens"],
     "title": "Greatest product",
     "type": "item",
     "variants": [
-      { "sku": "456", "title": "Great variant", "inventory_quantity": "12", "price": 29.99 },
-      { "sku": "789", "title": "Great variant", "inventory_quantity": "6", "price": 39.99 }
+      { 
+        "sku": "456", 
+        "title": "Great variant", 
+        "inventory_quantity": "12", 
+        "price": 29.99 
+      },
+      { 
+        "sku": "789", 
+        "title": "Great variant", 
+        "inventory_quantity": "6", 
+        "price": 39.99 
+      }
     ],
     "vendor": "Convictional Wholesale",
     "companyId": "convictional-wholesale"
@@ -116,12 +146,22 @@ This endpoint returns all your products.
     { "src": "https://cdn.convictional.com/123abc" },
     { "src": "https://cdn.convictional.com/987zyx" },
   ],
-  "tags": ["Tag", "Another Tag", "Toronto", "Beauty", "Mens"],
+  "tags": ["Toronto", "Beauty", "Mens"],
   "title": "Great product",
   "type": "item",
   "variants": [
-    { "sku": "123", "title": "Great variant", "inventory_quantity": "8", "price": 9.99 },
-    { "sku": "321", "title": "Great variant", "inventory_quantity": "3", "price": 19.99 }
+    { 
+      "sku": "123", 
+      "title": "Great variant", 
+      "inventory_quantity": "8", 
+      "price": 9.99 
+    },
+    { 
+      "sku": "321", 
+      "title": "Great variant", 
+      "inventory_quantity": "3", 
+      "price": 19.99 
+    }
   ],
   "vendor": "Convictional Wholesale"
 }
@@ -139,12 +179,22 @@ This endpoint returns all your products.
     { "src": "https://cdn.convictional.com/123abc" },
     { "src": "https://cdn.convictional.com/987zyx" },
   ],
-  "tags": ["Tag", "Another Tag", "Toronto", "Beauty", "Mens"],
+  "tags": ["Toronto", "Beauty", "Mens"],
   "title": "Great product",
   "type": "item",
   "variants": [
-    { "sku": "123", "title": "Great variant", "inventory_quantity": "8", "price": 9.99 },
-    { "sku": "321", "title": "Great variant", "inventory_quantity": "3", "price": 19.99 }
+    { 
+      "sku": "123", 
+      "title": "Great variant", 
+      "inventory_quantity": "8", 
+      "price": 9.99 
+    },
+    { 
+      "sku": "321", 
+      "title": "Great variant", 
+      "inventory_quantity": "3", 
+      "price": 19.99 
+    }
   ],
   "vendor": "Convictional Wholesale",
   "companyId": "convictional-wholesale"
@@ -183,12 +233,22 @@ This endpoint creates a new product.
     { "src": "https://cdn.convictional.com/123abc" },
     { "src": "https://cdn.convictional.com/987zyx" },
   ],
-  "tags": ["Tag", "Another Tag", "Toronto", "Beauty", "Mens"],
+  "tags": ["Toronto", "Beauty", "Mens"],
   "title": "Greater product",
   "type": "item",
   "variants": [
-    { "sku": "123", "title": "Great variant", "inventory_quantity": "8", "price": 9.99 },
-    { "sku": "321", "title": "Great variant", "inventory_quantity": "3", "price": 19.99 }
+    { 
+      "sku": "123", 
+      "title": "Great variant", 
+      "inventory_quantity": "8", 
+      "price": 9.99 
+    },
+    { 
+      "sku": "321", 
+      "title": "Great variant", 
+      "inventory_quantity": "3", 
+      "price": 19.99 
+    }
   ],
   "vendor": "Convictional Wholesale",
   "companyId": "convictional-wholesale"
@@ -217,12 +277,22 @@ This endpoint updates a single product by ID.
         { "src": "https://cdn.convictional.com/123abc" },
         { "src": "https://cdn.convictional.com/987zyx" },
       ],
-      "tags": ["Tag", "Another Tag", "Toronto", "Beauty", "Mens"],
+      "tags": ["Toronto", "Beauty", "Mens"],
       "title": "Great product",
       "type": "item",
       "variants": [
-        { "sku": "123", "title": "Great variant", "inventory_quantity": "8", "price": 9.99 },
-        { "sku": "321", "title": "Great variant", "inventory_quantity": "3", "price": 19.99 }
+        { 
+          "sku": "123", 
+          "title": "Great variant", 
+          "inventory_quantity": "8", 
+          "price": 9.99 
+        },
+        { 
+          "sku": "321", 
+          "title": "Great variant", 
+          "inventory_quantity": "3", 
+          "price": 19.99 
+        }
       ],
       "vendor": "Convictional Wholesale",
     },
@@ -234,12 +304,22 @@ This endpoint updates a single product by ID.
         { "src": "https://cdn.convictional.com/456bec" },
         { "src": "https://cdn.convictional.com/111qwe" },
       ],
-      "tags": ["Tag", "Another Tag", "Waterloo", "Fashion", "Womens"],
+      "tags": ["Waterloo", "Fashion", "Womens"],
       "title": "Greatest product",
       "type": "item",
       "variants": [
-        { "sku": "456", "title": "Great variant", "inventory_quantity": "12", "price": 29.99 },
-        { "sku": "789", "title": "Great variant", "inventory_quantity": "6", "price": 39.99 }
+        { 
+          "sku": "456", 
+          "title": "Great variant", 
+          "inventory_quantity": "12", 
+          "price": 29.99 
+        },
+        { 
+          "sku": "789", 
+          "title": "Great variant", 
+          "inventory_quantity": "6", 
+          "price": 39.99 
+        }
       ],
       "vendor": "Convictional Wholesale",
     }
@@ -260,12 +340,22 @@ This endpoint updates a single product by ID.
       { "src": "https://cdn.convictional.com/123abc" },
       { "src": "https://cdn.convictional.com/987zyx" },
     ],
-    "tags": ["Tag", "Another Tag", "Toronto", "Beauty", "Mens"],
+    "tags": ["Toronto", "Beauty", "Mens"],
     "title": "Great product",
     "type": "item",
     "variants": [
-      { "sku": "123", "title": "Great variant", "inventory_quantity": "8", "price": 9.99 },
-      { "sku": "321", "title": "Great variant", "inventory_quantity": "3", "price": 19.99 }
+      { 
+        "sku": "123", 
+        "title": "Great variant", 
+        "inventory_quantity": "8", 
+        "price": 9.99 
+      },
+      { 
+        "sku": "321", 
+        "title": "Great variant", 
+        "inventory_quantity": "3", 
+        "price": 19.99 
+      }
     ],
     "vendor": "Convictional Wholesale",
     "companyId": "convictional-wholesale"
@@ -279,12 +369,22 @@ This endpoint updates a single product by ID.
       { "src": "https://cdn.convictional.com/456bec" },
       { "src": "https://cdn.convictional.com/111qwe" },
     ],
-    "tags": ["Tag", "Another Tag", "Waterloo", "Fashion", "Womens"],
+    "tags": ["Waterloo", "Fashion", "Womens"],
     "title": "Greatest product",
     "type": "item",
     "variants": [
-      { "sku": "456", "title": "Great variant", "inventory_quantity": "12", "price": 29.99 },
-      { "sku": "789", "title": "Great variant", "inventory_quantity": "6", "price": 39.99 }
+      { 
+        "sku": "456", 
+        "title": "Great variant", 
+        "inventory_quantity": "12", 
+        "price": 29.99 
+      },
+      { 
+        "sku": "789", 
+        "title": "Great variant", 
+        "inventory_quantity": "6", 
+        "price": 39.99 
+      }
     ],
     "vendor": "Convictional Wholesale",
     "companyId": "convictional-wholesale"

@@ -14,7 +14,7 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | items         | Array     | Required  | Contains all order items (products, tax, shipping)  |
 | fulfillments  | Array     | Optional  | Contains all the tracking information               |
 | addresses     | Array     | Optional  | Contains all the customer addresses                 |
-| returns       | Array     | Optional  | Contains any returns for this order                 |
+| returns       | Array     | Optional  | Contains all the returns for this order             |
 | companyId     | String    | Automatic | Your company ID                                     |
 
 ## GET - Order
@@ -30,9 +30,58 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
   "posted": true,
   "partner": "my-partner",
   "date": "2018-01-28 16:46:13",
-  "items": [],
+  "items": [
+    {
+      "title": "Great Custom Product",
+      "quantity": 2,
+      "price": 9.99,
+      "sku": "123GRPRODUCT",
+      "vendor": "convictional-wholesale",
+      "properties": [
+        {
+          "type": "custom_engraving",
+          "data": "We Love Dad!"
+        }
+      ],
+      "grams": 200
+    },
+    {
+      "title": "Great Standard Product",
+      "quantity": 1,
+      "price": 19.99,
+      "sku": "35GRPRODUCT",
+      "vendor": "convictional-wholesale",
+      "properties": [],
+      "grams": 200
+    }
+  ],
   "fulfillments": [],
-  "addresses": [],
+  "addresses": [
+    {
+      "type": "shipping",
+      "name": "First Last",
+      "company": "Company, Inc",
+      "phone": "800-555-5555",
+      "city": "Toronto",
+      "zip": "M5V 4B3",
+      "state": "Ontario",
+      "country": "Canada",
+      "addressOne": "123 Toronto St.",
+      "addressTwo": "#206"
+    },
+    {
+      "type": "billing",
+      "name": "First Last",
+      "company": "Company, Inc",
+      "phone": "800-555-5555",
+      "city": "Toronto",
+      "zip": "M5V 4B3",
+      "state": "Ontario",
+      "country": "Canada",
+      "addressOne": "123 Toronto St.",
+      "addressTwo": "#206"
+    }
+  ],
   "returns": [],
   "companyId": "convictional-wholesale"
 }
@@ -59,9 +108,58 @@ This endpoint returns a single order by ID.
     "posted": true,
     "partner": "convictional-dropshipper-us",
     "date": "2018-01-28 16:46:13",
-    "items": [],
+    "items": [
+      {
+        "title": "Great Custom Product",
+        "quantity": 2,
+        "price": 9.99,
+        "sku": "123GRPRODUCT",
+        "vendor": "convictional-wholesale",
+        "properties": [
+          {
+            "type": "custom_engraving",
+            "data": "We Love Dad!"
+          }
+        ],
+        "grams": 200
+      },
+      {
+        "title": "Great Standard Product",
+        "quantity": 1,
+        "price": 19.99,
+        "sku": "35GRPRODUCT",
+        "vendor": "convictional-wholesale",
+        "properties": [],
+        "grams": 200
+      }
+    ],
     "fulfillments": [],
-    "addresses": [],
+    "addresses": [
+      {
+        "type": "shipping",
+        "name": "First Last",
+        "company": "Company, Inc",
+        "phone": "800-555-5555",
+        "city": "Toronto",
+        "zip": "M5V 4B3",
+        "state": "Ontario",
+        "country": "Canada",
+        "addressOne": "123 Toronto St.",
+        "addressTwo": "#206"
+      },
+      {
+        "type": "billing",
+        "name": "First Last",
+        "company": "Company, Inc",
+        "phone": "800-555-5555",
+        "city": "Toronto",
+        "zip": "M5V 4B3",
+        "state": "Ontario",
+        "country": "Canada",
+        "addressOne": "123 Toronto St.",
+        "addressTwo": "#206"
+      }
+    ],
     "returns": [],
     "companyId": "convictional-wholesale"
   },
@@ -73,9 +171,58 @@ This endpoint returns a single order by ID.
     "posted": false,
     "partner": "convictional-dropshipper-ca",
     "date": "2018-01-31 13:23:13",
-    "items": [],
+    "items": [
+      {
+        "title": "Great Custom Product",
+        "quantity": 2,
+        "price": 9.99,
+        "sku": "123GRPRODUCT",
+        "vendor": "convictional-wholesale",
+        "properties": [
+          {
+            "type": "custom_engraving",
+            "data": "We Love Dad!"
+          }
+        ],
+        "grams": 200
+      },
+      {
+        "title": "Great Standard Product",
+        "quantity": 1,
+        "price": 19.99,
+        "sku": "35GRPRODUCT",
+        "vendor": "convictional-wholesale",
+        "properties": [],
+        "grams": 200
+      }
+    ],
     "fulfillments": [],
-    "addresses": [],
+    "addresses": [
+      {
+        "type": "shipping",
+        "name": "First Last",
+        "company": "Company, Inc",
+        "phone": "800-555-5555",
+        "city": "Toronto",
+        "zip": "M5V 4B3",
+        "state": "Ontario",
+        "country": "Canada",
+        "addressOne": "123 Toronto St.",
+        "addressTwo": "#206"
+      },
+      {
+        "type": "billing",
+        "name": "First Last",
+        "company": "Company, Inc",
+        "phone": "800-555-5555",
+        "city": "Toronto",
+        "zip": "M5V 4B3",
+        "state": "Ontario",
+        "country": "Canada",
+        "addressOne": "123 Toronto St.",
+        "addressTwo": "#206"
+      }
+    ],
     "returns": [],
     "companyId": "convictional-wholesale"
   }
@@ -98,8 +245,57 @@ This endpoint returns all your orders.
   "code": "12345",
   "partner": "convictional-dropshipper-us",
   "date": "2018-01-28 16:46:13",
-  "items": [],
-  "addresses": [],
+  "items": [
+    {
+      "title": "Great Custom Product",
+      "quantity": 2,
+      "price": 9.99,
+      "sku": "123GRPRODUCT",
+      "vendor": "convictional-wholesale",
+      "properties": [
+        {
+          "type": "custom_engraving",
+          "data": "We Love Dad!"
+        }
+      ],
+      "grams": 200
+    },
+    {
+      "title": "Great Standard Product",
+      "quantity": 1,
+      "price": 19.99,
+      "sku": "35GRPRODUCT",
+      "vendor": "convictional-wholesale",
+      "properties": [],
+      "grams": 200
+    }
+  ],
+  "addresses": [
+    {
+      "type": "shipping",
+      "name": "First Last",
+      "company": "Company, Inc",
+      "phone": "800-555-5555",
+      "city": "Toronto",
+      "zip": "M5V 4B3",
+      "state": "Ontario",
+      "country": "Canada",
+      "addressOne": "123 Toronto St.",
+      "addressTwo": "#206"
+    },
+    {
+      "type": "billing",
+      "name": "First Last",
+      "company": "Company, Inc",
+      "phone": "800-555-5555",
+      "city": "Toronto",
+      "zip": "M5V 4B3",
+      "state": "Ontario",
+      "country": "Canada",
+      "addressOne": "123 Toronto St.",
+      "addressTwo": "#206"
+    }
+  ]
 }
 ```
 > Returns (JSON):
@@ -113,9 +309,58 @@ This endpoint returns all your orders.
   "posted": false,
   "partner": "convictional-dropshipper-us",
   "date": "2018-01-28 16:46:13",
-  "items": [],
+  "items": [
+    {
+      "title": "Great Custom Product",
+      "quantity": 2,
+      "price": 9.99,
+      "sku": "123GRPRODUCT",
+      "vendor": "convictional-wholesale",
+      "properties": [
+        {
+          "type": "custom_engraving",
+          "data": "We Love Dad!"
+        }
+      ],
+      "grams": 200
+    },
+    {
+      "title": "Great Standard Product",
+      "quantity": 1,
+      "price": 19.99,
+      "sku": "35GRPRODUCT",
+      "vendor": "convictional-wholesale",
+      "properties": [],
+      "grams": 200
+    }
+  ],
   "fulfillments": [],
-  "addresses": [],
+  "addresses": [
+    {
+      "type": "shipping",
+      "name": "First Last",
+      "company": "Company, Inc",
+      "phone": "800-555-5555",
+      "city": "Toronto",
+      "zip": "M5V 4B3",
+      "state": "Ontario",
+      "country": "Canada",
+      "addressOne": "123 Toronto St.",
+      "addressTwo": "#206"
+    },
+    {
+      "type": "billing",
+      "name": "First Last",
+      "company": "Company, Inc",
+      "phone": "800-555-5555",
+      "city": "Toronto",
+      "zip": "M5V 4B3",
+      "state": "Ontario",
+      "country": "Canada",
+      "addressOne": "123 Toronto St.",
+      "addressTwo": "#206"
+    }
+  ],
   "returns": [],
   "companyId": "convictional-wholesale"
 }
@@ -150,9 +395,58 @@ This endpoint creates a new order.
   "posted": true,
   "partner": "convictional-dropshipper-us",
   "date": "2018-01-28 16:46:13",
-  "items": [],
+  "items": [
+    {
+      "title": "Great Custom Product",
+      "quantity": 2,
+      "price": 9.99,
+      "sku": "123GRPRODUCT",
+      "vendor": "convictional-wholesale",
+      "properties": [
+        {
+          "type": "custom_engraving",
+          "data": "We Love Dad!"
+        }
+      ],
+      "grams": 200
+    },
+    {
+      "title": "Great Standard Product",
+      "quantity": 1,
+      "price": 19.99,
+      "sku": "35GRPRODUCT",
+      "vendor": "convictional-wholesale",
+      "properties": [],
+      "grams": 200
+    }
+  ],
   "fulfillments": [],
-  "addresses": [],
+  "addresses": [
+    {
+      "type": "shipping",
+      "name": "First Last",
+      "company": "Company, Inc",
+      "phone": "800-555-5555",
+      "city": "Toronto",
+      "zip": "M5V 4B3",
+      "state": "Ontario",
+      "country": "Canada",
+      "addressOne": "123 Toronto St.",
+      "addressTwo": "#206"
+    },
+    {
+      "type": "billing",
+      "name": "First Last",
+      "company": "Company, Inc",
+      "phone": "800-555-5555",
+      "city": "Toronto",
+      "zip": "M5V 4B3",
+      "state": "Ontario",
+      "country": "Canada",
+      "addressOne": "123 Toronto St.",
+      "addressTwo": "#206"
+    }
+  ],
   "returns": [],
   "companyId": "convictional-wholesale"
 }
@@ -179,10 +473,57 @@ This endpoint updates a single order by ID.
       "posted": true,
       "partner": "convictional-dropshipper-us",
       "date": "2018-01-28 16:46:13",
-      "items": [],
-      "fulfillments": [],
-      "addresses": [],
-      "returns": []
+      "items": [
+        {
+          "title": "Great Custom Product",
+          "quantity": 2,
+          "price": 9.99,
+          "sku": "123GRPRODUCT",
+          "vendor": "convictional-wholesale",
+          "properties": [
+            {
+              "type": "custom_engraving",
+              "data": "We Love Dad!"
+            }
+          ],
+          "grams": 200
+        },
+        {
+          "title": "Great Standard Product",
+          "quantity": 1,
+          "price": 19.99,
+          "sku": "35GRPRODUCT",
+          "vendor": "convictional-wholesale",
+          "properties": [],
+          "grams": 200
+        }
+      ],
+      "addresses": [
+        {
+          "type": "shipping",
+          "name": "First Last",
+          "company": "Company, Inc",
+          "phone": "800-555-5555",
+          "city": "Toronto",
+          "zip": "M5V 4B3",
+          "state": "Ontario",
+          "country": "Canada",
+          "addressOne": "123 Toronto St.",
+          "addressTwo": "#206"
+        },
+        {
+          "type": "billing",
+          "name": "First Last",
+          "company": "Company, Inc",
+          "phone": "800-555-5555",
+          "city": "Toronto",
+          "zip": "M5V 4B3",
+          "state": "Ontario",
+          "country": "Canada",
+          "addressOne": "123 Toronto St.",
+          "addressTwo": "#206"
+        }
+      ]
     },
     {
       "code": "12346",
@@ -191,10 +532,57 @@ This endpoint updates a single order by ID.
       "posted": false,
       "partner": "convictional-dropshipper-ca",
       "date": "2018-01-31 13:23:13",
-      "items": [],
-      "fulfillments": [],
-      "addresses": [],
-      "returns": [],
+      "items": [
+        {
+          "title": "Great Custom Product",
+          "quantity": 2,
+          "price": 9.99,
+          "sku": "123GRPRODUCT",
+          "vendor": "convictional-wholesale",
+          "properties": [
+            {
+              "type": "custom_engraving",
+              "data": "We Love Dad!"
+            }
+          ],
+          "grams": 200
+        },
+        {
+          "title": "Great Standard Product",
+          "quantity": 1,
+          "price": 19.99,
+          "sku": "35GRPRODUCT",
+          "vendor": "convictional-wholesale",
+          "properties": [],
+          "grams": 200
+        }
+      ],
+      "addresses": [
+        {
+          "type": "shipping",
+          "name": "First Last",
+          "company": "Company, Inc",
+          "phone": "800-555-5555",
+          "city": "Toronto",
+          "zip": "M5V 4B3",
+          "state": "Ontario",
+          "country": "Canada",
+          "addressOne": "123 Toronto St.",
+          "addressTwo": "#206"
+        },
+        {
+          "type": "billing",
+          "name": "First Last",
+          "company": "Company, Inc",
+          "phone": "800-555-5555",
+          "city": "Toronto",
+          "zip": "M5V 4B3",
+          "state": "Ontario",
+          "country": "Canada",
+          "addressOne": "123 Toronto St.",
+          "addressTwo": "#206"
+        }
+      ]
     }
   ]
 }
@@ -212,9 +600,58 @@ This endpoint updates a single order by ID.
     "posted": true,
     "partner": "convictional-dropshipper-us",
     "date": "2018-01-28 16:46:13",
-    "items": [],
+    "items": [
+      {
+        "title": "Great Custom Product",
+        "quantity": 2,
+        "price": 9.99,
+        "sku": "123GRPRODUCT",
+        "vendor": "convictional-wholesale",
+        "properties": [
+          {
+            "type": "custom_engraving",
+            "data": "We Love Dad!"
+          }
+        ],
+        "grams": 200
+      },
+      {
+        "title": "Great Standard Product",
+        "quantity": 1,
+        "price": 19.99,
+        "sku": "35GRPRODUCT",
+        "vendor": "convictional-wholesale",
+        "properties": [],
+        "grams": 200
+      }
+    ],
     "fulfillments": [],
-    "addresses": [],
+    "addresses": [
+      {
+        "type": "shipping",
+        "name": "First Last",
+        "company": "Company, Inc",
+        "phone": "800-555-5555",
+        "city": "Toronto",
+        "zip": "M5V 4B3",
+        "state": "Ontario",
+        "country": "Canada",
+        "addressOne": "123 Toronto St.",
+        "addressTwo": "#206"
+      },
+      {
+        "type": "billing",
+        "name": "First Last",
+        "company": "Company, Inc",
+        "phone": "800-555-5555",
+        "city": "Toronto",
+        "zip": "M5V 4B3",
+        "state": "Ontario",
+        "country": "Canada",
+        "addressOne": "123 Toronto St.",
+        "addressTwo": "#206"
+      }
+    ],
     "returns": [],
     "companyId": "convictional-wholesale"
   },
@@ -226,9 +663,58 @@ This endpoint updates a single order by ID.
     "posted": false,
     "partner": "convictional-dropshipper-ca",
     "date": "2018-01-31 13:23:13",
-    "items": [],
+    "items": [
+      {
+        "title": "Great Custom Product",
+        "quantity": 2,
+        "price": 9.99,
+        "sku": "123GRPRODUCT",
+        "vendor": "convictional-wholesale",
+        "properties": [
+          {
+            "type": "custom_engraving",
+            "data": "We Love Dad!"
+          }
+        ],
+        "grams": 200
+      },
+      {
+        "title": "Great Standard Product",
+        "quantity": 1,
+        "price": 19.99,
+        "sku": "35GRPRODUCT",
+        "vendor": "convictional-wholesale",
+        "properties": [],
+        "grams": 200
+      }
+    ],
     "fulfillments": [],
-    "addresses": [],
+    "addresses": [
+      {
+        "type": "shipping",
+        "name": "First Last",
+        "company": "Company, Inc",
+        "phone": "800-555-5555",
+        "city": "Toronto",
+        "zip": "M5V 4B3",
+        "state": "Ontario",
+        "country": "Canada",
+        "addressOne": "123 Toronto St.",
+        "addressTwo": "#206"
+      },
+      {
+        "type": "billing",
+        "name": "First Last",
+        "company": "Company, Inc",
+        "phone": "800-555-5555",
+        "city": "Toronto",
+        "zip": "M5V 4B3",
+        "state": "Ontario",
+        "country": "Canada",
+        "addressOne": "123 Toronto St.",
+        "addressTwo": "#206"
+      }
+    ],
     "returns": [],
     "companyId": "convictional-wholesale"
   }

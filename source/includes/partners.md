@@ -26,8 +26,14 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
   "email": "capartner@example.com",
   "invited": true,
   "itemLookup": [
-    {"myId": "12345", "partnerId": "ABC123"},
-    {"myId": "56789", "partnerId": "XYZ098"}
+    {
+      "myId": "12345",
+      "partnerId": "ABC123"
+    },
+    {
+      "myId": "56789",
+      "partnerId": "XYZ098"
+    }
   ],
   "priceList": "Price List for Canada",
   "relationship": "child",
@@ -55,8 +61,14 @@ This endpoint returns a single partner by ID.
     "email": "capartner@example.com",
     "invited": true,
     "itemLookup": [
-      {"myId": "12345", "partnerId": "ABC123"},
-      {"myId": "56789", "partnerId": "XYZ098"}
+      {
+        "myId": "12345",
+        "partnerId": "ABC123"
+      },
+      {
+        "myId": "56789",
+        "partnerId": "XYZ098"
+      }
     ],
     "priceList": "Price List for Canada",
     "relationship": "child",
@@ -69,8 +81,14 @@ This endpoint returns a single partner by ID.
     "email": "uspartner@example.com",
     "invited": true,
     "itemLookup": [
-      {"myId": "12345", "partnerId": "ABC123"},
-      {"myId": "56789", "partnerId": "XYZ098"}
+      {
+        "myId": "12345",
+        "partnerId": "ABC123"
+      },
+      {
+        "myId": "56789",
+        "partnerId": "XYZ098"
+      }
     ],
     "priceList": "Price List for USA",
     "relationship": "child",
@@ -109,8 +127,14 @@ This endpoint returns all your partners.
   "email": "capartner@example.com",
   "invited": true,
   "itemLookup": [
-    {"myId": "12345", "partnerId": "ABC123"},
-    {"myId": "56789", "partnerId": "XYZ098"}
+    {
+      "myId": "12345",
+      "partnerId": "ABC123"
+    },
+    {
+      "myId": "56789",
+      "partnerId": "XYZ098"
+    }
   ],
   "priceList": "Price List for Canada",
   "relationship": "child",
@@ -145,8 +169,14 @@ This endpoint creates a new partner.
   "email": "capartner@example.com",
   "invited": true,
   "itemLookup": [
-    {"myId": "12345", "partnerId": "ABC123"},
-    {"myId": "56789", "partnerId": "XYZ098"}
+    {
+      "myId": "12345",
+      "partnerId": "ABC123"
+    },
+    {
+      "myId": "56789",
+      "partnerId": "XYZ098"
+    }
   ],
   "priceList": "Price List for Canada",
   "relationship": "child",
@@ -195,8 +225,14 @@ This endpoint updates a single partner by ID.
     "email": "capartner@example.com",
     "invited": true,
     "itemLookup": [
-      {"myId": "12345", "partnerId": "ABC123"},
-      {"myId": "56789", "partnerId": "XYZ098"}
+      {
+        "myId": "12345",
+        "partnerId": "ABC123"
+      },
+      {
+        "myId": "56789",
+        "partnerId": "XYZ098"
+      }
     ],
     "priceList": "Price List for Canada",
     "relationship": "child",
@@ -209,8 +245,14 @@ This endpoint updates a single partner by ID.
     "email": "uspartner@example.com",
     "invited": true,
     "itemLookup": [
-      {"myId": "12345", "partnerId": "ABC123"},
-      {"myId": "56789", "partnerId": "XYZ098"}
+      {
+        "myId": "12345",
+        "partnerId": "ABC123"
+      },
+      {
+        "myId": "56789",
+        "partnerId": "XYZ098"
+      }
     ],
     "priceList": "Price List for USA",
     "relationship": "child",

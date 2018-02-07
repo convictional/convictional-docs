@@ -6,7 +6,7 @@ REST endpoints that allow you to create, retrieve, update and delete logs.
 | ----------- | ------ | --------- | -------------------------------------------- |
 | \_id        | String | Automatic <td style="width:100%;"> ID of this record </td>
 | createDate  | String | Automatic | Date of the log (YY/MM/DD hh:mm:ss)          |
-| description | String | Required  | A description                                |
+| description | String | Required  | A description of what you are logging        |
 | companyId   | String | Automatic | Your company ID                              |
 
 ## GET - Log
