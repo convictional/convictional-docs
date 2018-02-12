@@ -14,6 +14,8 @@ REST endpoints that allow you to create, retrieve, update and delete products.
 | type        | String  | Required    | 'item', 'shipping', 'tax' or 'custom'         |
 | variants    | Array   | Required    | All the variations of the product             |
 | vendor      | String  | Optional    | The brand of the product                      |
+| created     | Date    | Automatic   | Date record was created (in ISO8601 format)   |
+| updated     | Date    | Automatic   | Date record was updated (in ISO8601 format)   |
 | companyId   | String  | Automatic   | Your company ID                               |
 
 ## GET - Product
@@ -48,6 +50,8 @@ REST endpoints that allow you to create, retrieve, update and delete products.
     }
   ],
   "vendor": "Convictional Wholesale",
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -92,6 +96,8 @@ This endpoint returns a single product by ID.
       }
     ],
     "vendor": "Convictional Wholesale",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
@@ -121,6 +127,8 @@ This endpoint returns a single product by ID.
       }
     ],
     "vendor": "Convictional Wholesale",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]
@@ -197,6 +205,8 @@ This endpoint returns all your products.
     }
   ],
   "vendor": "Convictional Wholesale",
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -251,6 +261,8 @@ This endpoint creates a new product.
     }
   ],
   "vendor": "Convictional Wholesale",
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -358,6 +370,8 @@ This endpoint updates a single product by ID.
       }
     ],
     "vendor": "Convictional Wholesale",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
@@ -387,6 +401,8 @@ This endpoint updates a single product by ID.
       }
     ],
     "vendor": "Convictional Wholesale",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]

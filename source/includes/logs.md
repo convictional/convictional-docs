@@ -5,8 +5,9 @@ REST endpoints that allow you to create, retrieve, update and delete logs.
 | Property    | Type   | Required  | Description                                  |
 | ----------- | ------ | --------- | -------------------------------------------- |
 | \_id        | String | Automatic <td style="width:100%;"> ID of this record </td>
-| createDate  | String | Automatic | Date of the log (YY/MM/DD hh:mm:ss)          |
 | description | String | Required  | A description of what you are logging        |
+| created     | Date   | Automatic | Date record was created (in ISO8601 format)  |
+| updated     | Date   | Automatic | Date record was updated (in ISO8601 format)  |
 | companyId   | String | Automatic | Your company ID                              |
 
 ## GET - Log
@@ -16,8 +17,9 @@ REST endpoints that allow you to create, retrieve, update and delete logs.
 ```json
 {
   "_id": "5a692f658f6d524e8282dac7",
-  "createDate": "01/24/18 20:13:05",
   "description": "Welcome to Convictional",
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -37,14 +39,16 @@ This endpoint returns a single log by ID.
 [
   {
     "_id": "5a692f658f6d524e8282dac7",
-    "createDate": "01/24/18 20:13:05",
     "description": "Welcome to Convictional",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
     "_id": "5a692f658f6d524e8282dac8",
-    "createDate": "01/24/18 20:13:06",
     "description": "Successful request",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]
@@ -72,8 +76,9 @@ This endpoint returns all your logs.
 ```json
 {
   "_id": "5a692f658f6d524e8282dac7",
-  "createDate": "01/24/18 20:13:05",
   "description": "Welcome to Convictional",
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -100,8 +105,9 @@ This endpoint creates a new log.
 ```json
 {
   "_id": "5a692f658f6d524e8282dac7",
-  "createDate": "01/24/18 20:13:05",
   "description": "Welcome to Convictional!",
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -137,14 +143,16 @@ This endpoint updates a single log by ID.
 [
   {
     "_id": "5a692f658f6d524e8282dac7",
-    "createDate": "01/24/18 20:13:05",
     "description": "Welcome to Convictional",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
     "_id": "5a692f658f6d524e8282dac8",
-    "createDate": "01/24/18 20:13:06",
     "description": "Successful request",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]

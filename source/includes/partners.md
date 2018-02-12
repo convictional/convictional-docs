@@ -2,17 +2,19 @@
 REST endpoints that allow you to create, retrieve, update and delete partners.
 
 ## Partner Properties
-| Property     | Type     | Required   | Description                                 |
-| ------------ | ---------| -----------| ------------------------------------------- |
-| \_id         | String   | Automatic  <td style="width:100%;"> ID of this record </td>
-| code         | String   | Required   | The partner code in your system             |
-| email        | String   | Required   | The business email for this partner         |
-| active       | Boolean  | Required   | Do you want to sync with them?      |
-| invited      | Boolean  | Automatic  | Have they been invited?                     |
-| priceList    | String   | Optional   | The name of their price list                |
-| relationship | String   | Required   | Relation to you 'parent', 'child' or 'self' |
-| itemLookup   | Array    | Optional   | A reference of your item codes and theirs   |
-| companyId    | String   | Automatic  | Your company ID                             |
+| Property     | Type     | Required  | Description                                 |
+| ------------ | ---------| ----------| ------------------------------------------- |
+| \_id         | String   | Automatic <td style="width:100%;"> ID of this record </td>
+| code         | String   | Required  | The partner code in your system             |
+| email        | String   | Required  | The business email for this partner         |
+| active       | Boolean  | Required  | Do you want to sync with them?              |
+| invited      | Boolean  | Automatic | Have they been invited?                     |
+| priceList    | String   | Optional  | The name of their price list                |
+| relationship | String   | Required  | Relation to you 'parent', 'child' or 'self' |
+| itemLookup   | Array    | Optional  | A reference of your item codes and theirs   |
+| created      | Date     | Automatic | Date record was created (in ISO8601 format) |
+| updated      | Date     | Automatic | Date record was updated (in ISO8601 format) |
+| companyId    | String   | Automatic | Your company ID                             |
 
 ## GET - Partner
 
@@ -37,6 +39,8 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
   ],
   "priceList": "Price List for Canada",
   "relationship": "child",
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -72,6 +76,8 @@ This endpoint returns a single partner by ID.
     ],
     "priceList": "Price List for Canada",
     "relationship": "child",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
@@ -92,6 +98,8 @@ This endpoint returns a single partner by ID.
     ],
     "priceList": "Price List for USA",
     "relationship": "child",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]
@@ -113,7 +121,7 @@ This endpoint returns all your partners.
   "code": "12345",
   "email": "capartner@example.com",
   "priceList": "Price List for Canada",
-  "relationship": "child",
+  "relationship": "child"
 }
 ```
 
@@ -138,6 +146,8 @@ This endpoint returns all your partners.
   ],
   "priceList": "Price List for Canada",
   "relationship": "child",
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -180,6 +190,8 @@ This endpoint creates a new partner.
   ],
   "priceList": "Price List for Canada",
   "relationship": "child",
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -236,6 +248,8 @@ This endpoint updates a single partner by ID.
     ],
     "priceList": "Price List for Canada",
     "relationship": "child",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
@@ -256,6 +270,8 @@ This endpoint updates a single partner by ID.
     ],
     "priceList": "Price List for USA",
     "relationship": "child",
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]

@@ -15,6 +15,8 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | fulfillments  | Array     | Optional  | Contains all the tracking information               |
 | addresses     | Array     | Optional  | Contains all the customer addresses                 |
 | returns       | Array     | Optional  | Contains all the returns for this order             |
+| created       | Date      | Automatic | Date record was created (in ISO8601 format)         |
+| updated       | Date      | Automatic | Date record was updated (in ISO8601 format)         |
 | companyId     | String    | Automatic | Your company ID                                     |
 
 ## GET - Order
@@ -83,6 +85,8 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
     }
   ],
   "returns": [],
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -161,6 +165,8 @@ This endpoint returns a single order by ID.
       }
     ],
     "returns": [],
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
@@ -224,6 +230,8 @@ This endpoint returns a single order by ID.
       }
     ],
     "returns": [],
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]
@@ -362,6 +370,8 @@ This endpoint returns all your orders.
     }
   ],
   "returns": [],
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -448,6 +458,8 @@ This endpoint creates a new order.
     }
   ],
   "returns": [],
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -653,6 +665,8 @@ This endpoint updates a single order by ID.
       }
     ],
     "returns": [],
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
@@ -716,6 +730,8 @@ This endpoint updates a single order by ID.
       }
     ],
     "returns": [],
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]

@@ -14,6 +14,8 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | markup        | Number    | Optional  | Markup percentage (default "100")             |
 | rounding      | String    | Optional  | Decimals on the prices ("00" is $10.00)       |
 | list          | Array     | Required  | sku, base price, markup, markup type          |
+| created       | Date      | Automatic | Date record was created (in ISO8601 format)   |
+| updated       | Date      | Automatic | Date record was updated (in ISO8601 format)   |
 | companyId     | String    | Automatic | Your company ID                               |
 
 ## GET - Price
@@ -44,6 +46,8 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
       "markup": 120, 
       "type": "percent" },
   ],
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -85,6 +89,8 @@ This endpoint returns a single price by ID.
         "type": "percent" 
       },
     ],
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
@@ -111,6 +117,8 @@ This endpoint returns a single price by ID.
         "type": "percent" 
       },
     ],
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]
@@ -181,6 +189,8 @@ This endpoint returns all your prices.
       "type": "percent" 
     },
   ],
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -231,6 +241,8 @@ This endpoint creates a new price.
       "type": "percent" 
     },
   ],
+  "created": "2018-02-12T15:14:27.147-0500",
+  "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
 }
 ```
@@ -329,6 +341,8 @@ This endpoint updates a single price by ID.
         "type": "percent" 
       },
     ],
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   },
   {
@@ -354,6 +368,8 @@ This endpoint updates a single price by ID.
         "type": "percent" 
       },
     ],
+    "created": "2018-02-12T15:14:27.147-0500",
+    "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
   }
 ]
