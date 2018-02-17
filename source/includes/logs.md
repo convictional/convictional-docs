@@ -113,7 +113,7 @@ This endpoint creates a new log.
   "1": "5a8755c66affcc608657ed2d"
 }
 ```
-This endpoint creates multiple new logs. Bulk operation will occur automatically when you pass an array of log objects to this endpoint.
+This endpoint creates multiple new logs. Occurs automatically when you pass an array of log objects to this endpoint.
 
 ### Endpoint
 `https://api.convictional.com/logs`
@@ -157,10 +157,12 @@ This endpoint updates a single log by ID.
 {
   "logs": [
     {
+      "_id": "5a692f658f6d524e8282dac7",
       "description": "Welcome to Convictional"
     },
     {
-      "description": "Successful request"
+      "_id": "5a692f658f6d524e8282dac7",
+      "description": "This is a new description"
     }
   ]
 }
@@ -169,24 +171,11 @@ This endpoint updates a single log by ID.
 > Returns (JSON):
 
 ```json
-[
-  {
-    "_id": "5a692f658f6d524e8282dac7",
-    "description": "Welcome to Convictional",
-    "created": "2018-02-12T15:14:27.147-0500",
-    "updated": "2018-02-12T15:14:27.147-0500",
-    "companyId": "convictional-wholesale"
-  },
-  {
-    "_id": "5a692f658f6d524e8282dac8",
-    "description": "Successful request",
-    "created": "2018-02-12T15:14:27.147-0500",
-    "updated": "2018-02-12T15:14:27.147-0500",
-    "companyId": "convictional-wholesale"
-  }
-]
+{
+  "Modified": 2
+}
 ```
-This endpoint updates (or creates) logs.
+This endpoint updates (or creates) logs. If the ID matches an existing record, it will update. Otherwise, it will create.
 
 ### Endpoint
 `https://api.convictional.com/logs`
@@ -223,7 +212,9 @@ This endpoint deletes a single log by ID.
 > Returns (JSON):
 
 ```json
-OK
+{
+  "Deleted": 2
+}
 ```
 This endpoint deletes multiple logs by ID.
 
