@@ -63,7 +63,7 @@ This endpoint returns a single product by ID.
 ### Request example
 `GET https://api.convictional.com/products/5a692f658f6d524e8282dac7`
 
-## GET - Products
+## GET - Products (bulk)
 
 > Returns (JSON):
 
@@ -219,6 +219,87 @@ This endpoint creates a new product.
 ### Request example
 `POST https://api.convictional.com/products`
 
+## POST - Products (bulk)
+
+> Request Body (JSON):
+
+```json
+{
+  "products": [
+    {
+      "code": "12345",
+      "active": true,
+      "bodyHtml": "<p>Great product!</p>",
+      "images": [
+        { "src": "https://cdn.convictional.com/123abc" },
+        { "src": "https://cdn.convictional.com/987zyx" },
+      ],
+      "tags": ["Toronto", "Beauty", "Mens"],
+      "title": "Great product",
+      "type": "item",
+      "variants": [
+        { 
+          "sku": "123", 
+          "title": "Great variant", 
+          "inventory_quantity": "8", 
+          "price": 9.99 
+        },
+        { 
+          "sku": "321", 
+          "title": "Great variant", 
+          "inventory_quantity": "3", 
+          "price": 19.99 
+        }
+      ],
+      "vendor": "Convictional Wholesale",
+    },
+    {
+      "code": "12346",
+      "active": true,
+      "bodyHtml": "<p>Greatest product!</p>",
+      "images": [
+        { "src": "https://cdn.convictional.com/456bec" },
+        { "src": "https://cdn.convictional.com/111qwe" },
+      ],
+      "tags": ["Waterloo", "Fashion", "Womens"],
+      "title": "Greatest product",
+      "type": "item",
+      "variants": [
+        { 
+          "sku": "456", 
+          "title": "Great variant", 
+          "inventory_quantity": "12", 
+          "price": 29.99 
+        },
+        { 
+          "sku": "789", 
+          "title": "Great variant", 
+          "inventory_quantity": "6", 
+          "price": 39.99 
+        }
+      ],
+      "vendor": "Convictional Wholesale",
+    }
+  ]
+}
+```
+
+>  Returns (JSON):
+
+```json
+{
+  "0": "5a8755c66affcc608657ed2c",
+  "1": "5a8755c66affcc608657ed2d"
+}
+```
+This endpoint creates multiple new products. Occurs automatically when you pass an array of product objects to this endpoint.
+
+### Endpoint
+`https://api.convictional.com/products`
+
+### Request Example
+`POST https://api.convictional.com/products`
+
 ## PUT - Product
 
 > Request Body (JSON):
@@ -274,7 +355,7 @@ This endpoint updates a single product by ID.
 ### Request example
 `PUT https://api.convictional.com/products/5a692f658f6d524e8282dac7`
 
-## PUT - Products
+## PUT - Products (bulk)
 
 > Request Body (JSON):
 
@@ -342,72 +423,11 @@ This endpoint updates a single product by ID.
 > Returns (JSON):
 
 ```json
-[
-  {
-    "_id": "5a692f658f6d524e8282dac7",
-    "code": "12345",
-    "active": true,
-    "bodyHtml": "<p>Great product!</p>",
-    "images": [
-      { "src": "https://cdn.convictional.com/123abc" },
-      { "src": "https://cdn.convictional.com/987zyx" },
-    ],
-    "tags": ["Toronto", "Beauty", "Mens"],
-    "title": "Great product",
-    "type": "item",
-    "variants": [
-      { 
-        "sku": "123", 
-        "title": "Great variant", 
-        "inventory_quantity": "8", 
-        "price": 9.99 
-      },
-      { 
-        "sku": "321", 
-        "title": "Great variant", 
-        "inventory_quantity": "3", 
-        "price": 19.99 
-      }
-    ],
-    "vendor": "Convictional Wholesale",
-    "created": "2018-02-12T15:14:27.147-0500",
-    "updated": "2018-02-12T15:14:27.147-0500",
-    "companyId": "convictional-wholesale"
-  },
-  {
-    "_id": "5a692f658f6d524e8282dac8",
-    "code": "12346",
-    "active": true,
-    "bodyHtml": "<p>Greatest product!</p>",
-    "images": [
-      { "src": "https://cdn.convictional.com/456bec" },
-      { "src": "https://cdn.convictional.com/111qwe" },
-    ],
-    "tags": ["Waterloo", "Fashion", "Womens"],
-    "title": "Greatest product",
-    "type": "item",
-    "variants": [
-      { 
-        "sku": "456", 
-        "title": "Great variant", 
-        "inventory_quantity": "12", 
-        "price": 29.99 
-      },
-      { 
-        "sku": "789", 
-        "title": "Great variant", 
-        "inventory_quantity": "6", 
-        "price": 39.99 
-      }
-    ],
-    "vendor": "Convictional Wholesale",
-    "created": "2018-02-12T15:14:27.147-0500",
-    "updated": "2018-02-12T15:14:27.147-0500",
-    "companyId": "convictional-wholesale"
-  }
-]
+{
+  "Modified": 2
+}
 ```
-This endpoint updates (or creates) products.
+This endpoint updates (or creates) products. If the code matches an existing record, it will update. Otherwise, it will create.
 
 ### Endpoint
 `https://api.convictional.com/products`

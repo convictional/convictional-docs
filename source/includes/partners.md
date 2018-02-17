@@ -52,7 +52,7 @@ This endpoint returns a single partner by ID.
 ### Request example
 `GET https://api.convictional.com/partners/5a692f658f6d524e8282dac7`
 
-## GET - Partners
+## GET - Partners (bulk)
 
 > Returns (JSON):
 
@@ -159,6 +159,45 @@ This endpoint creates a new partner.
 ### Request example
 `POST https://api.convictional.com/partners`
 
+## POST - Partners (bulk)
+
+> Request Body (JSON):
+
+```json
+{
+  "partners": [
+    {
+      "code": "12345",
+      "email": "capartner@example.com",
+      "priceList": "Price List for Canada",
+      "relationship": "child",
+    },
+    {
+      "code": "12346",
+      "email": "uspartner@example.com",
+      "priceList": "Price List for USA",
+      "relationship": "child",
+    }
+  ]
+}
+```
+
+>  Returns (JSON):
+
+```json
+{
+  "0": "5a8755c66affcc608657ed2c",
+  "1": "5a8755c66affcc608657ed2d"
+}
+```
+This endpoint creates multiple new partners. Occurs automatically when you pass an array of partner objects to this endpoint.
+
+### Endpoint
+`https://api.convictional.com/partners`
+
+### Request Example
+`POST https://api.convictional.com/partners`
+
 ## PUT - Partner
 
 > Request Body (JSON):
@@ -203,7 +242,7 @@ This endpoint updates a single partner by ID.
 ### Request example
 `PUT https://api.convictional.com/partners/5a692f658f6d524e8282dac7`
 
-## PUT - Partners
+## PUT - Partners (bulk)
 
 > Request Body (JSON):
 
@@ -229,54 +268,11 @@ This endpoint updates a single partner by ID.
 > Returns (JSON):
 
 ```json
-[
-  {
-    "_id": "5a692f658f6d524e8282dac7",
-    "code": "12345",
-    "active": true,
-    "email": "capartner@example.com",
-    "invited": true,
-    "itemLookup": [
-      {
-        "myId": "12345",
-        "partnerId": "ABC123"
-      },
-      {
-        "myId": "56789",
-        "partnerId": "XYZ098"
-      }
-    ],
-    "priceList": "Price List for Canada",
-    "relationship": "child",
-    "created": "2018-02-12T15:14:27.147-0500",
-    "updated": "2018-02-12T15:14:27.147-0500",
-    "companyId": "convictional-wholesale"
-  },
-  {
-    "_id": "5a692f658f6d524e8282dac7",
-    "code": "12346",
-    "active": false,
-    "email": "uspartner@example.com",
-    "invited": true,
-    "itemLookup": [
-      {
-        "myId": "12345",
-        "partnerId": "ABC123"
-      },
-      {
-        "myId": "56789",
-        "partnerId": "XYZ098"
-      }
-    ],
-    "priceList": "Price List for USA",
-    "relationship": "child",
-    "created": "2018-02-12T15:14:27.147-0500",
-    "updated": "2018-02-12T15:14:27.147-0500",
-    "companyId": "convictional-wholesale"
-  }
-]
+{
+  "Modified": 2
+}
 ```
-This endpoint updates (or creates) partners.
+This endpoint updates (or creates) partners. If the code matches an existing record, it will update. Otherwise, it will create.
 
 ### Endpoint
 `https://api.convictional.com/partners`
