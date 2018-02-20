@@ -521,7 +521,7 @@ This endpoint creates a new order.
   "1": "5a8755c66affcc608657ed2d"
 }
 ```
-This endpoint creates multiple new orders. Occurs automatically when you pass an array of order objects to this endpoint.
+This endpoint creates multiple new orders. Occurs automatically when you pass an array of order objects to this endpoint. 
 
 ### Endpoint
 `https://api.convictional.com/orders`
@@ -752,7 +752,7 @@ This endpoint updates a single order by ID.
   "Modified": 2
 }
 ```
-This endpoint updates (or creates) orders. If the code matches an existing record, it will update. Otherwise, it will create.
+This endpoint updates (or creates) orders. If the code matches an existing record, it will update. Otherwise, it will create. 
 
 ### Endpoint
 `https://api.convictional.com/orders`

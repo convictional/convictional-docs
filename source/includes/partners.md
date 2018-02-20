@@ -190,7 +190,7 @@ This endpoint creates a new partner.
   "1": "5a8755c66affcc608657ed2d"
 }
 ```
-This endpoint creates multiple new partners. Occurs automatically when you pass an array of partner objects to this endpoint.
+This endpoint creates multiple new partners. Occurs automatically when you pass an array of partner objects to this endpoint. Maximum is 100 records, above that please send multiple requests to this endpoint.
 
 ### Endpoint
 `https://api.convictional.com/partners`
@@ -272,7 +272,7 @@ This endpoint updates a single partner by ID.
   "Modified": 2
 }
 ```
-This endpoint updates (or creates) partners. If the code matches an existing record, it will update. Otherwise, it will create.
+This endpoint updates (or creates) partners. If the code matches an existing record, it will update. Otherwise, it will create. Maximum is 100 records, above that please send multiple requests to this endpoint.
 
 ### Endpoint
 `https://api.convictional.com/partners`

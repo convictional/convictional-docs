@@ -23,6 +23,9 @@ Our API is still on the first version. When breaking changes happen in the futur
 # Authentication
 Convictional uses API keys to authenticate your requests. When you register your account, we generate an API key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request.
 
+# Bulk Endpoints
+Convictional offers bulk endpoints across all REST services. This allows you to create, read, update and delete up to 100 records as once. You can go above 100 records at a time but your request may be rejected on the basis of size, depending on the kind of record and method you are using.
+
 # Responses
 
 > 200: Returns (String):
