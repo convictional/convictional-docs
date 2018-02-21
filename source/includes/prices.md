@@ -7,8 +7,8 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record  </td>
 | code          | String    | Required  | Code in your system                           |
 | listName      | String    | Required  | Name of this price list                       |
-| startDate     | String    | Optional  | Start date (YY/MM/DD hh:mm:ss)                |
-| endDate       | String    | Optional  | End date (YY/MM/DD hh:mm:ss)                  |
+| startDate     | String    | Optional  | Start date (in ISO8601 format)                |
+| endDate       | String    | Optional  | End date (in ISO8601 format)                  |
 | currencyName  | String    | Optional  | Name of the currency                          |
 | conversion    | Number    | Optional  | Conversion rate from base (default "1")       |
 | markup        | Number    | Optional  | Markup percentage (default "100")             |

@@ -30,11 +30,11 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
   "itemLookup": [
     {
       "myId": "12345",
-      "partnerId": "ABC123"
+      "yourId": "ABC123"
     },
     {
       "myId": "56789",
-      "partnerId": "XYZ098"
+      "yourId": "XYZ098"
     }
   ],
   "priceList": "Price List for Canada",
@@ -67,11 +67,11 @@ This endpoint returns a single partner by ID.
     "itemLookup": [
       {
         "myId": "12345",
-        "partnerId": "ABC123"
+        "yourId": "ABC123"
       },
       {
         "myId": "56789",
-        "partnerId": "XYZ098"
+        "yourId": "XYZ098"
       }
     ],
     "priceList": "Price List for Canada",
@@ -89,11 +89,11 @@ This endpoint returns a single partner by ID.
     "itemLookup": [
       {
         "myId": "12345",
-        "partnerId": "ABC123"
+        "yourId": "ABC123"
       },
       {
         "myId": "56789",
-        "partnerId": "XYZ098"
+        "yourId": "XYZ098"
       }
     ],
     "priceList": "Price List for USA",
@@ -137,11 +137,11 @@ This endpoint returns all your partners.
   "itemLookup": [
     {
       "myId": "12345",
-      "partnerId": "ABC123"
+      "yourId": "ABC123"
     },
     {
       "myId": "56789",
-      "partnerId": "XYZ098"
+      "yourId": "XYZ098"
     }
   ],
   "priceList": "Price List for Canada",
@@ -220,11 +220,11 @@ This endpoint creates multiple new partners. Occurs automatically when you pass 
   "itemLookup": [
     {
       "myId": "12345",
-      "partnerId": "ABC123"
+      "yourId": "ABC123"
     },
     {
       "myId": "56789",
-      "partnerId": "XYZ098"
+      "yourId": "XYZ098"
     }
   ],
   "priceList": "Price List for Canada",

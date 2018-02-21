@@ -3,9 +3,10 @@ language_tabs:
   - javascript
 toc_footers:
   - <a target="_blank" href='https://app.convictional.com/sign_up'>Sign up to get your API key</a>
-  - <a target="_blank" href='http://help.convictional.com'>Not technical? Get help here.</a>
+  - <a target="_blank" href='http://help.convictional.com'>Not technical? Get help from support.</a>
   - <a target="_blank" href='https://convictional.com/pages/contact'>Want more? Talk to sales.</a>
   - <a target="_blank" href='https://convictional.com'>Learn more about Convictional</a>
+  - <a target="_blank" href='https://github.com/rogerkirkness/convictional-docs'>Want to help? Edit these docs.</a>
 includes:
   - main
   - orders
