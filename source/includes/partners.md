@@ -285,7 +285,9 @@ This endpoint updates (or creates) partners. If the code matches an existing rec
 > Returns (JSON):
 
 ```json
-OK
+{
+  "Deleted": 1
+}
 ```
 This endpoint deletes a single partner by ID.
 

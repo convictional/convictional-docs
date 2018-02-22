@@ -188,7 +188,9 @@ This endpoint updates (or creates) logs. If the ID matches an existing record, i
 > Returns (JSON):
 
 ```json
-OK
+{
+  "Deleted": 1
+}
 ```
 This endpoint deletes a single log by ID.
 

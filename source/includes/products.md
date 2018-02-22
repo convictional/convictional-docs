@@ -440,7 +440,9 @@ This endpoint updates (or creates) products. If the code matches an existing rec
 > Returns (String):
 
 ```json
-OK
+{
+  "Deleted": 1
+}
 ```
 This endpoint deletes a single product by ID.
 

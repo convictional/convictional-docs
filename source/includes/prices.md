@@ -408,7 +408,9 @@ This endpoint updates (or creates) prices. If the code matches an existing recor
 > Returns (JSON):
 
 ```json
-OK
+{
+  "Deleted": 1
+}
 ```
 This endpoint deletes a single price by ID.
 

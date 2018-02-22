@@ -765,7 +765,9 @@ This endpoint updates (or creates) orders. If the code matches an existing recor
 > Returns (JSON):
 
 ```json
-OK
+{
+  "Deleted": 1
+}
 ```
 This endpoint deletes a single order by ID.
 

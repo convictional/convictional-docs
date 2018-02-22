@@ -6,7 +6,8 @@ toc_footers:
   - <a target="_blank" href='http://help.convictional.com'>Not technical? Get help from support.</a>
   - <a target="_blank" href='https://convictional.com/pages/contact'>Want more? Talk to sales.</a>
   - <a target="_blank" href='https://convictional.com'>Learn more about Convictional</a>
-  - <a target="_blank" href='https://github.com/rogerkirkness/convictional-docs'>Want to help? Edit these docs.</a>
+  - <a target="_blank" href='https://status.convictional.com'>See current system status</a>
+  - <a target="_blank" href='https://github.com/rogerkirkness/convictional-docs'>Want to help? Edit docs.</a>
 includes:
   - main
   - orders
