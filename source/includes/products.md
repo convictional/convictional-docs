@@ -141,6 +141,14 @@ This endpoint returns all your products.
 ### Request example
 `GET https://api.convictional.com/products`
 
+### Query Parameters
+| Property      | Type      | Required  | Description                                       |
+| ------------  | --------- | ----------| --------------------------------------------------|
+| createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
+| createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
+| updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
+| updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
+
 ## POST - Product
 
 > Request Body (JSON):

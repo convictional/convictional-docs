@@ -113,11 +113,15 @@ This endpoint returns all your partners.
 `GET https://api.convictional.com/partners`
 
 ### Query Parameters
-| Property      | Type      | Required  | Description                      |
-| ------------  | --------- | ----------| ---------------------------------|
-| active        | Boolean   | Optional  | Filter by active status          |
-| invited       | Boolean   | Optional  | Filter by invited status         |
-| relationship  | String    | Optional  | Filter by relationship           |
+| Property      | Type      | Required  | Description                                       |
+| ------------  | --------- | ----------| --------------------------------------------------|
+| active        | Boolean   | Optional  | Filter by active status (true or false)           |
+| invited       | Boolean   | Optional  | Filter by invited status (true or false)          |
+| relationship  | String    | Optional  | Filter by relationship (child, self or parent)    |
+| createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
+| createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
+| updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
+| updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
 
 ## POST - Partner
 

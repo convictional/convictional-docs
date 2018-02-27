@@ -244,6 +244,19 @@ This endpoint returns all your orders.
 ### Request example
 `GET https://api.convictional.com/orders`
 
+### Query Parameters
+| Property      | Type      | Required  | Description                                       |
+| ------------  | --------- | ----------| --------------------------------------------------|
+| posted        | Boolean   | Optional  | Filter records by whether they are in your system |
+| complete      | Boolean   | Optional  | Filter records by whether they are shipped        |
+| billed        | Boolean   | Optional  | Filter records by whether they are billed         |
+| partner       | String    | Optional  | Filter records by a particular partner            |
+| code          | String    | Optional  | Filter records by a particular order code         |
+| createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
+| createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
+| updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
+| updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
+
 ## POST - Order
 
 > Request Body (JSON):
