@@ -131,6 +131,11 @@ This endpoint returns all your prices.
 ### Request example
 `GET https://api.convictional.com/prices`
 
+### Query Parameters
+| Property      | Type      | Required  | Description                      |
+| ------------  | --------- | ----------| ---------------------------------|
+| listName      | String    | Optional  | Filter by list name              |
+
 ## POST - Price
 
 > Request Body (JSON):

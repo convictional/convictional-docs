@@ -112,6 +112,13 @@ This endpoint returns all your partners.
 ### Request example
 `GET https://api.convictional.com/partners`
 
+### Query Parameters
+| Property      | Type      | Required  | Description                      |
+| ------------  | --------- | ----------| ---------------------------------|
+| active        | Boolean   | Optional  | Filter by active status          |
+| invited       | Boolean   | Optional  | Filter by invited status         |
+| relationship  | String    | Optional  | Filter by relationship           |
+
 ## POST - Partner
 
 > Request Body (JSON):
