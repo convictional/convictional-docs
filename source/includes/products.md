@@ -149,6 +149,9 @@ This endpoint returns all your products.
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
 
+### Filtered example
+`GET https://api.convictional.com/products?createdBefore=2018-02-28T11:26:43.000-0500`
+
 ## POST - Product
 
 > Request Body (JSON):

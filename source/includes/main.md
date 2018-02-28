@@ -15,7 +15,7 @@ Our goal providing an API for our service is to allow technically inclined custo
 > Last Updated:
 
 ```json
-2018-01-31
+2018-02-28
 ```
 
 Our API is still on the first version. When breaking changes happen in the future, we will notify users and migrate you to the new version. If you have any feedback, please get in touch. 

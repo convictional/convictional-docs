@@ -140,6 +140,9 @@ This endpoint returns all your prices.
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
 
+### Filtered example
+`GET https://api.convictional.com/prices?createdBefore=2018-02-28T11:26:43.000-0500`
+
 ## POST - Price
 
 > Request Body (JSON):
