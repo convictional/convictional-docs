@@ -128,20 +128,21 @@ This endpoint returns all your prices.
 ### Endpoint
 `https://api.convictional.com/prices`
 
-### Request example
+### Open example
 `GET https://api.convictional.com/prices`
-
-### Query Parameters
-| Property      | Type      | Required  | Description                                       |
-| ------------  | --------- | ----------| --------------------------------------------------|
-| listName      | String    | Optional  | Filter by list name (ie. "UK")                    |
-| createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
-| createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
-| updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
-| updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
 
 ### Filtered example
 `GET https://api.convictional.com/prices?createdBefore=2018-02-28T11:26:43.000-0500`
+
+### Query Parameters
+| Property      | Type      | Required  | Description                                             |
+| ------------  | --------- | ----------| --------------------------------------------------------|
+| listName      | String    | Optional  | Filter by list name. Returns any list containing string |
+| createdBefore | Date      | Optional  | Filter records created before this date (ISO8601)       |
+| createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)        |
+| updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601)       |
+| updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)        |
+
 
 ## POST - Price
 

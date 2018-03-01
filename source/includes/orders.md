@@ -241,8 +241,11 @@ This endpoint returns all your orders.
 ### Endpoint
 `https://api.convictional.com/orders`
 
-### Request example
+### Open example
 `GET https://api.convictional.com/orders`
+
+### Filtered example
+`GET https://api.convictional.com/orders?createdBefore=2018-02-28T11:26:43.000-0500`
 
 ### Query Parameters
 | Property      | Type      | Required  | Description                                       |
@@ -256,9 +259,6 @@ This endpoint returns all your orders.
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
-
-### Filtered example
-`GET https://api.convictional.com/orders?createdBefore=2018-02-28T11:26:43.000-0500`
 
 ## POST - Order
 
