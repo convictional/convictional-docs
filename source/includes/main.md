@@ -26,6 +26,9 @@ Convictional uses API keys to authenticate your requests. When you register your
 # Bulk Endpoints
 Convictional offers bulk endpoints across all REST services. This allows you to create, read, update and delete up to 100 records as once. You can go above 100 records at a time but your request may be rejected on the basis of size, depending on the kind of record and method you are using.
 
+# Client Libaries
+Convictional currenly offers a client library for Node.JS. For more information, visit the page on NPM [here](https://npmjs.com/package/convictional).
+
 # Responses
 
 > 200: Returns (String):
