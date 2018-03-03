@@ -137,6 +137,7 @@ This endpoint returns all your prices.
 ### Query Parameters
 | Property      | Type      | Required  | Description                                             |
 | ------------  | --------- | ----------| --------------------------------------------------------|
+| fields        | String    | Optional  | Return only the specified fields, comma separated       |
 | listName      | String    | Optional  | Filter by list name. Returns any list containing string |
 | createdBefore | Date      | Optional  | Filter records created before this date (ISO8601)       |
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)        |

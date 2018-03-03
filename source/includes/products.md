@@ -147,6 +147,7 @@ This endpoint returns all your products.
 ### Query Parameters
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
+| fields        | String    | Optional  | Return only the specified fields, comma separated |
 | createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |

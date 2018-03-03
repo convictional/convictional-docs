@@ -118,6 +118,7 @@ This endpoint returns all your partners.
 ### Query Parameters
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
+| fields        | String    | Optional  | Return only the specified fields, comma separated |
 | active        | Boolean   | Optional  | Filter by active status (true or false)           |
 | invited       | Boolean   | Optional  | Filter by invited status (true or false)          |
 | relationship  | String    | Optional  | Filter by relationship (child, self or parent)    |

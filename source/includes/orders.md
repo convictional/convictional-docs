@@ -250,6 +250,7 @@ This endpoint returns all your orders.
 ### Query Parameters
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
+| fields        | String    | Optional  | Return only the specified fields, comma separated |
 | posted        | Boolean   | Optional  | Filter records by whether they are in your system |
 | complete      | Boolean   | Optional  | Filter records by whether they are shipped        |
 | billed        | Boolean   | Optional  | Filter records by whether they are billed         |
