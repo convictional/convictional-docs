@@ -10,7 +10,7 @@ REST endpoints that allow you to create, retrieve, update and delete logs.
 | updated     | Date   | Automatic | Date record was updated (in ISO8601 format)  |
 | companyId   | String | Automatic | Your company ID                              |
 
-## GET - Log
+## Get Log
 
 > Returns (JSON):
 
@@ -31,7 +31,7 @@ This endpoint returns a single log by ID.
 ### Request example
 `GET https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
-## GET - Logs (bulk)
+## Get Logs (bulk)
 
 > Returns (JSON): 
 
@@ -73,7 +73,7 @@ This endpoint returns all your logs.
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
 
-## POST - Log
+## Create Log
 
 > Request Body (JSON):
 
@@ -102,7 +102,7 @@ This endpoint creates a new log.
 ### Request example
 `POST https://api.convictional.com/logs`
 
-## POST - Logs (bulk)
+## Create Logs (bulk)
 
 > Request Body (JSON):
 
@@ -133,7 +133,7 @@ This endpoint creates multiple new logs. Occurs automatically when you pass an a
 ### Request example
 `POST https://api.convictional.com/logs`
 
-## PUT - Log
+## Update Log
 > Request Body (JSON):
 
 ```json
@@ -161,7 +161,7 @@ This endpoint updates a single log by ID.
 ### Request example
 `PUT https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
-## PUT - Logs (bulk)
+## Update Logs (bulk)
 
 > Request Body (JSON):
 
@@ -195,7 +195,7 @@ This endpoint updates (or creates) logs. If the ID matches an existing record, i
 ### Request example
 `PUT https://api.convictional.com/logs`
 
-## DELETE - Log
+## Delete Log
 
 > Returns (JSON):
 
@@ -212,7 +212,7 @@ This endpoint deletes a single log by ID.
 ### Request example
 `DELETE https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
-## DELETE - Logs (bulk)
+## Delete Logs (bulk)
 
 > Request Body (JSON):
 

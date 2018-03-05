@@ -18,7 +18,7 @@ REST endpoints that allow you to create, retrieve, update and delete products.
 | updated     | Date    | Automatic   | Date record was updated (in ISO8601 format)   |
 | companyId   | String  | Automatic   | Your company ID                               |
 
-## GET - Product
+## Get Product
 
 > Returns (JSON):
 
@@ -63,7 +63,7 @@ This endpoint returns a single product by ID.
 ### Request example
 `GET https://api.convictional.com/products/5a692f658f6d524e8282dac7`
 
-## GET - Products (bulk)
+## Get Products (bulk)
 
 > Returns (JSON):
 
@@ -153,7 +153,7 @@ This endpoint returns all your products.
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
 
-## POST - Product
+## Create Product
 
 > Request Body (JSON):
 
@@ -231,7 +231,7 @@ This endpoint creates a new product.
 ### Request example
 `POST https://api.convictional.com/products`
 
-## POST - Products (bulk)
+## Create Products (bulk)
 
 > Request Body (JSON):
 
@@ -312,7 +312,7 @@ This endpoint creates multiple new products. Occurs automatically when you pass 
 ### Request example
 `POST https://api.convictional.com/products`
 
-## PUT - Product
+## Update Product
 
 > Request Body (JSON):
 
@@ -367,7 +367,7 @@ This endpoint updates a single product by ID.
 ### Request example
 `PUT https://api.convictional.com/products/5a692f658f6d524e8282dac7`
 
-## PUT - Products (bulk)
+## Update Products (bulk)
 
 > Request Body (JSON):
 
@@ -447,7 +447,7 @@ This endpoint updates (or creates) products. If the code matches an existing rec
 ### Request example
 `PUT https://api.convictional.com/products`
 
-## DELETE - Product
+## Delete Product
 
 > Returns (String):
 
@@ -464,7 +464,7 @@ This endpoint deletes a single product by ID.
 ### Request example
 `DELETE https://api.convictional.com/products/5a692f658f6d524e8282dac7`
 
-## DELETE - Products (bulk)
+## Delete Products (bulk)
 
 > Request Body (JSON):
 

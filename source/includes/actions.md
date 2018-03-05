@@ -1,7 +1,7 @@
 # Actions
 RPC endpoints that allow you to translate EDI documents, invite partners and more
 
-## GET - Sync
+## Sync
 
 > Returns JSON:
 
@@ -31,7 +31,7 @@ This endpoint allows you to initiate a sync method of your choosing.
 | getProductUpdates | Trigger an event that will get inventory from your system                       |
 | postProductUpdates| Trigger an event that will push inventory to your trading partners              |
 
-## POST - Translate
+## Translate
 
 > Returns JSON structured like this:
 

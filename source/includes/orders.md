@@ -19,7 +19,7 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)         |
 | companyId     | String    | Automatic | Your company ID                                     |
 
-## GET - Order
+## Get Order
 
 > Returns (JSON):
 
@@ -98,7 +98,7 @@ This endpoint returns a single order by ID.
 ### Request example
 `GET https://api.convictional.com/orders/5a692f658f6d524e8282dac7`
 
-## GET - Orders (bulk)
+## Get Orders (bulk)
 
 > Returns (JSON):
 
@@ -261,7 +261,7 @@ This endpoint returns all your orders.
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
 
-## POST - Order
+## Create Order
 
 > Request Body (JSON):
 
@@ -401,7 +401,7 @@ This endpoint creates a new order.
 ### Request example
 `POST https://api.convictional.com/orders`
 
-## POST - Orders (bulk)
+## Create Orders (bulk)
 
 > Request Body (JSON):
 
@@ -546,7 +546,7 @@ This endpoint creates multiple new orders. Occurs automatically when you pass an
 ### Request example
 `POST https://api.convictional.com/orders`
 
-## PUT - Order
+## Update Order
 
 > Request Body (JSON):
 
@@ -633,7 +633,7 @@ This endpoint updates a single order by ID.
 ### Request example
 `PUT https://api.convictional.com/orders/5a692f658f6d524e8282dac7`
 
-## PUT - Orders (bulk)
+## Update Orders (bulk)
 
 > Request Body (JSON):
 
@@ -777,7 +777,7 @@ This endpoint updates (or creates) orders. If the code matches an existing recor
 ### Request example
 `PUT https://api.convictional.com/orders`
 
-## DELETE - Order
+## Delete Order
 
 > Returns (JSON):
 
@@ -794,7 +794,7 @@ This endpoint deletes a single order by ID.
 ### Request example
 `DELETE https://api.convictional.com/orders/5a692f658f6d524e8282dac7`
 
-## DELETE - Orders (bulk)
+## Delete Orders (bulk)
 
 > Request Body (JSON):
 

@@ -18,7 +18,7 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)   |
 | companyId     | String    | Automatic | Your company ID                               |
 
-## GET - Price
+## Get Price
 
 > Returns (JSON):
 
@@ -59,7 +59,7 @@ This endpoint returns a single price by ID.
 ### Request example
 `GET https://api.convictional.com/prices/5a692f658f6d524e8282dac7`
 
-## GET - Prices (bulk)
+## Get Prices (bulk)
 
 > Returns (JSON):
 
@@ -145,7 +145,7 @@ This endpoint returns all your prices.
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)        |
 
 
-## POST - Price
+## Create Price
 
 > Request Body (JSON):
 
@@ -217,7 +217,7 @@ This endpoint creates a new price.
 ### Request example
 `POST https://api.convictional.com/prices`
 
-## POST - Prices (bulk)
+## Create Prices (bulk)
 
 > Request Body (JSON):
 
@@ -292,7 +292,7 @@ This endpoint creates multiple new prices. Occurs automatically when you pass an
 ### Request example
 `POST https://api.convictional.com/prices`
 
-## PUT - Price
+## Update Price
 
 > Request Body (JSON):
 
@@ -343,7 +343,7 @@ This endpoint updates a single price by ID.
 ### Request example
 `PUT https://api.convictional.com/prices/5a692f658f6d524e8282dac8`
 
-## PUT - Prices (bulk)
+## Update Prices (bulk)
 
 > Request Body (JSON):
 
@@ -417,7 +417,7 @@ This endpoint updates (or creates) prices. If the code matches an existing recor
 ### Request example
 `PUT https://api.convictional.com/prices`
 
-## DELETE - Price
+## Delete Price
 
 > Returns (JSON):
 
@@ -434,7 +434,7 @@ This endpoint deletes a single price by ID.
 ### Request example
 `DELETE https://api.convictional.com/prices/5a692f658f6d524e8282dac7`
 
-## DELETE - Prices (bulk)
+## Delete Prices (bulk)
 
 > Request Body (JSON):
 
