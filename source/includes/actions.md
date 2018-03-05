@@ -1,7 +1,7 @@
 # Actions
 RPC endpoints that allow you to translate EDI documents, invite partners and more
 
-## POST - Sync
+## GET - Sync
 
 > Returns JSON:
 
@@ -16,8 +16,8 @@ This endpoint allows you to initiate a sync method of your choosing.
 ### Endpoint URL
 `https://api.convictional.com/sync/:method`
 
-### HTTP Request Example
-`POST https://api.convictional.com/sync/getOrders`
+### HTTP Request example
+`GET https://api.convictional.com/sync/getOrders`
 
 ### Sync Methods
 | Method            | Description                                                                     |

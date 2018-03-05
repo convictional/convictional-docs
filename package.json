@@ -1,7 +1,6 @@
 {
-  "name": "node-slate",
-  "version": "1.0.0",
-  "description": "Node port of tripit/slate",
+  "name": "convictional-docs",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "start": "gulp serve",
@@ -9,15 +8,12 @@
     "deploy": "./deploy.sh"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sdelements/node-slate.git"
+    "url": "https://github.com/convictional/convictional-docs"
   },
-  "author": "SD Elements",
-  "license": "Apache-2.0",
+  "author": "Convictional Commerce, Inc.",
   "bugs": {
-    "url": "https://github.com/sdelements/node-slate/issues"
+    "url": "https://github.com/convictional/convictional-docs/issues"
   },
-  "homepage": "https://github.com/sdelements/node-slate#readme",
   "devDependencies": {
     "del": "^3.0.0",
     "gulp": "^3.9.1",

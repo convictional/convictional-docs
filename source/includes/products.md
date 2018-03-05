@@ -309,7 +309,7 @@ This endpoint creates multiple new products. Occurs automatically when you pass 
 ### Endpoint
 `https://api.convictional.com/products`
 
-### Request Example
+### Request example
 `POST https://api.convictional.com/products`
 
 ## PUT - Product
@@ -487,5 +487,5 @@ This endpoint deletes multiple products by ID.
 ### Endpoint
 `https://api.convictional.com/products`
 
-### Request Example
+### Request example
 `DELETE https://api.convictional.com/products`

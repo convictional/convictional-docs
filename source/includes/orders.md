@@ -543,7 +543,7 @@ This endpoint creates multiple new orders. Occurs automatically when you pass an
 ### Endpoint
 `https://api.convictional.com/orders`
 
-### Request Example
+### Request example
 `POST https://api.convictional.com/orders`
 
 ## PUT - Order
@@ -817,5 +817,5 @@ This endpoint deletes multiple orders by ID.
 ### Endpoint
 `https://api.convictional.com/orders`
 
-### Request Example
+### Request example
 `DELETE https://api.convictional.com/orders`

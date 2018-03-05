@@ -28,7 +28,7 @@ This endpoint returns a single log by ID.
 ### Endpoint
 `https://api.convictional.com/logs/:id`
 
-### Request Example
+### Request example
 `GET https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
 ## GET - Logs (bulk)
@@ -99,7 +99,7 @@ This endpoint creates a new log.
 ### Endpoint
 `https://api.convictional.com/logs`
 
-### Request Example
+### Request example
 `POST https://api.convictional.com/logs`
 
 ## POST - Logs (bulk)
@@ -130,7 +130,7 @@ This endpoint creates multiple new logs. Occurs automatically when you pass an a
 ### Endpoint
 `https://api.convictional.com/logs`
 
-### Request Example
+### Request example
 `POST https://api.convictional.com/logs`
 
 ## PUT - Log
@@ -158,7 +158,7 @@ This endpoint updates a single log by ID.
 ### Endpoint
 `https://api.convictional.com/logs/:id`
 
-### Request Example
+### Request example
 `PUT https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
 ## PUT - Logs (bulk)
@@ -192,7 +192,7 @@ This endpoint updates (or creates) logs. If the ID matches an existing record, i
 ### Endpoint
 `https://api.convictional.com/logs`
 
-### Request Example
+### Request example
 `PUT https://api.convictional.com/logs`
 
 ## DELETE - Log
@@ -209,7 +209,7 @@ This endpoint deletes a single log by ID.
 ### Endpoint
 `https://api.convictional.com/logs/:id`
 
-### Request Example
+### Request example
 `DELETE https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
 ## DELETE - Logs (bulk)
@@ -235,5 +235,5 @@ This endpoint deletes multiple logs by ID.
 ### Endpoint
 `https://api.convictional.com/logs`
 
-### Request Example
+### Request example
 `DELETE https://api.convictional.com/logs`

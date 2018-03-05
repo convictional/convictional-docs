@@ -289,7 +289,7 @@ This endpoint creates multiple new prices. Occurs automatically when you pass an
 ### Endpoint
 `https://api.convictional.com/prices`
 
-### Request Example
+### Request example
 `POST https://api.convictional.com/prices`
 
 ## PUT - Price
@@ -457,5 +457,5 @@ This endpoint deletes multiple prices by ID.
 ### Endpoint
 `https://api.convictional.com/prices`
 
-### Request Example
+### Request example
 `DELETE https://api.convictional.com/prices`

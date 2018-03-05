@@ -210,7 +210,7 @@ This endpoint creates multiple new partners. Occurs automatically when you pass 
 ### Endpoint
 `https://api.convictional.com/partners`
 
-### Request Example
+### Request example
 `POST https://api.convictional.com/partners`
 
 ## PUT - Partner
@@ -335,5 +335,30 @@ This endpoint deletes multiple partners by ID.
 ### Endpoint
 `https://api.convictional.com/partners`
 
-### Request Example
+### Request example
 `DELETE https://api.convictional.com/partners`
+
+## Invite Partner
+
+> Returns (JSON):
+
+```json
+{
+  "Invited partner: test@convictional.com" 
+}
+```
+This endpoint invites a single partner by email.
+
+### Endpoint
+`https://api.convictional.com/partners/invite/:email`
+
+### Request example
+`GET https://api.convictional.com/partners/invite/test@convictional.com`
+
+### Message example
+**You are invited to trade on Convictional with: wholesale-company-name**
+You are invited to start trading with: wholesale-company-name.
+
+Click the link below and make an account. Then go to settings and connect to your store.
+
+https://app.convictional.com/sign_up?shop=wholesale-company-name
