@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.0.4 - 2018-03-06
+* Changing the color to match the logo on highlight
+* Fixing a spelling mistake on "libraries"
+
 ### 1.0.3 - 2018-03-05
 * Tweaking the descriptions of methods to make them easier to understand.
 

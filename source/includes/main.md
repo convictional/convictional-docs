@@ -15,7 +15,7 @@ Our goal providing an API for our service is to allow technically inclined custo
 > Last Updated:
 
 ```json
-2018-02-28
+{ "2018-03-06" }
 ```
 
 Our API is still on the first version. When breaking changes happen in the future, we will notify users and migrate you to the new version. If you have any feedback, please get in touch. 
@@ -26,7 +26,7 @@ Convictional uses API keys to authenticate your requests. When you register your
 ## Bulk Endpoints
 Convictional offers bulk endpoints across all REST services. This allows you to create, read, update and delete up to 100 records as once. You can go above 100 records at a time but your request may be rejected on the basis of size, depending on the kind of record and method you are using. The max data size is 16mb.
 
-## Client Libaries
+## Client Libraries
 Convictional currenly offers a client library for Node.JS. For more information, visit the page on NPM [here](https://npmjs.com/package/convictional).
 
 ## Responses
