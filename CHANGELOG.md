@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.0.5 - 2018-03-08
+* Removing custom fonts / icons. Much better load times.
+
 ### 1.0.4 - 2018-03-06
 * Changing the color to match the logo on highlight
 * Fixing a spelling mistake on "libraries"

@@ -1,7 +1,6 @@
 @charset "utf-8";
 @import 'normalize';
 @import 'variables';
-@import 'icon-font';
 
 ////////////////////////////////////////////////////////////////////////////////
 // GENERAL STUFF
@@ -91,7 +90,6 @@ html, body {
       top: 17px;
       left: $nav-padding;
       color: $nav-text;
-      @extend %icon-search;
     }
   }
 
@@ -338,7 +336,6 @@ html, body {
   }
 
   h1 {
-    @extend %header-font;
     font-size: 30px;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -355,7 +352,6 @@ html, body {
   }
 
   h2 {
-    @extend %header-font;
     font-size: 20px;
     margin-top: 4em;
     margin-bottom: 0;
@@ -373,7 +369,6 @@ html, body {
   }
 
   h3, h4, h5, h6 {
-    @extend %header-font;
     font-size: 15px;
     margin-top: 2.5em;
     margin-bottom: 0.8em;
@@ -443,7 +438,6 @@ html, body {
     padding: 3px;
     border-radius: 3px;
     @extend %break-words;
-    @extend %code-font;
   }
 
   pre>code {
@@ -475,18 +469,6 @@ html, body {
     vertical-align: middle;
     padding-right: 0.5em;
     font-size: 14px;
-  }
-
-  aside.notice:before {
-    @extend %icon-info-sign;
-  }
-
-  aside.warning:before {
-    @extend %icon-exclamation-sign;
-  }
-
-  aside.success:before {
-    @extend %icon-ok-sign;
   }
 
   .search-highlight {
@@ -528,10 +510,6 @@ html, body {
       text-decoration: none;
       border-bottom: dashed 1px #ccc;
     }
-  }
-
-  pre {
-    @extend %code-font;
   }
 
   blockquote {
