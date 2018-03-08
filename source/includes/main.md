@@ -15,18 +15,44 @@ Our goal providing an API for our service is to allow technically inclined custo
 > Last Updated:
 
 ```json
-{ "2018-03-06" }
+{ "2018-03-08" }
 ```
 
 Our API is still on the first version. When breaking changes happen in the future, we will notify users and migrate you to the new version. If you have any feedback, please get in touch. 
 
 ## Authentication
+
+> Request Headers:
+
+```json
+{ 
+  "Authentication": "5ba82897-0bff-4e4e-842e"
+}
+```
+
 Convictional uses API keys to authenticate your requests. When you register your account, we generate an API key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request.
 
 ## Bulk Endpoints
-Convictional offers bulk endpoints across all REST services. This allows you to create, read, update and delete up to 100 records as once. You can go above 100 records at a time but your request may be rejected on the basis of size, depending on the kind of record and method you are using. The max data size is 16mb.
+Convictional offers bulk endpoints across all REST services. This allows you to create, read, update and delete up to 100 records as once. You can go above 100 records at a time but your request may be rejected on the basis of size, depending on the kind of record and method you are using. The max data size is 16mb. If you use our client library we handle the queuing and chunking for you, so you can deal with as many documents as you want.
 
 ## Client Libraries
+
+> Require Statement:
+
+```javascript
+// Top of your file with all your requires:
+var convictional = require('convictional')({
+  'apiKey': '86e7ccdc-55b5-4066-a79f-7a1e0e59c690'
+})
+ 
+// ... later where you want to use it:
+var orderId = '5a692f658f6d524e8282dac7'
+convictional.getOrder(orderId).then((order) => {
+  console.log(order) // Do stuff with record...
+}).catch((error) => { console.error(error) })
+
+```
+
 Convictional currenly offers a client library for Node.JS. For more information, visit the page on NPM [here](https://npmjs.com/package/convictional).
 
 ## Responses
@@ -34,32 +60,40 @@ Convictional currenly offers a client library for Node.JS. For more information,
 > 200: Returns (String):
 
 ```json
-OK
+{
+  "OK"
+}
 ```
 
 > 400: Returns (String):
 
 ```json
-Not found
+{
+  "Not found"
+}
 ```
 
 > 401: Returns (String): 
 
 ```json
-Not authorized
+{
+  "Not authorized"
+}
 ```
 
 > 500: Returns (String):
 
 ```json
-Bad request
+{
+  "Bad request"
+}
 ```
 
 The Convictional API uses the following response codes:
 
 | Code      | Description     |
 | --------- | --------------- |
-| 200       <td style="width:100%;">OK</td> |
-| 400       | Not found       |
-| 401       | Not authorized  |
-| 500       | Bad request     |
+| 200       <td style="width:100%;">OK: means your request was successful.</td> |
+| 400       | Not found: means the ID or code of the resource cannot be found.  |
+| 401       | Not authorized: means the "Authorization" header API kye is wrong.|
+| 500       | Bad request: means something about your request body isn't right. |
