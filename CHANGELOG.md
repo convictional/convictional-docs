@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.0.6 - 2018-03-08
+* Removing all images.
+
 ### 1.0.5 - 2018-03-08
 * Removing custom fonts / icons. Much better load times.
 
