@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.0.7 - 2018-03-08
+* Slight tweaks to page load.
+
 ### 1.0.6 - 2018-03-08
 * Removing all images.
 
