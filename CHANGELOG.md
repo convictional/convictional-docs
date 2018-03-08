@@ -1,5 +1,9 @@
 ## Changelog
 
+### 1.0.8 - 2018-03-08
+* First with Netlify CD, HTTPS, etc.
+* Switching color of active tab
+
 ### 1.0.7 - 2018-03-08
 * Slight tweaks to page load.
 
