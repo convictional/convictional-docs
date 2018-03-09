@@ -6,9 +6,10 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | -----------   | ------    | --------- | --------------------------------------------------- |
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record        </td>
 | code          | String    | Required  | Order number in the source ecommerce system         |
+| posted        | Boolean   | Automatic | Has this order been synced with your system?        |
+| shipped       | Boolean   | Automatic | Has this order been shipped?                        |
 | billed        | Boolean   | Automatic | Has this order been invoiced?                       |
 | complete      | Boolean   | Automatic | Is this order shipped and billed?                   |
-| posted        | Boolean   | Automatic | Has this order been synced with your system?        |
 | partner       | String    | Required  | The partner code that sent this order               |
 | date          | String    | Required  | The date of the order (YY/MM/DD hh:mm:ss)           |
 | items         | Array     | Required  | Contains all order items (products, tax, shipping)  |
@@ -27,9 +28,10 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 {
   "_id": "5a692f658f6d524e8282dac7",
   "code": "12345",
+  "posted": true,
+  "shipped": true,
   "billed": true,
   "complete": true,
-  "posted": true,
   "partner": "my-partner",
   "date": "2018-01-28 16:46:13",
   "items": [
@@ -107,9 +109,10 @@ This endpoint returns a single order by ID.
   {
     "_id": "5a692f658f6d524e8282dac7",
     "code": "12345",
+    "posted": true,
+    "shipped": true,
     "billed": true,
     "complete": true,
-    "posted": true,
     "partner": "convictional-dropshipper-us",
     "date": "2018-01-28 16:46:13",
     "items": [
@@ -137,7 +140,24 @@ This endpoint returns a single order by ID.
         "grams": 200
       }
     ],
-    "fulfillments": [],
+    "fulfillments": [
+      {
+        "status": "complete",
+        "carrier": "USPS",
+        "trackingNumbers": [
+          "123ABC", "DEF321"
+        ],
+        "urls": [
+          "https://track.com/123ABC",
+          "https://track.com/DEF321"
+        ],
+        "items": [{
+          "sku": "123",
+          "title": "Product",
+          "quantity": 2  
+        }]
+      }
+    ],
     "addresses": [
       {
         "type": "shipping",
@@ -172,9 +192,10 @@ This endpoint returns a single order by ID.
   {
     "_id": "5a692f658f6d524e8282dac8",
     "code": "12346",
+    "posted": true,
+    "shipped": true,
     "billed": true,
-    "complete": false,
-    "posted": false,
+    "complete": true,
     "partner": "convictional-dropshipper-ca",
     "date": "2018-01-31 13:23:13",
     "items": [
@@ -202,7 +223,24 @@ This endpoint returns a single order by ID.
         "grams": 200
       }
     ],
-    "fulfillments": [],
+    "fulfillments": [
+      {
+        "status": "complete",
+        "carrier": "USPS",
+        "trackingNumbers": [
+          "123ABC", "DEF321"
+        ],
+        "urls": [
+          "https://track.com/123ABC",
+          "https://track.com/DEF321"
+        ],
+        "items": [{
+          "sku": "123",
+          "title": "Product",
+          "quantity": 2  
+        }]
+      }
+    ],
     "addresses": [
       {
         "type": "shipping",
@@ -329,9 +367,10 @@ This endpoint returns all your orders.
 {
   "_id": "5a692f658f6d524e8282dac7",
   "code": "12345",
-  "billed": false,
-  "complete": false,
-  "posted": false,
+  "posted": true,
+  "shipped": true,
+  "billed": true,
+  "complete": true,
   "partner": "convictional-dropshipper-us",
   "date": "2018-01-28 16:46:13",
   "items": [
@@ -359,7 +398,24 @@ This endpoint returns all your orders.
       "grams": 200
     }
   ],
-  "fulfillments": [],
+  "fulfillments": [
+    {
+      "status": "complete",
+      "carrier": "USPS",
+      "trackingNumbers": [
+        "123ABC", "DEF321"
+      ],
+      "urls": [
+        "https://track.com/123ABC",
+        "https://track.com/DEF321"
+      ],
+      "items": [{
+        "sku": "123",
+        "title": "Product",
+        "quantity": 2  
+      }]
+    }
+  ],
   "addresses": [
     {
       "type": "shipping",
@@ -410,9 +466,10 @@ This endpoint creates a new order.
   "orders": [
     {
       "code": "12345",
+      "posted": true,
+      "shipped": true,
       "billed": true,
       "complete": true,
-      "posted": true,
       "partner": "convictional-dropshipper-us",
       "date": "2018-01-28 16:46:13",
       "items": [
@@ -469,9 +526,10 @@ This endpoint creates a new order.
     },
     {
       "code": "12346",
+      "posted": true,
+      "shipped": true,
       "billed": true,
-      "complete": false,
-      "posted": false,
+      "complete": true,
       "partner": "convictional-dropshipper-ca",
       "date": "2018-01-31 13:23:13",
       "items": [
@@ -562,9 +620,10 @@ This endpoint creates multiple new orders. Occurs automatically when you pass an
 {
   "_id": "5a692f658f6d524e8282dac7",
   "code": "12345",
+  "posted": true,
+  "shipped": true,
   "billed": true,
   "complete": true,
-  "posted": true,
   "partner": "convictional-dropshipper-us",
   "date": "2018-01-28 16:46:13",
   "items": [
@@ -592,7 +651,24 @@ This endpoint creates multiple new orders. Occurs automatically when you pass an
       "grams": 200
     }
   ],
-  "fulfillments": [],
+  "fulfillments": [
+    {
+      "status": "complete",
+      "carrier": "USPS",
+      "trackingNumbers": [
+        "123ABC", "DEF321"
+      ],
+      "urls": [
+        "https://track.com/123ABC",
+        "https://track.com/DEF321"
+      ],
+      "items": [{
+        "sku": "123",
+        "title": "Product",
+        "quantity": 2  
+      }]
+    }
+  ],
   "addresses": [
     {
       "type": "shipping",
@@ -642,9 +718,10 @@ This endpoint updates a single order by ID.
   "orders": [
     {
       "code": "12345",
+      "posted": true,
+      "shipped": true,
       "billed": true,
       "complete": true,
-      "posted": true,
       "partner": "convictional-dropshipper-us",
       "date": "2018-01-28 16:46:13",
       "items": [
@@ -701,9 +778,10 @@ This endpoint updates a single order by ID.
     },
     {
       "code": "12346",
+      "posted": true,
+      "shipped": true,
       "billed": true,
-      "complete": false,
-      "posted": false,
+      "complete": true,
       "partner": "convictional-dropshipper-ca",
       "date": "2018-01-31 13:23:13",
       "items": [

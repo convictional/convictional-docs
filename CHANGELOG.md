@@ -1,5 +1,10 @@
 ## Changelog
 
+### 1.0.9 - 2018-03-08
+* Adding fulfillments fields
+* Adding example of bulk request
+* Updating "main" wording
+
 ### 1.0.8 - 2018-03-08
 * First with Netlify CD, HTTPS, etc.
 * Switching color of active tab
