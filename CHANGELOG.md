@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.1.0 - 2018-03-12
+* Adding support for limiting number of results and pagination
+
 ### 1.0.9 - 2018-03-08
 * Adding fulfillments fields
 * Adding example of bulk request

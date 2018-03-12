@@ -119,6 +119,8 @@ This endpoint returns all your partners.
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
 | fields        | String    | Optional  | Return only the specified fields, comma separated |
+| page          | Number    | Optional  | Return only records on a specific page            |
+| limit         | Number    | Optional  | Return up to this number of records               |
 | active        | Boolean   | Optional  | Filter by active status (true or false)           |
 | invited       | Boolean   | Optional  | Filter by invited status (true or false)          |
 | relationship  | String    | Optional  | Filter by relationship (child, self or parent)    |

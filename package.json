@@ -1,11 +1,13 @@
 {
   "name": "convictional-docs",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "main": "index.js",
   "scripts": {
     "start": "gulp serve",
     "build": "gulp",
-    "deploy": "./deploy.sh"
+    "deploy": "./deploy.sh",
+    "commit": "git add -A && git commit -m \"Bump version to $npm_package_version\" && git push",
+    "code": "npm run commit && npm run deploy"
   },
   "repository": {
     "url": "https://github.com/convictional/convictional-docs"

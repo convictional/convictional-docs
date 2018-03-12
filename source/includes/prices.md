@@ -135,14 +135,16 @@ This endpoint returns all your prices.
 `GET https://api.convictional.com/prices?createdBefore=2018-02-28T11:26:43.000-0500`
 
 ### Query Parameters
-| Property      | Type      | Required  | Description                                             |
-| ------------  | --------- | ----------| --------------------------------------------------------|
-| fields        | String    | Optional  | Return only the specified fields, comma separated       |
-| listName      | String    | Optional  | Filter by list name. Returns any list containing string |
-| createdBefore | Date      | Optional  | Filter records created before this date (ISO8601)       |
-| createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)        |
-| updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601)       |
-| updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)        |
+| Property      | Type      | Required  | Description                                       |
+| ------------  | --------- | ----------| --------------------------------------------------|
+| fields        | String    | Optional  | Return only the specified fields, comma separated |
+| page          | Number    | Optional  | Return only records on a specific page            |
+| limit         | Number    | Optional  | Return up to this number of records               |
+| listName      | String    | Optional  | Filter by name. Returns any list containing string|
+| createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
+| createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
+| updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
+| updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
 
 
 ## Create Price
