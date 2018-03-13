@@ -291,6 +291,7 @@ This endpoint returns all your orders.
 | fields        | String    | Optional  | Return only the specified fields, comma separated |
 | page          | Number    | Optional  | Return only records on a specific page            |
 | limit         | Number    | Optional  | Return up to this number of records               |
+| count         | Boolean   | Optional  | Return a count of documents, defaults to false    |
 | posted        | Boolean   | Optional  | Filter records by whether they are in your system |
 | complete      | Boolean   | Optional  | Filter records by whether they are shipped        |
 | billed        | Boolean   | Optional  | Filter records by whether they are billed         |

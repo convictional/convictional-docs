@@ -45,7 +45,7 @@ Convictional uses API keys to authenticate your requests. When you register your
 ]
 ```
 
-Convictional offers bulk endpoints. This allows you to create, read, update and delete up to 100 records as once. You can go above 100 records at a time but your request may be rejected on the basis of size. The max data size is 16mb. If you use our client library we handle the queuing and chunking for you. Send an array of records instead of a single record to create, update and delete endpoints to use bulk abilities.
+Convictional offers bulk endpoints. This allows you to create, read, update and delete up to 100 records as once. You can go above 100 records at a time but your request may be rejected on the basis of size. The max data size is 6mb. If you use our client library we handle the queuing and chunking for you. Send an array of records instead of a single record to create, update and delete endpoints to use bulk abilities.
 
 ## Client Libraries
 

@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.1.1 - 2018-03-13
+* Adding support for returning a document count across REST endpoints
+
 ### 1.1.0 - 2018-03-12
 * Adding support for limiting number of results and pagination
 

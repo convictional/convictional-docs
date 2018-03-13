@@ -35,13 +35,13 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
   "rounding": "99",
   "list": [
     { 
-      "code": "123", 
+      "sku": "123", 
       "price": 9.99, 
       "markup": 10, 
       "type": "fixed" 
     },
     { 
-      "code": "321", 
+      "sku": "321", 
       "price": 19.99, 
       "markup": 120, 
       "type": "percent" },
@@ -77,13 +77,13 @@ This endpoint returns a single price by ID.
     "rounding": "99",
     "list": [
       { 
-        "code": "123", 
+        "sku": "123", 
         "price": 9.99, 
         "markup": 10, 
         "type": "fixed" 
       },
       { 
-        "code": "321", 
+        "sku": "321", 
         "price": 19.99, 
         "markup": 120, 
         "type": "percent" 
@@ -105,13 +105,13 @@ This endpoint returns a single price by ID.
     "rounding": "99",
     "list": [
       { 
-        "code": "456", 
+        "sku": "456", 
         "price": 9.99, 
         "markup": 10, 
         "type": "fixed" 
       },
       { 
-        "code": "678", 
+        "sku": "678", 
         "price": 19.99, 
         "markup": 120, 
         "type": "percent" 
@@ -140,6 +140,7 @@ This endpoint returns all your prices.
 | fields        | String    | Optional  | Return only the specified fields, comma separated |
 | page          | Number    | Optional  | Return only records on a specific page            |
 | limit         | Number    | Optional  | Return up to this number of records               |
+| count         | Boolean   | Optional  | Return a count of documents, defaults to false    |
 | listName      | String    | Optional  | Filter by name. Returns any list containing string|
 | createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
@@ -163,13 +164,13 @@ This endpoint returns all your prices.
   "rounding": "99",
   "list": [
     { 
-      "code": "123", 
+      "sku": "123", 
       "price": 9.99, 
       "markup": 10, 
       "type": "fixed" 
     },
     { 
-      "code": "321", 
+      "sku": "321", 
       "price": 19.99, 
       "markup": 120, 
       "type": "percent" 
@@ -193,13 +194,13 @@ This endpoint returns all your prices.
   "rounding": "99",
   "list": [
     { 
-      "code": "123", 
+      "sku": "123", 
       "price": 9.99, 
       "markup": 10, 
       "type": "fixed" 
     },
     { 
-      "code": "321", 
+      "sku": "321", 
       "price": 19.99, 
       "markup": 120, 
       "type": "percent" 
@@ -237,13 +238,13 @@ This endpoint creates a new price.
       "rounding": "99",
       "list": [
         { 
-          "code": "123", 
+          "sku": "123", 
           "price": 9.99, 
           "markup": 10, 
           "type": "fixed" 
         },
         { 
-          "code": "321", 
+          "sku": "321", 
           "price": 19.99, 
           "markup": 120, 
           "type": "percent" 
@@ -261,13 +262,13 @@ This endpoint creates a new price.
       "rounding": "99",
       "list": [
         { 
-          "code": "456", 
+          "sku": "456", 
           "price": 9.99, 
           "markup": 10, 
           "type": "fixed" 
         },
         { 
-          "code": "678", 
+          "sku": "678", 
           "price": 19.99, 
           "markup": 120, 
           "type": "percent" 
@@ -320,13 +321,13 @@ This endpoint creates multiple new prices. Occurs automatically when you pass an
   "rounding": "00",
   "list": [
     { 
-      "code": "123", 
+      "sku": "123", 
       "price": 9.99, 
       "markup": 10, 
       "type": "fixed" 
     },
     { 
-      "code": "321", 
+      "sku": "321", 
       "price": 19.99, 
       "markup": 120, 
       "type": "percent" 
@@ -363,13 +364,13 @@ This endpoint updates a single price by ID.
       "rounding": "99",
       "list": [
         { 
-          "code": "123", 
+          "sku": "123", 
           "price": 9.99, 
           "markup": 10, 
           "type": "fixed" 
         },
         { 
-          "code": "321", 
+          "sku": "321", 
           "price": 19.99, 
           "markup": 120, 
           "type": "percent" 
@@ -387,13 +388,13 @@ This endpoint updates a single price by ID.
       "rounding": "99",
       "list": [
         { 
-          "code": "456", 
+          "sku": "456", 
           "price": 9.99, 
           "markup": 10, 
           "type": "fixed" 
         },
         { 
-          "code": "678", 
+          "sku": "678", 
           "price": 19.99, 
           "markup": 120, 
           "type": "percent" 
