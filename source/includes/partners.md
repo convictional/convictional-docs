@@ -343,6 +343,15 @@ This endpoint deletes multiple partners by ID.
 
 ## Invite Partner
 
+> Request (JSON):
+
+```json
+{
+  "email": "test@convictional.com",
+  "billing": true
+}
+```
+
 > Returns (JSON):
 
 ```json
@@ -353,10 +362,10 @@ This endpoint deletes multiple partners by ID.
 This endpoint invites a single partner by email.
 
 ### Endpoint
-`https://api.convictional.com/partners/invite/:email`
+`https://api.convictional.com/partners/invite`
 
 ### Request example
-`GET https://api.convictional.com/partners/invite/test@convictional.com`
+`POST https://api.convictional.com/partners/invite`
 
 ### Message example
 **You are invited to trade on Convictional with: wholesale-company-name**
@@ -364,4 +373,4 @@ You are invited to start trading with: wholesale-company-name.
 
 Click the link below and make an account. Then go to settings and connect to your store.
 
-https://app.convictional.com/sign_up?shop=wholesale-company-name
+https://app.convictional.com/sign_up?billing=true&shop=wholesale-company-name

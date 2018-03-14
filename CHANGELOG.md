@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.1.2 - 2018-03-13
+* Updating invite partner endpoint with POST changes
+
 ### 1.1.1 - 2018-03-13
 * Adding support for returning a document count across REST endpoints
 
