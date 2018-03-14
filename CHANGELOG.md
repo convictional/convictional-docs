@@ -1,5 +1,8 @@
 ## Changelog
 
+### 1.1.3 - 2018-03-14
+* Changing the navigation slightly
+
 ### 1.1.2 - 2018-03-13
 * Updating invite partner endpoint with POST changes
 

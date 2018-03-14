@@ -7,7 +7,7 @@ toc_footers:
   - <a target="_blank" href='https://convictional.com/pages/contact'>Want us to build for you?</a>
   - <a target="_blank" href='https://convictional.com'>Learn more about us.</a>
   - <a target="_blank" href='https://status.convictional.com'>See current system status.</a>
-  - <a target="_blank" href='https://github.com/rogerkirkness/convictional-docs'>Want to help? Edit docs.</a>
+  - <a target="_blank" href='https://github.com/convictional/convictional-docs/tree/master/source/includes'>Want to help? Edit docs.</a>
 includes:
   - main
   - actions
