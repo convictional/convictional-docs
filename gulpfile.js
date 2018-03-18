@@ -71,14 +71,14 @@ gulp.task('fonts', function() {
 });
 
 gulp.task('manifest', function () {
-  return gulp.src('./source/manifest.json').pipe(gulp.dest('build/manifest.json'))
+  return gulp.src('./source/*.json').pipe(gulp.dest('build'))
 })
 
-gulp.task('sw', function() {
-  return gulp.src('./source/sw.js').pipe(gulp.dest('build/sw.js'))
+gulp.task('sw', function () {
+  return gulp.src('./source/*.js').pipe(gulp.dest('build'))
 })
 
-gulp.task('images', function() {
+gulp.task('images', function () {
   return gulp.src('./source/images/**/*').pipe(gulp.dest('build/images'));
 });
 
