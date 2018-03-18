@@ -70,6 +70,14 @@ gulp.task('fonts', function() {
   return gulp.src('./source/fonts/**/*').pipe(gulp.dest('build/fonts'));
 });
 
+gulp.task('manifest', function () {
+  return gulp.src('./source/manifest.json').pipe(gulp.dest('build/manifest.json'))
+})
+
+gulp.task('sw', function() {
+  return gulp.src('./source/sw.js').pipe(gulp.dest('build/sw.js'))
+})
+
 gulp.task('images', function() {
   return gulp.src('./source/images/**/*').pipe(gulp.dest('build/images'));
 });

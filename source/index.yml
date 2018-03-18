@@ -2,12 +2,12 @@ title: API Documentation
 language_tabs:
   - javascript
 toc_footers:
-  - <a target="_blank" href='https://app.convictional.com/sign_up'>Get your API key.</a>
-  - <a target="_blank" href='http://help.convictional.com'>Get help from support.</a>
-  - <a target="_blank" href='https://convictional.com/pages/contact'>Want us to build for you?</a>
-  - <a target="_blank" href='https://convictional.com'>Learn more about us.</a>
-  - <a target="_blank" href='https://status.convictional.com'>See current system status.</a>
-  - <a target="_blank" href='https://github.com/convictional/convictional-docs/tree/master/source/includes'>Want to help? Edit docs.</a>
+  - <a rel="noopener" target="_blank" href='https://app.convictional.com/sign_up'>Get your API key.</a>
+  - <a rel="noopener" target="_blank" href='http://help.convictional.com'>Get help from support.</a>
+  - <a rel="noopener" target="_blank" href='https://convictional.com/pages/contact'>Want us to build for you?</a>
+  - <a rel="noopener" target="_blank" href='https://convictional.com'>Learn more about us.</a>
+  - <a rel="noopener" target="_blank" href='https://status.convictional.com'>See current system status.</a>
+  - <a rel="noopener" target="_blank" href='https://github.com/convictional/convictional-docs/tree/master/source/includes'>Want to help? Edit docs.</a>
 includes:
   - main
   - actions

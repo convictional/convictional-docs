@@ -65,7 +65,7 @@ convictional.getOrder(orderId).then((order) => {
 
 ```
 
-Convictional currenly offers a client library for Node.JS. For more information, visit the page on NPM [here](https://npmjs.com/package/convictional).
+Convictional currenly offers a client library for Node.JS. For more information visit the [client libary on NPM](https://npmjs.com/package/convictional).
 
 ## Responses
 
