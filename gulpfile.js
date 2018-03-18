@@ -137,7 +137,7 @@ gulp.task('NO_COMPRESS', function() {
   COMPRESS = false;
 });
 
-gulp.task('default', ['clean', 'fonts', 'images', 'highlightjs', 'js', 'sass', 'html']);
+gulp.task('default', ['clean', 'fonts', 'images', 'highlightjs', 'manifest', 'sw', 'js', 'sass', 'html']);
 
 gulp.task('serve', ['NO_COMPRESS', 'default'], function() {
 
