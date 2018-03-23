@@ -55,12 +55,5 @@
         <% } %>
       </div>
     </div>
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js', {scope: '/'})
-          .then(() => { console.log('serviceWorker registered.') })
-          .catch((error) => { console.error(error) })
-      }
-    </script>
   </body>
 </html>

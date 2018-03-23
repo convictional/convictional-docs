@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.5 - 2018-03-23
+
+* Removing service workers
+* Adding some fields to orders
+
 ## 1.1.4 - 2018-03-18
 
 * Adding support for offline and service worker-based caching

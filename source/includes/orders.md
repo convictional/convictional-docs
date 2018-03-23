@@ -6,6 +6,7 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | -----------   | ------    | --------- | --------------------------------------------------- |
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record        </td>
 | code          | String    | Required  | Order number in the source ecommerce system         |
+| parentCode    | String    | Required  | Parent prder number in the system of record         |
 | posted        | Boolean   | Automatic | Has this order been synced with your system?        |
 | shipped       | Boolean   | Automatic | Has this order been shipped?                        |
 | billed        | Boolean   | Automatic | Has this order been invoiced?                       |
@@ -28,6 +29,7 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 {
   "_id": "5a692f658f6d524e8282dac7",
   "code": "12345",
+  "parentCode": "54321",
   "posted": true,
   "shipped": true,
   "billed": true,
@@ -109,6 +111,7 @@ This endpoint returns a single order by ID.
   {
     "_id": "5a692f658f6d524e8282dac7",
     "code": "12345",
+    "parentCode": "54321",
     "posted": true,
     "shipped": true,
     "billed": true,
@@ -192,6 +195,7 @@ This endpoint returns a single order by ID.
   {
     "_id": "5a692f658f6d524e8282dac8",
     "code": "12346",
+    "parentCode": "54321",
     "posted": true,
     "shipped": true,
     "billed": true,
@@ -293,8 +297,9 @@ This endpoint returns all your orders.
 | limit         | Number    | Optional  | Return up to this number of records               |
 | count         | Boolean   | Optional  | Return a count of documents, defaults to false    |
 | posted        | Boolean   | Optional  | Filter records by whether they are in your system |
-| complete      | Boolean   | Optional  | Filter records by whether they are shipped        |
+| shipped       | Boolean   | Optional  | Filter records by whether they are shipped        |
 | billed        | Boolean   | Optional  | Filter records by whether they are billed         |
+| complete      | Boolean   | Optional  | Filter records by whether they are complete       |
 | partner       | String    | Optional  | Filter records by a particular partner            |
 | code          | String    | Optional  | Filter records by a particular order code         |
 | createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
@@ -309,6 +314,7 @@ This endpoint returns all your orders.
 ```json
 {
   "code": "12345",
+  "parentCode": "54321",
   "partner": "convictional-dropshipper-us",
   "date": "2018-01-28 16:46:13",
   "items": [
@@ -370,6 +376,7 @@ This endpoint returns all your orders.
 {
   "_id": "5a692f658f6d524e8282dac7",
   "code": "12345",
+  "parentCode": "54321",
   "posted": true,
   "shipped": true,
   "billed": true,
@@ -469,6 +476,7 @@ This endpoint creates a new order.
   "orders": [
     {
       "code": "12345",
+      "parentCode": "54321",
       "posted": true,
       "shipped": true,
       "billed": true,
@@ -529,6 +537,7 @@ This endpoint creates a new order.
     },
     {
       "code": "12346",
+      "parentCode": "54321",
       "posted": true,
       "shipped": true,
       "billed": true,
@@ -623,6 +632,7 @@ This endpoint creates multiple new orders. Occurs automatically when you pass an
 {
   "_id": "5a692f658f6d524e8282dac7",
   "code": "12345",
+  "parentCode": "54321",
   "posted": true,
   "shipped": true,
   "billed": true,
@@ -721,6 +731,7 @@ This endpoint updates a single order by ID.
   "orders": [
     {
       "code": "12345",
+      "parentCode": "54321",
       "posted": true,
       "shipped": true,
       "billed": true,
@@ -781,6 +792,7 @@ This endpoint updates a single order by ID.
     },
     {
       "code": "12346",
+      "parentCode": "54321",
       "posted": true,
       "shipped": true,
       "billed": true,
