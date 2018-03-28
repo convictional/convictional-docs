@@ -70,3 +70,8 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 | Property | Description                                                                           |
 | -------- | ------------------------------------------------------------------------------------- |
 | body     <td style="width:100%;"> The request body must contain an X12 EDI document in text </td>
+
+### Query Parameters
+| Property      | Type      | Required  | Description                                       |
+| ------------  | --------- | ----------| --------------------------------------------------|
+| raw           | Boolean   | Optional  | Return raw document (default: true)               |

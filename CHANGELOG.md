@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.1.6 - 2018-03-28
+
+* Adding query parameters for translate endpoint
+
 ## 1.1.5 - 2018-03-23
 
 * Removing service workers
