@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.7 - 2018-04-02
+
+* Fixing partner.relationship description in properties
+* Updating version to 2018-04-02 to reflect the change
+
 ## 1.1.6 - 2018-03-28
 
 * Adding query parameters for translate endpoint

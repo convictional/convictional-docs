@@ -10,7 +10,7 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
 | active       | Boolean  | Required  | Do you want to sync with them?              |
 | invited      | Boolean  | Automatic | Have they been invited?                     |
 | priceList    | String   | Optional  | The name of their price list                |
-| relationship | String   | Required  | Relation to you 'parent', 'child' or 'self' |
+| relationship | String   | Required  | Relative to you: 'parent', 'child' or 'self'|
 | itemLookup   | Array    | Optional  | A reference of your item codes and theirs   |
 | created      | Date     | Automatic | Date record was created (in ISO8601 format) |
 | updated      | Date     | Automatic | Date record was updated (in ISO8601 format) |

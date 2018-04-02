@@ -15,7 +15,7 @@ Our goal providing an API for our service is to allow technically inclined custo
 > Last Updated:
 
 ```json
-{ "2018-03-08" }
+{ "2018-04-02" }
 ```
 
 When breaking changes happen in the future, we will notify users and migrate you to the new version. 
