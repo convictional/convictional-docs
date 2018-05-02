@@ -15,7 +15,7 @@ Our goal providing an API for our service is to allow technically inclined custo
 > Last Updated:
 
 ```json
-{ "2018-04-02" }
+{ "2018-05-02" }
 ```
 
 When breaking changes happen in the future, we will notify users and migrate you to the new version. 
@@ -109,3 +109,34 @@ The Convictional API uses the following response codes:
 | 400       | Not found: means the ID or code of the resource cannot be found.  |
 | 401       | Not authorized: means the "Authorization" header API kye is wrong.|
 | 500       | Bad request: means something about your request body isn't right. |
+
+## Custom Data
+
+> Schema:
+
+```json
+{
+  "key": "string",
+  "type": "string",
+  "value": "string
+}
+```
+
+> Example:
+
+```json
+[
+  {
+    "key": "api_key",
+    "type": "string",
+    "value": "123ABC"
+  },
+  {
+    "key": "status_code",
+    "type": "number",
+    "value": 123
+  }
+]
+```
+
+Convictional allows use of custom key/value pairs on all records. Over time we will migrate some of our more user-specific fields over to use this format, so you can define your own data.

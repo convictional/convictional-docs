@@ -6,6 +6,7 @@ REST endpoints that allow you to create, retrieve, update and delete logs.
 | ----------- | ------ | --------- | -------------------------------------------- |
 | \_id        | String | Automatic <td style="width:100%;"> ID of this record </td>
 | description | String | Required  | A description of what you are logging        |
+| custom      | Array  | Optional  | Custom key/value pairs                       |
 | created     | Date   | Automatic | Date record was created (in ISO8601 format)  |
 | updated     | Date   | Automatic | Date record was updated (in ISO8601 format)  |
 | companyId   | String | Automatic | Your company ID                              |
@@ -42,6 +43,18 @@ This endpoint returns a single log by ID.
     "description": "Welcome to Convictional",
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
+    "custom": [
+      {
+        "key": "statusCode",
+        "type": "number",
+        "value": 200
+      },
+      {
+        "key": "path",
+        "type": "string",
+        "value": "/orders"
+      }
+    ],
     "companyId": "convictional-wholesale"
   },
   {
@@ -49,6 +62,18 @@ This endpoint returns a single log by ID.
     "description": "Successful request",
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
+    "custom": [
+      {
+        "key": "statusCode",
+        "type": "number",
+        "value": 200
+      },
+      {
+        "key": "path",
+        "type": "string",
+        "value": "/orders"
+      }
+    ],
     "companyId": "convictional-wholesale"
   }
 ]
@@ -82,7 +107,19 @@ This endpoint returns all your logs.
 
 ```json
 {
-  "description": "Welcome to Convictional"
+  "description": "Welcome to Convictional",
+  "custom": [
+      {
+        "key": "statusCode",
+        "type": "number",
+        "value": 200
+      },
+      {
+        "key": "path",
+        "type": "string",
+        "value": "/orders"
+      }
+    ],
 }
 ```
 
@@ -94,6 +131,18 @@ This endpoint returns all your logs.
   "description": "Welcome to Convictional",
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "custom": [
+      {
+        "key": "statusCode",
+        "type": "number",
+        "value": 200
+      },
+      {
+        "key": "path",
+        "type": "string",
+        "value": "/orders"
+      }
+    ],
   "companyId": "convictional-wholesale"
 }
 ```
@@ -153,9 +202,22 @@ This endpoint creates multiple new logs. Occurs automatically when you pass an a
   "description": "Welcome to Convictional!",
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "custom": [
+      {
+        "key": "statusCode",
+        "type": "number",
+        "value": 200
+      },
+      {
+        "key": "path",
+        "type": "string",
+        "value": "/orders"
+      }
+    ],
   "companyId": "convictional-wholesale"
 }
 ```
+
 This endpoint updates a single log by ID.
 
 ### Endpoint

@@ -14,6 +14,7 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | markup        | Number    | Optional  | Markup percentage (default "100")             |
 | rounding      | String    | Optional  | Decimals on the prices ("00" is $10.00)       |
 | list          | Array     | Required  | sku, base price, markup, markup type          |
+| custom        | Array     | Optional  | Custom key/value pairs                        |
 | created       | Date      | Automatic | Date record was created (in ISO8601 format)   |
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)   |
 | companyId     | String    | Automatic | Your company ID                               |

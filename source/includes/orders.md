@@ -17,6 +17,7 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | fulfillments  | Array     | Optional  | Contains all the tracking information               |
 | addresses     | Array     | Optional  | Contains all the customer addresses                 |
 | returns       | Array     | Optional  | Contains all the returns for this order             |
+| custom        | Array     | Optional  | Custom key/value pairs                              |
 | created       | Date      | Automatic | Date record was created (in ISO8601 format)         |
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)         |
 | companyId     | String    | Automatic | Your company ID                                     |

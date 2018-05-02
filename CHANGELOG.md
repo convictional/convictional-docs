@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.4.7 - 2018-05-02
+
+* Adding support for custom key/value pairs.
+* Bringing into versioning parity with API.
+
 ## 1.1.7 - 2018-04-02
 
 * Fixing partner.relationship description in properties

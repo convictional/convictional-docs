@@ -14,6 +14,7 @@ REST endpoints that allow you to create, retrieve, update and delete products.
 | type        | String  | Required    | 'item', 'shipping', 'tax' or 'custom'         |
 | variants    | Array   | Required    | All the variations of the product             |
 | vendor      | String  | Optional    | The brand of the product                      |
+| custom      | Array   | Optional    | Custom key/value pairs                        |
 | created     | Date    | Automatic   | Date record was created (in ISO8601 format)   |
 | updated     | Date    | Automatic   | Date record was updated (in ISO8601 format)   |
 | companyId   | String  | Automatic   | Your company ID                               |
