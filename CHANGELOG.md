@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.4.8 - 2018-05-03
+
+* Adding force field to partner documentation, examples and GET queries.
+
 ## 1.4.7 - 2018-05-02
 
 * Adding support for custom key/value pairs.

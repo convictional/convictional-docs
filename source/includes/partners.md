@@ -1,21 +1,24 @@
 # Partners
+
 REST endpoints that allow you to create, retrieve, update and delete partners.
 
 ## Partner Properties
-| Property     | Type     | Required  | Description                                 |
-| ------------ | ---------| ----------| ------------------------------------------- |
-| \_id         | String   | Automatic <td style="width:100%;"> ID of this record </td>
-| code         | String   | Required  | The partner code in your system             |
-| email        | String   | Required  | The business email for this partner         |
-| active       | Boolean  | Required  | Do you want to sync with them?              |
-| invited      | Boolean  | Automatic | Have they been invited?                     |
-| priceList    | String   | Optional  | The name of their price list                |
-| relationship | String   | Required  | Relative to you: 'parent', 'child' or 'self'|
-| itemLookup   | Array    | Optional  | A reference of your item codes and theirs   |
-| custom       | Array    | Optional  | Custom key/value pairs                      |
-| created      | Date     | Automatic | Date record was created (in ISO8601 format) |
-| updated      | Date     | Automatic | Date record was updated (in ISO8601 format) |
-| companyId    | String   | Automatic | Your company ID                             |
+
+| Property     | Type     | Required  | Description                                   |
+| ------------ | ---------| ----------| --------------------------------------------- |
+| \_id         | String   | Automatic <td style="width:100%;"> ID of this record  </td>
+| code         | String   | Required  | The partner code in your system               |
+| email        | String   | Required  | The business email for this partner           |
+| active       | Boolean  | Required  | Do you want to sync with them?                |
+| invited      | Boolean  | Automatic | Have they been invited?                       |
+| force        | Boolean  | Optional  | Overwrite products? Excludes prices/inventory.|
+| priceList    | String   | Optional  | The name of their price list                  |
+| relationship | String   | Required  | Relative to you: 'parent', 'child' or 'self'  |
+| itemLookup   | Array    | Optional  | A reference of your item codes and theirs     |
+| custom       | Array    | Optional  | Custom key/value pairs                        |
+| created      | Date     | Automatic | Date record was created (in ISO8601 format)   |
+| updated      | Date     | Automatic | Date record was updated (in ISO8601 format)   |
+| companyId    | String   | Automatic | Your company ID                               |
 
 ## Get Partner
 
@@ -26,6 +29,7 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
   "_id": "5a692f658f6d524e8282dac7",
   "code": "12345",
   "active": true,
+  "force": true,
   "email": "capartner@example.com",
   "invited": true,
   "itemLookup": [
@@ -48,9 +52,11 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
 This endpoint returns a single partner by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/partners/:id`
 
 ### Request example
+
 `GET https://api.convictional.com/partners/5a692f658f6d524e8282dac7`
 
 ## Get Partners (bulk)
@@ -63,6 +69,7 @@ This endpoint returns a single partner by ID.
     "_id": "5a692f658f6d524e8282dac7",
     "code": "12345",
     "active": true,
+    "force": true,
     "email": "capartner@example.com",
     "invited": true,
     "itemLookup": [
@@ -85,6 +92,7 @@ This endpoint returns a single partner by ID.
     "_id": "5a692f658f6d524e8282dac7",
     "code": "12346",
     "active": false,
+    "force": false,
     "email": "uspartner@example.com",
     "invited": true,
     "itemLookup": [
@@ -108,15 +116,19 @@ This endpoint returns a single partner by ID.
 This endpoint returns all your partners.
 
 ### Endpoint
+
 `https://api.convictional.com/partners`
 
 ### Open example
+
 `GET https://api.convictional.com/partners`
 
 ### Filtered example
+
 `GET https://api.convictional.com/partners?createdBefore=2018-02-28T11:26:43.000-0500`
 
 ### Query Parameters
+
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
 | fields        | String    | Optional  | Return only the specified fields, comma separated |
@@ -125,6 +137,7 @@ This endpoint returns all your partners.
 | count         | Boolean   | Optional  | Return a count of documents, defaults to false    |
 | active        | Boolean   | Optional  | Filter by active status (true or false)           |
 | invited       | Boolean   | Optional  | Filter by invited status (true or false)          |
+| force         | Boolean   | Optional  | Filter by whether to force overwrite products     |
 | relationship  | String    | Optional  | Filter by relationship (child, self or parent)    |
 | createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
@@ -151,6 +164,7 @@ This endpoint returns all your partners.
   "_id": "5a692f658f6d524e8282dac7",
   "code": "12345",
   "active": true,
+  "force": true,
   "email": "capartner@example.com",
   "invited": true,
   "itemLookup": [
@@ -212,9 +226,11 @@ This endpoint creates a new partner.
 This endpoint creates multiple new partners. Occurs automatically when you pass an array of partner objects to this endpoint. Maximum is 100 records, above that please send multiple requests to this endpoint.
 
 ### Endpoint
+
 `https://api.convictional.com/partners`
 
 ### Request example
+
 `POST https://api.convictional.com/partners`
 
 ## Update Partner
@@ -234,6 +250,7 @@ This endpoint creates multiple new partners. Occurs automatically when you pass 
   "_id": "5a692f658f6d524e8282dac7",
   "code": "12345",
   "active": false,
+  "force": true,
   "email": "capartner@example.com",
   "invited": true,
   "itemLookup": [
@@ -256,9 +273,11 @@ This endpoint creates multiple new partners. Occurs automatically when you pass 
 This endpoint updates a single partner by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/partners/:id`
 
 ### Request example
+
 `PUT https://api.convictional.com/partners/5a692f658f6d524e8282dac7`
 
 ## Update Partners (bulk)
@@ -294,9 +313,11 @@ This endpoint updates a single partner by ID.
 This endpoint updates (or creates) partners. If the code matches an existing record, it will update. Otherwise, it will create. Maximum is 100 records, above that please send multiple requests to this endpoint.
 
 ### Endpoint
+
 `https://api.convictional.com/partners`
 
 ### Request example
+
 `PUT https://api.convictional.com/partners`
 
 ## Delete Partner
@@ -311,9 +332,11 @@ This endpoint updates (or creates) partners. If the code matches an existing rec
 This endpoint deletes a single partner by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/partners/:id`
 
 ### Request example
+
 `DELETE https://api.convictional.com/partners/5a692f658f6d524e8282dac7`
 
 ## Delete Partners (bulk)
@@ -337,9 +360,11 @@ This endpoint deletes a single partner by ID.
 This endpoint deletes multiple partners by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/partners`
 
 ### Request example
+
 `DELETE https://api.convictional.com/partners`
 
 ## Invite Partner
@@ -363,12 +388,15 @@ This endpoint deletes multiple partners by ID.
 This endpoint invites a single partner by email.
 
 ### Endpoint
+
 `https://api.convictional.com/partners/invite`
 
 ### Request example
+
 `POST https://api.convictional.com/partners/invite`
 
 ### Message example
+
 **You are invited to trade on Convictional with: wholesale-company-name**
 You are invited to start trading with: wholesale-company-name.
 
