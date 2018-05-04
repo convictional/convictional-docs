@@ -279,7 +279,7 @@ html, body {
     color: $lang-select-text;
     text-decoration: none;
     padding: 0 10px;
-    line-height: 30px;
+    line-height: 40px;
     outline: 0;
 
     &:active, &:focus {
@@ -390,7 +390,7 @@ html, body {
     th,td {
       text-align: left;
       vertical-align: top;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     th {
@@ -425,7 +425,7 @@ html, body {
   }
 
   p, li, dt, dd {
-    line-height: 1.6;
+    line-height: 1.5;
     margin-top: 0;
   }
 
@@ -452,7 +452,7 @@ html, body {
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     background: $aside-notice-bg;
-    line-height: 1.6;
+    line-height: 1.5;
 
     &.warning {
       background-color: $aside-warning-bg;
@@ -586,4 +586,5 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
+  line-height:1.5;
 }

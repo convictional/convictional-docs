@@ -106,6 +106,7 @@ The Convictional API uses the following response codes:
 | Code      | Description     |
 | --------- | --------------- |
 | 200       <td style="width:100%;">OK: means your request was successful.</td> |
+| 307       | Redirect: means this handler wants you to go somewhere else.      |
 | 400       | Not found: means the ID or code of the resource cannot be found.  |
 | 401       | Not authorized: means the "Authorization" header API kye is wrong.|
 | 500       | Bad request: means something about your request body isn't right. |
@@ -118,7 +119,7 @@ The Convictional API uses the following response codes:
 {
   "key": "string",
   "type": "string",
-  "value": "string
+  "value": "string"
 }
 ```
 
@@ -129,14 +130,21 @@ The Convictional API uses the following response codes:
   {
     "key": "api_key",
     "type": "string",
-    "value": "123ABC"
+    "value": "123ABC-DEF456"
   },
   {
     "key": "status_code",
     "type": "number",
-    "value": 123
+    "value": "123"
+  },
+  {
+    "key": "product_data",
+    "type": "json",
+    "value": "{ code: ABC, quantity: 3 }"
   }
 ]
 ```
 
 Convictional allows use of custom key/value pairs on all records. Over time we will migrate some of our more user-specific fields over to use this format, so you can define your own data.
+
+The three types we currently support are: strings, numbers and JSON. All three will be stored as strings but you can convert them into the right type based on what is in the type field.

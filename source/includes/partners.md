@@ -16,6 +16,7 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
 | relationship | String   | Required  | Relative to you: 'parent', 'child' or 'self'  |
 | itemLookup   | Array    | Optional  | A reference of your item codes and theirs     |
 | custom       | Array    | Optional  | Custom key/value pairs                        |
+| live         | Boolean  | Automatic | True for live mode, false for test mode       |
 | created      | Date     | Automatic | Date record was created (in ISO8601 format)   |
 | updated      | Date     | Automatic | Date record was updated (in ISO8601 format)   |
 | companyId    | String   | Automatic | Your company ID                               |
@@ -46,9 +47,11 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
   "relationship": "child",
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
+
 This endpoint returns a single partner by ID.
 
 ### Endpoint
@@ -86,6 +89,7 @@ This endpoint returns a single partner by ID.
     "relationship": "child",
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
+    "live": true,
     "companyId": "convictional-wholesale"
   },
   {
@@ -109,10 +113,12 @@ This endpoint returns a single partner by ID.
     "relationship": "child",
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
+    "live": true,
     "companyId": "convictional-wholesale"
   }
 ]
 ```
+
 This endpoint returns all your partners.
 
 ### Endpoint
@@ -181,15 +187,19 @@ This endpoint returns all your partners.
   "relationship": "child",
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
+
 This endpoint creates a new partner.
 
 ### Endpoint
+
 `https://api.convictional.com/partners`
 
 ### Request example
+
 `POST https://api.convictional.com/partners`
 
 ## Create Partners (bulk)
@@ -215,7 +225,7 @@ This endpoint creates a new partner.
 }
 ```
 
->  Returns (JSON):
+> Returns (JSON):
 
 ```json
 {
@@ -223,6 +233,7 @@ This endpoint creates a new partner.
   "1": "5a8755c66affcc608657ed2d"
 }
 ```
+
 This endpoint creates multiple new partners. Occurs automatically when you pass an array of partner objects to this endpoint. Maximum is 100 records, above that please send multiple requests to this endpoint.
 
 ### Endpoint
@@ -267,9 +278,11 @@ This endpoint creates multiple new partners. Occurs automatically when you pass 
   "relationship": "child",
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
+
 This endpoint updates a single partner by ID.
 
 ### Endpoint
@@ -310,6 +323,7 @@ This endpoint updates a single partner by ID.
   "Modified": 2
 }
 ```
+
 This endpoint updates (or creates) partners. If the code matches an existing record, it will update. Otherwise, it will create. Maximum is 100 records, above that please send multiple requests to this endpoint.
 
 ### Endpoint
@@ -329,6 +343,7 @@ This endpoint updates (or creates) partners. If the code matches an existing rec
   "Deleted": 1
 }
 ```
+
 This endpoint deletes a single partner by ID.
 
 ### Endpoint
@@ -357,6 +372,7 @@ This endpoint deletes a single partner by ID.
   "Deleted": 2
 }
 ```
+
 This endpoint deletes multiple partners by ID.
 
 ### Endpoint
@@ -382,9 +398,10 @@ This endpoint deletes multiple partners by ID.
 
 ```json
 {
-  "Invited partner: test@convictional.com" 
+  "Invited partner: test@convictional.com"
 }
 ```
+
 This endpoint invites a single partner by email.
 
 ### Endpoint
@@ -397,9 +414,13 @@ This endpoint invites a single partner by email.
 
 ### Message example
 
-**You are invited to trade on Convictional with: wholesale-company-name**
-You are invited to start trading with: wholesale-company-name.
+<p style="background:white;"><br>
+<b>Subject:</b> Trade with: supplier.<br><br>
+<b>Body:</b><br>
+You are invited to trade with: supplier<br><br>
 
-Click the link below and make an account. Then go to settings and connect to your store.
+1. Click the link below and make an account.<br>
+2. Then go to settings and connect to your store.<br><br>
 
-https://app.convictional.com/sign_up?billing=true&shop=wholesale-company-name
+https://app.convictional.com/sign_up?billing=true&shop=supplier<br><br>
+</p>

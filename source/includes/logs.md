@@ -1,15 +1,18 @@
 # Logs
+
 REST endpoints that allow you to create, retrieve, update and delete logs.
 
 ## Log Properties
-| Property    | Type   | Required  | Description                                  |
-| ----------- | ------ | --------- | -------------------------------------------- |
-| \_id        | String | Automatic <td style="width:100%;"> ID of this record </td>
-| description | String | Required  | A description of what you are logging        |
-| custom      | Array  | Optional  | Custom key/value pairs                       |
-| created     | Date   | Automatic | Date record was created (in ISO8601 format)  |
-| updated     | Date   | Automatic | Date record was updated (in ISO8601 format)  |
-| companyId   | String | Automatic | Your company ID                              |
+
+| Property    | Type    | Required  | Description                                  |
+| ----------- | ------- | --------- | -------------------------------------------- |
+| \_id        | String  | Automatic <td style="width:100%;"> ID of this record </td>
+| description | String  | Required  | A description of what you are logging        |
+| custom      | Array   | Optional  | Custom key/value pairs                       |
+| live        | Boolean | Automatic | True for live mode, false for test mode      |
+| created     | Date    | Automatic | Date record was created (in ISO8601 format)  |
+| updated     | Date    | Automatic | Date record was updated (in ISO8601 format)  |
+| companyId   | String  | Automatic | Your company ID                              |
 
 ## Get Log
 
@@ -24,17 +27,20 @@ REST endpoints that allow you to create, retrieve, update and delete logs.
   "companyId": "convictional-wholesale"
 }
 ```
+
 This endpoint returns a single log by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/logs/:id`
 
 ### Request example
+
 `GET https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
 ## Get Logs (bulk)
 
-> Returns (JSON): 
+> Returns (JSON):
 
 ```json
 [
@@ -55,6 +61,7 @@ This endpoint returns a single log by ID.
         "value": "/orders"
       }
     ],
+    "live": true,
     "companyId": "convictional-wholesale"
   },
   {
@@ -74,22 +81,28 @@ This endpoint returns a single log by ID.
         "value": "/orders"
       }
     ],
+    "live": true,
     "companyId": "convictional-wholesale"
   }
 ]
 ```
+
 This endpoint returns all your logs.
 
 ### Endpoint
+
 `https://api.convictional.com/logs`
 
 ### Open example
+
 `GET https://api.convictional.com/logs`
 
 ### Filtered example
+
 `GET https://api.convictional.com/logs?createdBefore=2018-02-28T11:26:43.000-0500`
 
 ### Query Parameters
+
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
 | fields        | String    | Optional  | Return only the specified fields, comma separated |
@@ -132,26 +145,30 @@ This endpoint returns all your logs.
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
   "custom": [
-      {
-        "key": "statusCode",
-        "type": "number",
-        "value": 200
-      },
-      {
-        "key": "path",
-        "type": "string",
-        "value": "/orders"
-      }
-    ],
+    {
+      "key": "statusCode",
+      "type": "number",
+      "value": 200
+    },
+    {
+      "key": "path",
+      "type": "string",
+      "value": "/orders"
+    }
+  ],
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
+
 This endpoint creates a new log.
 
 ### Endpoint
+
 `https://api.convictional.com/logs`
 
 ### Request example
+
 `POST https://api.convictional.com/logs`
 
 ## Create Logs (bulk)
@@ -169,7 +186,7 @@ This endpoint creates a new log.
 ]
 ```
 
->  Returns (JSON):
+> Returns (JSON):
 
 ```json
 {
@@ -177,15 +194,19 @@ This endpoint creates a new log.
   "1": "5a8755c66affcc608657ed2d"
 }
 ```
+
 This endpoint creates multiple new logs. Occurs automatically when you pass an array of log objects to this endpoint.
 
 ### Endpoint
+
 `https://api.convictional.com/logs`
 
 ### Request example
+
 `POST https://api.convictional.com/logs`
 
 ## Update Log
+
 > Request Body (JSON):
 
 ```json
@@ -203,17 +224,18 @@ This endpoint creates multiple new logs. Occurs automatically when you pass an a
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
   "custom": [
-      {
-        "key": "statusCode",
-        "type": "number",
-        "value": 200
-      },
-      {
-        "key": "path",
-        "type": "string",
-        "value": "/orders"
-      }
-    ],
+    {
+      "key": "statusCode",
+      "type": "number",
+      "value": 200
+     },
+    {
+      "key": "path",
+      "type": "string",
+      "value": "/orders"
+    }
+  ],
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
@@ -221,9 +243,11 @@ This endpoint creates multiple new logs. Occurs automatically when you pass an a
 This endpoint updates a single log by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/logs/:id`
 
 ### Request example
+
 `PUT https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
 ## Update Logs (bulk)
@@ -252,12 +276,15 @@ This endpoint updates a single log by ID.
   "Modified": 2
 }
 ```
+
 This endpoint updates (or creates) logs. If the ID matches an existing record, it will update. Otherwise, it will create.
 
 ### Endpoint
+
 `https://api.convictional.com/logs`
 
 ### Request example
+
 `PUT https://api.convictional.com/logs`
 
 ## Delete Log
@@ -269,12 +296,15 @@ This endpoint updates (or creates) logs. If the ID matches an existing record, i
   "Deleted": 1
 }
 ```
+
 This endpoint deletes a single log by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/logs/:id`
 
 ### Request example
+
 `DELETE https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
 ## Delete Logs (bulk)
@@ -295,10 +325,13 @@ This endpoint deletes a single log by ID.
   "Deleted": 2
 }
 ```
+
 This endpoint deletes multiple logs by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/logs`
 
 ### Request example
+
 `DELETE https://api.convictional.com/logs`

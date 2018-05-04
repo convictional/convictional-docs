@@ -15,6 +15,7 @@ REST endpoints that allow you to create, retrieve, update and delete products.
 | variants    | Array   | Required    | All the variations of the product             |
 | vendor      | String  | Optional    | The brand of the product                      |
 | custom      | Array   | Optional    | Custom key/value pairs                        |
+| live        | Boolean | Automatic   | True for live mode, false for test mode       |
 | created     | Date    | Automatic   | Date record was created (in ISO8601 format)   |
 | updated     | Date    | Automatic   | Date record was updated (in ISO8601 format)   |
 | companyId   | String  | Automatic   | Your company ID                               |
@@ -53,6 +54,7 @@ REST endpoints that allow you to create, retrieve, update and delete products.
   "vendor": "Convictional Wholesale",
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
@@ -99,6 +101,7 @@ This endpoint returns a single product by ID.
     "vendor": "Convictional Wholesale",
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
+    "live": true,
     "companyId": "convictional-wholesale"
   },
   {
@@ -130,6 +133,7 @@ This endpoint returns a single product by ID.
     "vendor": "Convictional Wholesale",
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
+    "live": true,
     "companyId": "convictional-wholesale"
   }
 ]
@@ -187,6 +191,7 @@ This endpoint returns all your products.
       "price": 19.99 
     }
   ],
+  "live": true,
   "vendor": "Convictional Wholesale"
 }
 ```
@@ -223,6 +228,7 @@ This endpoint returns all your products.
   "vendor": "Convictional Wholesale",
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
@@ -267,6 +273,7 @@ This endpoint creates a new product.
           "price": 19.99 
         }
       ],
+      "live": true,
       "vendor": "Convictional Wholesale",
     },
     {
@@ -294,6 +301,7 @@ This endpoint creates a new product.
           "price": 39.99 
         }
       ],
+      "live": true,
       "vendor": "Convictional Wholesale",
     }
   ]
@@ -360,6 +368,7 @@ This endpoint creates multiple new products. Occurs automatically when you pass 
   "vendor": "Convictional Wholesale",
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
@@ -404,6 +413,7 @@ This endpoint updates a single product by ID.
         }
       ],
       "vendor": "Convictional Wholesale",
+      "live": true
     },
     {
       "code": "12346",
@@ -431,6 +441,7 @@ This endpoint updates a single product by ID.
         }
       ],
       "vendor": "Convictional Wholesale",
+      "live": true
     }
   ]
 }

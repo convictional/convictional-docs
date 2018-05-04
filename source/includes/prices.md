@@ -1,7 +1,9 @@
 # Prices
+
 REST endpoints that allow you to create, retrieve, update and delete prices.
 
 ## Price Properties
+
 | Property      | Type      | Required  | Description                                   |
 | ------------  | --------- | ----------| --------------------------------------------- |
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record  </td>
@@ -15,6 +17,7 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | rounding      | String    | Optional  | Decimals on the prices ("00" is $10.00)       |
 | list          | Array     | Required  | sku, base price, markup, markup type          |
 | custom        | Array     | Optional  | Custom key/value pairs                        |
+| live          | Boolean   | Automatic | True for live mode, false for test mode       |
 | created       | Date      | Automatic | Date record was created (in ISO8601 format)   |
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)   |
 | companyId     | String    | Automatic | Your company ID                               |
@@ -35,29 +38,33 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
   "markup": 120,
   "rounding": "99",
   "list": [
-    { 
-      "sku": "123", 
-      "price": 9.99, 
-      "markup": 10, 
-      "type": "fixed" 
+    {
+      "sku": "123",
+      "price": 9.99,
+      "markup": 10,
+      "type": "fixed"
     },
-    { 
-      "sku": "321", 
-      "price": 19.99, 
-      "markup": 120, 
+    {
+      "sku": "321",
+      "price": 19.99,
+      "markup": 120,
       "type": "percent" },
   ],
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
+
 This endpoint returns a single price by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/prices/:id`
 
 ### Request example
+
 `GET https://api.convictional.com/prices/5a692f658f6d524e8282dac7`
 
 ## Get Prices (bulk)
@@ -77,21 +84,22 @@ This endpoint returns a single price by ID.
     "markup": 120,
     "rounding": "99",
     "list": [
-      { 
-        "sku": "123", 
-        "price": 9.99, 
-        "markup": 10, 
-        "type": "fixed" 
+      {
+        "sku": "123",
+        "price": 9.99,
+        "markup": 10,
+        "type": "fixed"
       },
-      { 
-        "sku": "321", 
-        "price": 19.99, 
-        "markup": 120, 
-        "type": "percent" 
-      },
+      {
+        "sku": "321",
+        "price": 19.99,
+        "markup": 120,
+        "type": "percent"
+      }
     ],
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
+    "live": true,
     "companyId": "convictional-wholesale"
   },
   {
@@ -105,37 +113,43 @@ This endpoint returns a single price by ID.
     "markup": 100,
     "rounding": "99",
     "list": [
-      { 
-        "sku": "456", 
-        "price": 9.99, 
-        "markup": 10, 
-        "type": "fixed" 
+      {
+        "sku": "456",
+        "price": 9.99,
+        "markup": 10,
+        "type": "fixed"
       },
-      { 
-        "sku": "678", 
-        "price": 19.99, 
-        "markup": 120, 
-        "type": "percent" 
+      {
+        "sku": "678",
+        "price": 19.99,
+        "markup": 120,
+        "type": "percent"
       },
     ],
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
+    "live": true,
     "companyId": "convictional-wholesale"
   }
 ]
 ```
+
 This endpoint returns all your prices.
 
 ### Endpoint
+
 `https://api.convictional.com/prices`
 
 ### Open example
+
 `GET https://api.convictional.com/prices`
 
 ### Filtered example
+
 `GET https://api.convictional.com/prices?createdBefore=2018-02-28T11:26:43.000-0500`
 
 ### Query Parameters
+
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
 | fields        | String    | Optional  | Return only the specified fields, comma separated |
@@ -147,7 +161,6 @@ This endpoint returns all your prices.
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
-
 
 ## Create Price
 
@@ -164,19 +177,20 @@ This endpoint returns all your prices.
   "markup": 100,
   "rounding": "99",
   "list": [
-    { 
-      "sku": "123", 
-      "price": 9.99, 
-      "markup": 10, 
-      "type": "fixed" 
+    {
+      "sku": "123",
+      "price": 9.99,
+      "markup": 10,
+      "type": "fixed"
     },
-    { 
-      "sku": "321", 
-      "price": 19.99, 
-      "markup": 120, 
-      "type": "percent" 
+    {
+      "sku": "321",
+      "price": 19.99,
+      "markup": 120,
+      "type": "percent"
     },
-  ]
+  ],
+  "live": true
 }
 ```
 
@@ -194,21 +208,22 @@ This endpoint returns all your prices.
   "markup": 100,
   "rounding": "99",
   "list": [
-    { 
-      "sku": "123", 
-      "price": 9.99, 
-      "markup": 10, 
-      "type": "fixed" 
+    {
+      "sku": "123",
+      "price": 9.99,
+      "markup": 10,
+      "type": "fixed"
     },
-    { 
-      "sku": "321", 
-      "price": 19.99, 
-      "markup": 120, 
-      "type": "percent" 
+    {
+      "sku": "321",
+      "price": 19.99,
+      "markup": 120,
+      "type": "percent"
     },
   ],
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
@@ -216,9 +231,11 @@ This endpoint returns all your prices.
 This endpoint creates a new price.
 
 ### Endpoint
+
 `https://api.convictional.com/prices`
 
 ### Request example
+
 `POST https://api.convictional.com/prices`
 
 ## Create Prices (bulk)
@@ -238,19 +255,20 @@ This endpoint creates a new price.
       "markup": 120,
       "rounding": "99",
       "list": [
-        { 
-          "sku": "123", 
-          "price": 9.99, 
-          "markup": 10, 
-          "type": "fixed" 
+        {
+          "sku": "123",
+          "price": 9.99,
+          "markup": 10,
+          "type": "fixed"
         },
-        { 
-          "sku": "321", 
-          "price": 19.99, 
-          "markup": 120, 
-          "type": "percent" 
+        {
+          "sku": "321",
+          "price": 19.99,
+          "markup": 120,
+          "type": "percent"
         },
-      ]
+      ],
+      "live": true
     },
     {
       "code": "12346",
@@ -262,25 +280,26 @@ This endpoint creates a new price.
       "markup": 100,
       "rounding": "99",
       "list": [
-        { 
-          "sku": "456", 
-          "price": 9.99, 
-          "markup": 10, 
-          "type": "fixed" 
+        {
+          "sku": "456",
+          "price": 9.99,
+          "markup": 10,
+          "type": "fixed"
         },
-        { 
-          "sku": "678", 
-          "price": 19.99, 
-          "markup": 120, 
-          "type": "percent" 
+        {
+          "sku": "678",
+          "price": 19.99,
+          "markup": 120,
+          "type": "percent"
         },
-      ]
+      ],
+      "live": true
     }
   ]
 }
 ```
 
->  Returns (JSON):
+> Returns (JSON):
 
 ```json
 {
@@ -288,12 +307,15 @@ This endpoint creates a new price.
   "1": "5a8755c66affcc608657ed2d"
 }
 ```
+
 This endpoint creates multiple new prices. Occurs automatically when you pass an array of price objects to this endpoint.
 
 ### Endpoint
+
 `https://api.convictional.com/prices`
 
 ### Request example
+
 `POST https://api.convictional.com/prices`
 
 ## Update Price
@@ -321,30 +343,34 @@ This endpoint creates multiple new prices. Occurs automatically when you pass an
   "markup": 110,
   "rounding": "00",
   "list": [
-    { 
-      "sku": "123", 
-      "price": 9.99, 
-      "markup": 10, 
-      "type": "fixed" 
+    {
+      "sku": "123",
+      "price": 9.99,
+      "markup": 10,
+      "type": "fixed"
     },
-    { 
-      "sku": "321", 
-      "price": 19.99, 
-      "markup": 120, 
-      "type": "percent" 
+    {
+      "sku": "321",
+      "price": 19.99,
+      "markup": 120,
+      "type": "percent"
     },
   ],
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
+  "live": true,
   "companyId": "convictional-wholesale"
 }
 ```
+
 This endpoint updates a single price by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/prices/:id`
 
 ### Request example
+
 `PUT https://api.convictional.com/prices/5a692f658f6d524e8282dac8`
 
 ## Update Prices (bulk)
@@ -364,19 +390,20 @@ This endpoint updates a single price by ID.
       "markup": 120,
       "rounding": "99",
       "list": [
-        { 
-          "sku": "123", 
-          "price": 9.99, 
-          "markup": 10, 
-          "type": "fixed" 
+        {
+          "sku": "123",
+          "price": 9.99,
+          "markup": 10,
+          "type": "fixed"
         },
-        { 
-          "sku": "321", 
-          "price": 19.99, 
-          "markup": 120, 
-          "type": "percent" 
+        {
+          "sku": "321",
+          "price": 19.99,
+          "markup": 120,
+          "type": "percent"
         },
-      ]
+      ],
+      "live": true
     },
     {
       "code": "12346",
@@ -388,19 +415,20 @@ This endpoint updates a single price by ID.
       "markup": 100,
       "rounding": "99",
       "list": [
-        { 
-          "sku": "456", 
-          "price": 9.99, 
-          "markup": 10, 
-          "type": "fixed" 
+        {
+          "sku": "456",
+          "price": 9.99,
+          "markup": 10,
+          "type": "fixed"
         },
-        { 
-          "sku": "678", 
-          "price": 19.99, 
-          "markup": 120, 
-          "type": "percent" 
+        {
+          "sku": "678",
+          "price": 19.99,
+          "markup": 120,
+          "type": "percent"
         },
-      ]
+      ],
+      "live": true
     }
   ]
 }
@@ -413,12 +441,15 @@ This endpoint updates a single price by ID.
   "Modified": 2
 }
 ```
+
 This endpoint updates (or creates) prices. If the code matches an existing record, it will update. Otherwise, it will create.
 
 ### Endpoint
+
 `https://api.convictional.com/prices`
 
 ### Request example
+
 `PUT https://api.convictional.com/prices`
 
 ## Delete Price
@@ -430,12 +461,15 @@ This endpoint updates (or creates) prices. If the code matches an existing recor
   "Deleted": 1
 }
 ```
+
 This endpoint deletes a single price by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/prices/:id`
 
 ### Request example
+
 `DELETE https://api.convictional.com/prices/5a692f658f6d524e8282dac7`
 
 ## Delete Prices (bulk)
@@ -456,10 +490,13 @@ This endpoint deletes a single price by ID.
   "Deleted": 2
 }
 ```
+
 This endpoint deletes multiple prices by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/prices`
 
 ### Request example
+
 `DELETE https://api.convictional.com/prices`

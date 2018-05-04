@@ -1,8 +1,10 @@
 # Changelog
 
-## 1.4.8 - 2018-05-03
+## 1.4.8 - 2018-05-04
 
 * Adding force field to partner documentation, examples and GET queries.
+* Adding custom field to users, partners, orders, prices, products and logs.
+* Adding live field to partners, orders, prices, products and logs.
 
 ## 1.4.7 - 2018-05-02
 
