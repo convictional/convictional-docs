@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.5.2 - 2018-05-23
+
+* Adding _id field to custom objects.
+
 ## 1.4.8 - 2018-05-04
 
 * Adding force field to partner documentation, examples and GET queries.
