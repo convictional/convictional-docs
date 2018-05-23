@@ -117,6 +117,7 @@ The Convictional API uses the following response codes:
 
 ```json
 {
+  "_id": "ObjectID",
   "key": "string",
   "type": "string",
   "value": "string"
@@ -128,16 +129,19 @@ The Convictional API uses the following response codes:
 ```json
 [
   {
+    "_id": "5425345jh43lkh25jk",
     "key": "api_key",
     "type": "string",
     "value": "123ABC-DEF456"
   },
   {
+    "_id": "5425345jh43lkh25jk",
     "key": "status_code",
     "type": "number",
     "value": "123"
   },
   {
+    "_id": "5425345jh43lkh25jk",
     "key": "product_data",
     "type": "json",
     "value": "{ code: ABC, quantity: 3 }"
