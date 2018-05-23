@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.5.3 - 2018-05-23
+
+* Refactoring to remove the partner "code" field.
+* Adding partner "billing" field.
+* Adding details about data types.
+
 ## 1.5.2 - 2018-05-23
 
 * Adding _id field to custom objects.

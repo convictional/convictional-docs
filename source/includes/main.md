@@ -152,3 +152,18 @@ The Convictional API uses the following response codes:
 Convictional allows use of custom key/value pairs on all records. Over time we will migrate some of our more user-specific fields over to use this format, so you can define your own data.
 
 The three types we currently support are: strings, numbers and JSON. All three will be stored as strings but you can convert them into the right type based on what is in the type field.
+
+## Data Types
+
+```json
+{
+  "string": "string",
+  "number": 0,
+  "json": {
+    "this_is": "json"
+  },
+  "boolean": true
+}
+```
+
+Convictional supports various data types. The main ones are strings, numbers, json and booleans. 

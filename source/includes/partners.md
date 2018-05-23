@@ -7,11 +7,11 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
 | Property     | Type     | Required  | Description                                   |
 | ------------ | ---------| ----------| --------------------------------------------- |
 | \_id         | String   | Automatic <td style="width:100%;"> ID of this record  </td>
-| code         | String   | Required  | The partner code in your system               |
 | email        | String   | Required  | The business email for this partner           |
 | active       | Boolean  | Required  | Do you want to sync with them?                |
 | invited      | Boolean  | Automatic | Have they been invited?                       |
 | force        | Boolean  | Optional  | Overwrite products? Excludes prices/inventory.|
+| billing      | Boolean  | Optional  | Do you want to bill them here?                |
 | priceList    | String   | Optional  | The name of their price list                  |
 | relationship | String   | Required  | Relative to you: 'parent', 'child' or 'self'  |
 | itemLookup   | Array    | Optional  | A reference of your item codes and theirs     |
@@ -28,11 +28,11 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
 ```json
 {
   "_id": "5a692f658f6d524e8282dac7",
-  "code": "12345",
+  "email": "capartner@example.com",
   "active": true,
   "force": true,
-  "email": "capartner@example.com",
   "invited": true,
+  "billing": true,
   "itemLookup": [
     {
       "myId": "12345",
@@ -70,11 +70,11 @@ This endpoint returns a single partner by ID.
 [
   {
     "_id": "5a692f658f6d524e8282dac7",
-    "code": "12345",
+    "email": "capartner@example.com",
     "active": true,
     "force": true,
-    "email": "capartner@example.com",
     "invited": true,
+    "billing": true,
     "itemLookup": [
       {
         "myId": "12345",
@@ -94,11 +94,11 @@ This endpoint returns a single partner by ID.
   },
   {
     "_id": "5a692f658f6d524e8282dac7",
-    "code": "12346",
-    "active": false,
-    "force": false,
     "email": "uspartner@example.com",
+    "active": true,
+    "force": true,
     "invited": true,
+    "billing": true,
     "itemLookup": [
       {
         "myId": "12345",
@@ -156,7 +156,6 @@ This endpoint returns all your partners.
 
 ```json
 {
-  "code": "12345",
   "email": "capartner@example.com",
   "priceList": "Price List for Canada",
   "relationship": "child"
@@ -168,11 +167,11 @@ This endpoint returns all your partners.
 ```json
 {
   "_id": "5a692f658f6d524e8282dac7",
-  "code": "12345",
-  "active": true,
-  "force": true,
-  "email": "capartner@example.com",
-  "invited": true,
+    "email": "capartner@example.com",
+    "active": true,
+    "force": true,
+    "invited": true,
+    "billing": true,
   "itemLookup": [
     {
       "myId": "12345",
@@ -210,13 +209,11 @@ This endpoint creates a new partner.
 {
   "partners": [
     {
-      "code": "12345",
       "email": "capartner@example.com",
       "priceList": "Price List for Canada",
       "relationship": "child",
     },
     {
-      "code": "12346",
       "email": "uspartner@example.com",
       "priceList": "Price List for USA",
       "relationship": "child",
@@ -259,11 +256,11 @@ This endpoint creates multiple new partners. Occurs automatically when you pass 
 ```json
 {
   "_id": "5a692f658f6d524e8282dac7",
-  "code": "12345",
-  "active": false,
-  "force": true,
   "email": "capartner@example.com",
+  "active": true,
+  "force": true,
   "invited": true,
+  "billing": true,
   "itemLookup": [
     {
       "myId": "12345",
@@ -301,13 +298,11 @@ This endpoint updates a single partner by ID.
 {
   "partners": [
     {
-      "code": "12345",
       "email": "capartner@example.com",
       "priceList": "Price List for Canada",
       "relationship": "child",
     },
     {
-      "code": "12346",
       "email": "uspartner@example.com",
       "priceList": "Price List for USA",
       "relationship": "child",
@@ -324,7 +319,7 @@ This endpoint updates a single partner by ID.
 }
 ```
 
-This endpoint updates (or creates) partners. If the code matches an existing record, it will update. Otherwise, it will create. Maximum is 100 records, above that please send multiple requests to this endpoint.
+This endpoint updates (or creates) partners. If the email matches an existing record, it will update. Otherwise, it will create. Maximum is 100 records, above that please send multiple requests to this endpoint.
 
 ### Endpoint
 
