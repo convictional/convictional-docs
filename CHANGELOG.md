@@ -5,6 +5,7 @@
 * Refactoring to remove the partner "code" field.
 * Adding partner "billing" field.
 * Adding details about data types.
+* Adding the favicon back.
 
 ## 1.5.2 - 2018-05-23
 
