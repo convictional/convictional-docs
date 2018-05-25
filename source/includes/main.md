@@ -15,7 +15,7 @@ Our goal providing an API for our service is to allow technically inclined custo
 > Last Updated:
 
 ```json
-{ "2018-05-02" }
+{ "2018-05-24" }
 ```
 
 When breaking changes happen in the future, we will notify users and migrate you to the new version. 
@@ -159,9 +159,7 @@ The three types we currently support are: strings, numbers and JSON. All three w
 {
   "string": "string",
   "number": 0,
-  "json": {
-    "this_is": "json"
-  },
+  "json": { "this_is": "json" },
   "boolean": true
 }
 ```
