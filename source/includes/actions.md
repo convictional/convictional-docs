@@ -3,7 +3,7 @@ RPC endpoints that allow you to translate EDI documents, invite partners and mor
 
 ## Sync
 
-> Returns JSON:
+> Returns (JSON):
 
 ```json
 {
@@ -33,7 +33,7 @@ This endpoint allows you to initiate a sync method of your choosing.
 
 ## Translate
 
-> Returns JSON structured like this:
+> Returns (JSON):
 
 ```json
 {

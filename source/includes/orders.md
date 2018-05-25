@@ -16,9 +16,8 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | partner       | String    | Required  | The partner code that sent this order               |
 | date          | String    | Required  | The date of the order (YY/MM/DD hh:mm:ss)           |
 | items         | Array     | Required  | Contains all order items (products, tax, shipping)  |
-| fulfillments  | Array     | Optional  | Contains all the tracking information               |
+| fulfillments  | Array     | Optional  | Contains all in and out shipments                   |
 | addresses     | Array     | Optional  | Contains all the customer addresses                 |
-| returns       | Array     | Optional  | Contains all the returns for this order             |
 | custom        | Array     | Optional  | Custom key/value pairs                              |
 | live          | Boolean   | Automatic | True for live mode, false for test mode             |
 | created       | Date      | Automatic | Date record was created (in ISO8601 format)         |
@@ -92,7 +91,6 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
       "addressTwo": "#206"
     }
   ],
-  "returns": [],
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
@@ -194,7 +192,6 @@ This endpoint returns a single order by ID.
         "addressTwo": "#206"
       }
     ],
-    "returns": [],
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
@@ -278,7 +275,6 @@ This endpoint returns a single order by ID.
         "addressTwo": "#206"
       }
     ],
-    "returns": [],
     "created": "2018-02-12T15:14:27.147-0500",
     "updated": "2018-02-12T15:14:27.147-0500",
     "companyId": "convictional-wholesale"
@@ -465,7 +461,6 @@ This endpoint returns all your orders.
       "addressTwo": "#206"
     }
   ],
-  "returns": [],
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
@@ -726,7 +721,6 @@ This endpoint creates multiple new orders. Occurs automatically when you pass an
       "addressTwo": "#206"
     }
   ],
-  "returns": [],
   "created": "2018-02-12T15:14:27.147-0500",
   "updated": "2018-02-12T15:14:27.147-0500",
   "companyId": "convictional-wholesale"
