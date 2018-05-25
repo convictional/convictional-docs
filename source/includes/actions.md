@@ -75,3 +75,45 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
 | raw           | Boolean   | Optional  | Return raw document (default: true)               |
+
+## Invite
+
+> Request (JSON):
+
+```json
+{
+  "email": "test@convictional.com",
+  "billing": true
+}
+```
+
+> Returns (JSON):
+
+```json
+{
+  "Invited partner: test@convictional.com"
+}
+```
+
+This endpoint invites a single partner by email.
+
+### Endpoint
+
+`https://api.convictional.com/partners/invite`
+
+### Request example
+
+`POST https://api.convictional.com/partners/invite`
+
+### Message example
+
+<p style="background:white;"><br>
+<b>Subject:</b> Trade with: supplier.<br><br>
+<b>Body:</b><br>
+You are invited to trade with: supplier<br><br>
+
+1. Click the link below and make an account.<br>
+2. Then go to settings and connect to your store.<br><br>
+
+https://app.convictional.com/sign_up?billing=true&shop=supplier<br><br>
+</p>
