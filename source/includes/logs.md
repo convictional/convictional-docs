@@ -306,32 +306,3 @@ This endpoint deletes a single log by ID.
 ### Request example
 
 `DELETE https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
-
-## Delete Logs (bulk)
-
-> Request Body (JSON):
-
-```json
-[
-  "5a8755c66affcc608657ed2c",
-  "5a8755c66affcc608657ed2d"
-]
-```
-
-> Returns (JSON):
-
-```json
-{
-  "Deleted": 2
-}
-```
-
-This endpoint deletes multiple logs by ID.
-
-### Endpoint
-
-`https://api.convictional.com/logs`
-
-### Request example
-
-`DELETE https://api.convictional.com/logs`

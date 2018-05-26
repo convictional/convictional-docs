@@ -907,32 +907,3 @@ This endpoint deletes a single order by ID.
 ### Request example
 
 `DELETE https://api.convictional.com/orders/5a692f658f6d524e8282dac7`
-
-## Delete Orders (bulk)
-
-> Request Body (JSON):
-
-```json
-[
-  "5a8755c66affcc608657ed2c",
-  "5a8755c66affcc608657ed2d"
-]
-```
-
-> Returns (JSON):
-
-```json
-{
-  "Deleted": 2
-}
-```
-
-This endpoint deletes multiple orders by ID.
-
-### Endpoint
-
-`https://api.convictional.com/orders`
-
-### Request example
-
-`DELETE https://api.convictional.com/orders`

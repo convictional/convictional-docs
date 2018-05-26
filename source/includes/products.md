@@ -478,29 +478,3 @@ This endpoint deletes a single product by ID.
 
 ### Request example
 `DELETE https://api.convictional.com/products/5a692f658f6d524e8282dac7`
-
-## Delete Products (bulk)
-
-> Request Body (JSON):
-
-```json
-[
-  "5a8755c66affcc608657ed2c",
-  "5a8755c66affcc608657ed2d"
-]
-```
-
-> Returns (JSON):
-
-```json
-{
-  "Deleted": 2
-}
-```
-This endpoint deletes multiple products by ID.
-
-### Endpoint
-`https://api.convictional.com/products`
-
-### Request example
-`DELETE https://api.convictional.com/products`
