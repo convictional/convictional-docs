@@ -60,7 +60,7 @@ var convictional = require('convictional')({
 // ... later where you want to use it:
 var orderId = '5a692f658f6d524e8282dac7'
 convictional.getOrder(orderId).then((order) => {
-  console.log(order) // Do stuff with record...
+  // Do stuff with record...
 }).catch((error) => { console.error(error) })
 
 ```
