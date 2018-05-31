@@ -1,4 +1,5 @@
 # Actions
+
 RPC endpoints that allow you to translate EDI documents, invite partners and more
 
 ## Sync
@@ -14,12 +15,15 @@ RPC endpoints that allow you to translate EDI documents, invite partners and mor
 This endpoint allows you to initiate a sync method of your choosing.
 
 ### Endpoint URL
+
 `https://api.convictional.com/sync/:method`
 
 ### HTTP Request example
+
 `GET https://api.convictional.com/sync/getOrders`
 
 ### Sync Methods
+
 | Method            | Description                                                                     |
 | ----------------  |------------------------------------------------------------------------ --------|
 | getOrders         | Trigger an event that will get the orders from all your trading partners        | 
@@ -60,6 +64,7 @@ This endpoint allows you to initiate a sync method of your choosing.
 This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 
 ### Endpoint URL
+
 `https://api.convictional.com/translate`
 
 ### HTTP Request example
@@ -67,14 +72,61 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 `POST https://api.convictional.com/translate`
 
 ### Translate Properties
+
 | Property | Description                                                                           |
 | -------- | ------------------------------------------------------------------------------------- |
 | body     <td style="width:100%;"> The request body must contain an X12 EDI document in text </td>
 
 ### Query Parameters
+
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
 | raw           | Boolean   | Optional  | Return raw document (default: true)               |
+
+## Transmit
+
+> Success Returns (JSON):
+
+```json
+{
+  "status": "completed"
+}
+```
+
+> Failure Returns (JSON):
+
+```json
+{
+  "error": "(error message)"
+}
+```
+
+This endpoint allows you to send a document via FTP with provided credentials and file name.
+
+### Endpoint URL
+
+`https://api.convictional.com/transmit`
+
+### HTTP Request example
+
+`POST https://api.convictional.com/transmit`
+
+### Transmit Properties
+
+| Property    | Type      | Required  | Description                                                     |
+| ----------- | --------- | ----------| --------------------------------------------------------------- |
+| fileName    | string    | Required  | The name of the file. For folders, put 'folder.folder.file.txt' |
+| document    | string    | Required  | The contents of the document in plain text. Any format.         |
+| credentials | json      | Required  | The credentials of the FTP server you want to send this to.     |
+
+#### Credentials Properties
+
+| Property    | Type      | Required  | Description                                                     |
+| ----------- | --------- | ----------| --------------------------------------------------------------- |
+| host        | string    | Required  | The hostname or IP address of the FTP server.                   |
+| port        | string    | Required  | The port of the FTP server.                                     |
+| user        | string    | Required  | Username for authentication.                                    |
+| pass        | string    | Required  | Password for authentication.                                    |
 
 ## Invite
 

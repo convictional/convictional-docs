@@ -6,6 +6,10 @@ To view the documentation, please visit our docs site [here](http://docs.convict
 
 ## Changelog
 
+## 1.5.5 - 2018-05-31
+
+* Adding information about the transmit endpoint.
+
 ## 1.5.4 - 2018-05-26
 
 * Removing all bulk delete endpoints.
