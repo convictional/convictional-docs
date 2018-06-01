@@ -26,7 +26,7 @@ This endpoint allows you to initiate a sync method of your choosing.
 
 | Method            | Description                                                                     |
 | ----------------  |------------------------------------------------------------------------ --------|
-| getOrders         | Trigger an event that will get the orders from all your trading partners        | 
+| getOrders         | Trigger an event that will get the orders from all your trading partners        |
 | getOrderUpdates   | Trigger an event that will get order updates from your system                   |
 | postOrders        | Trigger an event that will push orders from Convictional into your system       |
 | postOrderUpdates  | Trigger an event that will push order updates to all your trading partners      |
@@ -84,6 +84,21 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 | raw           | Boolean   | Optional  | Return raw document (default: true)               |
 
 ## Transmit
+
+> Request (JSON):
+
+```json
+{
+  "fileName": "folder.fileName.txt",
+  "document": "This is the contents of the file, in any format you want. Send it as a big string and we'll deal with converting it to the appropriate format for you.",
+  "credentials": {
+    "host": "127.0.0.1",
+    "port": "21",
+    "user": "anonymous",
+    "pass": "@anonymous"
+  }
+}
+```
 
 > Success Returns (JSON):
 
