@@ -112,7 +112,16 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 
 ```json
 {
-  "error": "(error message)"
+  "error": "No document provided."
+},
+{
+  "error": "No file name provided."
+},
+{
+  "error": "No credentials provided."
+},
+{
+  "error": "(other connection errors)"
 }
 ```
 
