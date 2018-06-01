@@ -90,7 +90,7 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 ```json
 {
   "fileName": "folder.fileName.txt",
-  "document": "This is the contents of the file, in any format you want. Send it as a big string and we'll deal with converting it to the appropriate format for you.",
+  "document": "This is the contents of the file.",
   "credentials": {
     "host": "127.0.0.1",
     "port": "21",
