@@ -15,7 +15,7 @@ Our goal providing an API for our service is to allow technically inclined custo
 > Last Updated:
 
 ```json
-{ "2018-05-24" }
+{ "2018-05-31" }
 ```
 
 When breaking changes happen in the future, we will notify users and migrate you to the new version. 
@@ -160,8 +160,17 @@ The three types we currently support are: strings, numbers and JSON. All three w
   "string": "string",
   "number": 0,
   "json": { "this_is": "json" },
-  "boolean": true
+  "boolean": true,
+  "date": "2018-05-31T18:03:24+00:00"
 }
 ```
 
-Convictional supports various data types. The main ones are strings, numbers, json and booleans. 
+### Data Types
+
+| Type    | Description |
+| ------- | ----------- |
+| string  | A string can be any length and contain alphanumberic characters |
+| number  | A number can be any size and contain numberic characters        |
+| json    | A JSON object can contain arbitrary JSON                        |
+| boolean | A boolean is either true or false                               |
+| date    | A date in ISO 8601 format ("YYYY-MM-DDThh:mm:ss.sss-hh:mm")     |
