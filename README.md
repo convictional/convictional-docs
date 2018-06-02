@@ -10,6 +10,7 @@ To view the documentation, please visit our docs site [here](http://docs.convict
 
 * Adding information about the transmit endpoint.
 * Adding an example to the transmit endpoint.
+* Changing the title to "API | Convictional: B2B Integration Platform"
 
 ## 1.5.4 - 2018-05-26
 
