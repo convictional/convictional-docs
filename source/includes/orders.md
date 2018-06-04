@@ -24,7 +24,7 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)         |
 | companyId     | String    | Automatic | Your company ID                                     |
 
-## Get Order
+## Get Order by ID
 
 > Returns (JSON):
 
@@ -107,7 +107,7 @@ This endpoint returns a single order by ID.
 
 `GET https://api.convictional.com/orders/5a692f658f6d524e8282dac7`
 
-## Get Orders (bulk)
+## Get Orders by Query
 
 > Returns (JSON):
 
@@ -477,158 +477,6 @@ This endpoint creates a new order.
 
 `POST https://api.convictional.com/orders`
 
-## Create Orders (bulk)
-
-> Request Body (JSON):
-
-```json
-{
-  "orders": [
-    {
-      "code": "12345",
-      "parentCode": "54321",
-      "posted": true,
-      "shipped": true,
-      "billed": true,
-      "complete": true,
-      "partner": "convictional-dropshipper-us",
-      "date": "2018-01-28 16:46:13",
-      "items": [
-        {
-          "title": "Great Custom Product",
-          "quantity": 2,
-          "price": 9.99,
-          "sku": "123GRPRODUCT",
-          "vendor": "convictional-wholesale",
-          "properties": [
-            {
-              "type": "custom_engraving",
-              "data": "We Love Dad!"
-            }
-          ],
-          "grams": 200
-        },
-        {
-          "title": "Great Standard Product",
-          "quantity": 1,
-          "price": 19.99,
-          "sku": "35GRPRODUCT",
-          "vendor": "convictional-wholesale",
-          "properties": [],
-          "grams": 200
-        }
-      ],
-      "addresses": [
-        {
-          "type": "shipping",
-          "name": "First Last",
-          "company": "Company, Inc",
-          "phone": "800-555-5555",
-          "city": "Toronto",
-          "zip": "M5V 4B3",
-          "state": "Ontario",
-          "country": "Canada",
-          "addressOne": "123 Toronto St.",
-          "addressTwo": "#206"
-        },
-        {
-          "type": "billing",
-          "name": "First Last",
-          "company": "Company, Inc",
-          "phone": "800-555-5555",
-          "city": "Toronto",
-          "zip": "M5V 4B3",
-          "state": "Ontario",
-          "country": "Canada",
-          "addressOne": "123 Toronto St.",
-          "addressTwo": "#206"
-        }
-      ]
-    },
-    {
-      "code": "12346",
-      "parentCode": "54321",
-      "posted": true,
-      "shipped": true,
-      "billed": true,
-      "complete": true,
-      "partner": "convictional-dropshipper-ca",
-      "date": "2018-01-31 13:23:13",
-      "items": [
-        {
-          "title": "Great Custom Product",
-          "quantity": 2,
-          "price": 9.99,
-          "sku": "123GRPRODUCT",
-          "vendor": "convictional-wholesale",
-          "properties": [
-            {
-              "type": "custom_engraving",
-              "data": "We Love Dad!"
-            }
-          ],
-          "grams": 200
-        },
-        {
-          "title": "Great Standard Product",
-          "quantity": 1,
-          "price": 19.99,
-          "sku": "35GRPRODUCT",
-          "vendor": "convictional-wholesale",
-          "properties": [],
-          "grams": 200
-        }
-      ],
-      "addresses": [
-        {
-          "type": "shipping",
-          "name": "First Last",
-          "company": "Company, Inc",
-          "phone": "800-555-5555",
-          "city": "Toronto",
-          "zip": "M5V 4B3",
-          "state": "Ontario",
-          "country": "Canada",
-          "addressOne": "123 Toronto St.",
-          "addressTwo": "#206"
-        },
-        {
-          "type": "billing",
-          "name": "First Last",
-          "company": "Company, Inc",
-          "phone": "800-555-5555",
-          "city": "Toronto",
-          "zip": "M5V 4B3",
-          "state": "Ontario",
-          "country": "Canada",
-          "addressOne": "123 Toronto St.",
-          "addressTwo": "#206"
-        }
-      ]
-    }
-  ]
-}
-```
-
-> Returns (JSON):
-
-```json
-{
-  "0": "5a8755c66affcc608657ed2c",
-  "1": "5a8755c66affcc608657ed2d"
-}
-```
-
-This endpoint creates multiple new orders. Occurs automatically when you pass an array of order objects to this endpoint.
-
-### Endpoint
-
-`https://api.convictional.com/orders`
-
-### Request example
-
-`POST https://api.convictional.com/orders`
-
 ## Update Order
 
 > Request Body (JSON):
@@ -737,7 +585,7 @@ This endpoint updates a single order by ID.
 
 `PUT https://api.convictional.com/orders/5a692f658f6d524e8282dac7`
 
-## Update Orders (bulk)
+## Bulk Update/Create Products
 
 > Request Body (JSON):
 

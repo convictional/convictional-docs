@@ -14,7 +14,7 @@ REST endpoints that allow you to create, retrieve, update and delete logs.
 | updated     | Date    | Automatic | Date record was updated (in ISO8601 format)  |
 | companyId   | String  | Automatic | Your company ID                              |
 
-## Get Log
+## Get Log by ID
 
 > Returns (JSON):
 
@@ -38,7 +38,7 @@ This endpoint returns a single log by ID.
 
 `GET https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
-## Get Logs (bulk)
+## Get Logs by Query
 
 > Returns (JSON):
 
@@ -171,40 +171,6 @@ This endpoint creates a new log.
 
 `POST https://api.convictional.com/logs`
 
-## Create Logs (bulk)
-
-> Request Body (JSON):
-
-```json
-[
-  {
-    "description": "This is one log"
-  },
-  {
-    "description": "This is another log"
-  }
-]
-```
-
-> Returns (JSON):
-
-```json
-{
-  "0": "5a8755c66affcc608657ed2c",
-  "1": "5a8755c66affcc608657ed2d"
-}
-```
-
-This endpoint creates multiple new logs. Occurs automatically when you pass an array of log objects to this endpoint.
-
-### Endpoint
-
-`https://api.convictional.com/logs`
-
-### Request example
-
-`POST https://api.convictional.com/logs`
-
 ## Update Log
 
 > Request Body (JSON):
@@ -250,7 +216,7 @@ This endpoint updates a single log by ID.
 
 `PUT https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
 
-## Update Logs (bulk)
+## Bulk Update/Create Products
 
 > Request Body (JSON):
 

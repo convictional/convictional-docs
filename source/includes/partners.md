@@ -21,7 +21,7 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
 | updated      | Date     | Automatic | Date record was updated (in ISO8601 format)   |
 | companyId    | String   | Automatic | Your company ID                               |
 
-## Get Partner
+## Get Partner by ID
 
 > Returns (JSON):
 
@@ -62,7 +62,7 @@ This endpoint returns a single partner by ID.
 
 `GET https://api.convictional.com/partners/5a692f658f6d524e8282dac7`
 
-## Get Partners (bulk)
+## Get Partners by Query
 
 > Returns (JSON):
 
@@ -201,46 +201,6 @@ This endpoint creates a new partner.
 
 `POST https://api.convictional.com/partners`
 
-## Create Partners (bulk)
-
-> Request Body (JSON):
-
-```json
-{
-  "partners": [
-    {
-      "email": "capartner@example.com",
-      "priceList": "Price List for Canada",
-      "relationship": "child",
-    },
-    {
-      "email": "uspartner@example.com",
-      "priceList": "Price List for USA",
-      "relationship": "child",
-    }
-  ]
-}
-```
-
-> Returns (JSON):
-
-```json
-{
-  "0": "5a8755c66affcc608657ed2c",
-  "1": "5a8755c66affcc608657ed2d"
-}
-```
-
-This endpoint creates multiple new partners. Occurs automatically when you pass an array of partner objects to this endpoint. Maximum is 100 records, above that please send multiple requests to this endpoint.
-
-### Endpoint
-
-`https://api.convictional.com/partners`
-
-### Request example
-
-`POST https://api.convictional.com/partners`
-
 ## Update Partner
 
 > Request Body (JSON):
@@ -290,7 +250,7 @@ This endpoint updates a single partner by ID.
 
 `PUT https://api.convictional.com/partners/5a692f658f6d524e8282dac7`
 
-## Update Partners (bulk)
+## Bulk Update/Create Products
 
 > Request Body (JSON):
 

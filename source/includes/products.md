@@ -1,7 +1,9 @@
 # Products
+
 REST endpoints that allow you to create, retrieve, update and delete products.
 
 ## Product Properties
+
 | Property    | Type    | Required    | Description                                   |
 | ----------- | ------- | ----------- | --------------------------------------------  |
 | \_id        | String  | Automatic   <td style="width:100%;"> ID of this record </td>
@@ -20,7 +22,7 @@ REST endpoints that allow you to create, retrieve, update and delete products.
 | updated     | Date    | Automatic   | Date record was updated (in ISO8601 format)   |
 | companyId   | String  | Automatic   | Your company ID                               |
 
-## Get Product
+## Get Product by ID
 
 > Returns (JSON):
 
@@ -66,7 +68,7 @@ This endpoint returns a single product by ID.
 ### Request example
 `GET https://api.convictional.com/products/5a692f658f6d524e8282dac7`
 
-## Get Products (bulk)
+## Get Products by Query
 
 > Returns (JSON):
 
@@ -138,18 +140,23 @@ This endpoint returns a single product by ID.
   }
 ]
 ```
+
 This endpoint returns all your products.
 
 ### Endpoint
+
 `https://api.convictional.com/products`
 
 ### Open example
+
 `GET https://api.convictional.com/products`
 
 ### Filtered example
+
 `GET https://api.convictional.com/products?createdBefore=2018-02-28T11:26:43.000-0500`
 
 ### Query Parameters
+
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
 | fields        | String    | Optional  | Return only the specified fields, comma separated |
@@ -236,92 +243,11 @@ This endpoint returns all your products.
 This endpoint creates a new product.
 
 ### Endpoint
+
 `https://api.convictional.com/products`
 
 ### Request example
-`POST https://api.convictional.com/products`
 
-## Create Products (bulk)
-
-> Request Body (JSON):
-
-```json
-{
-  "products": [
-    {
-      "code": "12345",
-      "active": true,
-      "bodyHtml": "<p>Great product!</p>",
-      "images": [
-        { "src": "https://cdn.convictional.com/123abc" },
-        { "src": "https://cdn.convictional.com/987zyx" },
-      ],
-      "tags": ["Toronto", "Beauty", "Mens"],
-      "title": "Great product",
-      "type": "item",
-      "variants": [
-        { 
-          "sku": "123", 
-          "title": "Great variant", 
-          "inventory_quantity": "8", 
-          "price": 9.99 
-        },
-        { 
-          "sku": "321", 
-          "title": "Great variant", 
-          "inventory_quantity": "3", 
-          "price": 19.99 
-        }
-      ],
-      "live": true,
-      "vendor": "Convictional Wholesale",
-    },
-    {
-      "code": "12346",
-      "active": true,
-      "bodyHtml": "<p>Greatest product!</p>",
-      "images": [
-        { "src": "https://cdn.convictional.com/456bec" },
-        { "src": "https://cdn.convictional.com/111qwe" },
-      ],
-      "tags": ["Waterloo", "Fashion", "Womens"],
-      "title": "Greatest product",
-      "type": "item",
-      "variants": [
-        { 
-          "sku": "456", 
-          "title": "Great variant", 
-          "inventory_quantity": "12", 
-          "price": 29.99 
-        },
-        { 
-          "sku": "789", 
-          "title": "Great variant", 
-          "inventory_quantity": "6", 
-          "price": 39.99 
-        }
-      ],
-      "live": true,
-      "vendor": "Convictional Wholesale",
-    }
-  ]
-}
-```
-
->  Returns (JSON):
-
-```json
-{
-  "0": "5a8755c66affcc608657ed2c",
-  "1": "5a8755c66affcc608657ed2d"
-}
-```
-This endpoint creates multiple new products. Occurs automatically when you pass an array of product objects to this endpoint.
-
-### Endpoint
-`https://api.convictional.com/products`
-
-### Request example
 `POST https://api.convictional.com/products`
 
 ## Update Product
@@ -372,15 +298,18 @@ This endpoint creates multiple new products. Occurs automatically when you pass 
   "companyId": "convictional-wholesale"
 }
 ```
+
 This endpoint updates a single product by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/products/:id`
 
 ### Request example
+
 `PUT https://api.convictional.com/products/5a692f658f6d524e8282dac7`
 
-## Update Products (bulk)
+## Bulk Update/Create Products
 
 > Request Body (JSON):
 
@@ -454,12 +383,15 @@ This endpoint updates a single product by ID.
   "Modified": 2
 }
 ```
+
 This endpoint updates (or creates) products. If the code matches an existing record, it will update. Otherwise, it will create.
 
 ### Endpoint
+
 `https://api.convictional.com/products`
 
 ### Request example
+
 `PUT https://api.convictional.com/products`
 
 ## Delete Product
@@ -474,7 +406,9 @@ This endpoint updates (or creates) products. If the code matches an existing rec
 This endpoint deletes a single product by ID.
 
 ### Endpoint
+
 `https://api.convictional.com/products/:id`
 
 ### Request example
+
 `DELETE https://api.convictional.com/products/5a692f658f6d524e8282dac7`

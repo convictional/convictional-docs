@@ -22,7 +22,7 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)   |
 | companyId     | String    | Automatic | Your company ID                               |
 
-## Get Price
+## Get Price by ID
 
 > Returns (JSON):
 
@@ -67,7 +67,7 @@ This endpoint returns a single price by ID.
 
 `GET https://api.convictional.com/prices/5a692f658f6d524e8282dac7`
 
-## Get Prices (bulk)
+## Get Prices by Query
 
 > Returns (JSON):
 
@@ -238,86 +238,6 @@ This endpoint creates a new price.
 
 `POST https://api.convictional.com/prices`
 
-## Create Prices (bulk)
-
-> Request Body (JSON):
-
-```json
-{
-  "prices": [
-    {
-      "code": "12345",
-      "listName": "Price List for USA",
-      "startDate": "2018/01/01 00:00:00",
-      "endDate": "2018/01/31 23:59:59",
-      "currencyName": "USD",
-      "conversion": 1.2,
-      "markup": 120,
-      "rounding": "99",
-      "list": [
-        {
-          "sku": "123",
-          "price": 9.99,
-          "markup": 10,
-          "type": "fixed"
-        },
-        {
-          "sku": "321",
-          "price": 19.99,
-          "markup": 120,
-          "type": "percent"
-        },
-      ],
-      "live": true
-    },
-    {
-      "code": "12346",
-      "listName": "Price List for Canada",
-      "startDate": "2018/01/01 00:00:00",
-      "endDate": "2018/01/31 23:59:59",
-      "currencyName": "CAD",
-      "conversion": 1,
-      "markup": 100,
-      "rounding": "99",
-      "list": [
-        {
-          "sku": "456",
-          "price": 9.99,
-          "markup": 10,
-          "type": "fixed"
-        },
-        {
-          "sku": "678",
-          "price": 19.99,
-          "markup": 120,
-          "type": "percent"
-        },
-      ],
-      "live": true
-    }
-  ]
-}
-```
-
-> Returns (JSON):
-
-```json
-{
-  "0": "5a8755c66affcc608657ed2c",
-  "1": "5a8755c66affcc608657ed2d"
-}
-```
-
-This endpoint creates multiple new prices. Occurs automatically when you pass an array of price objects to this endpoint.
-
-### Endpoint
-
-`https://api.convictional.com/prices`
-
-### Request example
-
-`POST https://api.convictional.com/prices`
-
 ## Update Price
 
 > Request Body (JSON):
@@ -373,7 +293,7 @@ This endpoint updates a single price by ID.
 
 `PUT https://api.convictional.com/prices/5a692f658f6d524e8282dac8`
 
-## Update Prices (bulk)
+## Bulk Update/Create Products
 
 > Request Body (JSON):
 
