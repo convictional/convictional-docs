@@ -1,6 +1,6 @@
 # Actions
 
-RPC endpoints that allow you to translate EDI documents, invite partners and more
+RPC endpoints that allow you to translate EDI documents, invite partners and more.
 
 ## Sync
 
@@ -25,15 +25,17 @@ This endpoint allows you to initiate a sync method of your choosing.
 ### Sync Methods
 
 | Method            | Description                                                                     |
-| ----------------  |------------------------------------------------------------------------ --------|
-| getOrders         | Trigger an event that will get the orders from all your trading partners        |
-| getOrderUpdates   | Trigger an event that will get order updates from your system                   |
-| postOrders        | Trigger an event that will push orders from Convictional into your system       |
-| postOrderUpdates  | Trigger an event that will push order updates to all your trading partners      |
-| getProducts       | Trigger an event that will get products from your system                        |
-| postProducts      | Trigger an event that will push products to your trading partners               |
-| getProductUpdates | Trigger an event that will get inventory from your system                       |
-| postProductUpdates| Trigger an event that will push inventory to your trading partners              |
+| ----------------  |-----------------------------------------------------|
+| getOrders         | Get the orders from all your trading partners       |
+| getOrderUpdates   | Get order updates from your system                  |
+| postOrders        | Push orders from Convictional into your system      |
+| postOrderUpdates  | Push order updates to all your trading partners     |
+| getProducts       | Get products from your system                       |
+| postProducts      | Push products to your trading partners              |
+| getProductUpdates | Get inventory from your system                      |
+| postProductUpdates| Push inventory to your trading partners             |
+| postInvoices      | Invoice and charge for shipped orders               |
+| getSkuById        | Get SKU ID in attached partner shops                |
 
 ## Translate
 

@@ -6,6 +6,10 @@ To view the documentation, please visit our docs site [here](http://docs.convict
 
 ## Changelog
 
+## 1.5.6 - 2018-06-04
+
+* Adding information about getSkuById sync function.
+
 ## 1.5.5 - 2018-05-31
 
 * Adding information about the transmit endpoint.
