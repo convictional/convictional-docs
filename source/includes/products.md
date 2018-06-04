@@ -309,7 +309,7 @@ This endpoint updates a single product by ID.
 
 `PUT https://api.convictional.com/products/5a692f658f6d524e8282dac7`
 
-## Bulk Update/Create Products
+## Bulk Update/Create
 
 > Request Body (JSON):
 

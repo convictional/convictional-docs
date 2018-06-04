@@ -293,7 +293,7 @@ This endpoint updates a single price by ID.
 
 `PUT https://api.convictional.com/prices/5a692f658f6d524e8282dac8`
 
-## Bulk Update/Create Products
+## Bulk Update/Create
 
 > Request Body (JSON):
 
