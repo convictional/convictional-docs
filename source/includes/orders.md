@@ -12,7 +12,7 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | posted        | Boolean   | Automatic | Has this order been synced with your system?        |
 | shipped       | Boolean   | Automatic | Has this order been shipped?                        |
 | billed        | Boolean   | Automatic | Has this order been invoiced?                       |
-| complete      | Boolean   | Automatic | Is this order shipped and billed?                   |
+| complete      | Boolean   | Automatic | Has this order been synced to your partner?         |
 | partner       | String    | Required  | The partner code that sent this order               |
 | date          | String    | Required  | The date of the order (YY/MM/DD hh:mm:ss)           |
 | items         | Array     | Required  | Contains all order items (products, tax, shipping)  |
