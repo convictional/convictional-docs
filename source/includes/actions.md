@@ -161,6 +161,7 @@ This endpoint allows you to send a document via FTP with provided credentials an
 ```json
 {
   "email": "test@convictional.com",
+  "companyName": "Supplier, Inc.",
   "billing": true
 }
 ```
@@ -186,7 +187,7 @@ This endpoint invites a single partner by email.
 ### Message example
 
 <p style="background:white;"><br>
-<b>Subject:</b> Trade with: supplier.<br><br>
+<b>Subject:</b> You are invited to trade with: supplier<br><br>
 <b>Body:</b><br>
 You are invited to trade with: supplier<br><br>
 
@@ -195,3 +196,11 @@ You are invited to trade with: supplier<br><br>
 
 https://app.convictional.com/sign_up?billing=true&shop=supplier<br><br>
 </p>
+
+### Invite Properties
+
+| Property    | Type      | Required  | Description                                              |
+| ----------- | --------- | ----------| -------------------------------------------------------- |
+| email       | string    | Required  | The email of the partner you want to invite.             |
+| companyName | string    | Optional  | Your company name so your partners recognize it.         |
+| billing     | boolean   | Optional  | Default: true. Do you want to get a credit card on file? |
