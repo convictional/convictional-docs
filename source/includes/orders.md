@@ -7,8 +7,8 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | Property      | Type      | Required  | Description                                         |
 | -----------   | ------    | --------- | --------------------------------------------------- |
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record        </td>
-| code          | String    | Required  | Order number in the source ecommerce system         |
-| parentCode    | String    | Required  | Parent prder number in the system of record         |
+| code          | String    | Required  | Retailer's order number                             |
+| parentCode    | String    | Required  | Supplier's order number                             |
 | posted        | Boolean   | Automatic | Has this order been synced with your system?        |
 | shipped       | Boolean   | Automatic | Has this order been shipped?                        |
 | billed        | Boolean   | Automatic | Has this order been invoiced?                       |
