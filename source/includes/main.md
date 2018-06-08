@@ -35,7 +35,7 @@ When breaking changes happen, we will notify users and migrate you. Our long-ter
 }
 ```
 
-Convictional uses API keys to authenticate your requests. When you register your account, we generate an API key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access the resources in your account.
+Convictional uses API keys to authenticate your requests. When you register, we generate a key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access your account.
 
 ## Bulk Endpoints
 
@@ -50,7 +50,7 @@ Convictional uses API keys to authenticate your requests. When you register your
 ]
 ```
 
-Convictional offers bulk create/update and read endpoints. You can create/update up to 100 records at once, and read up to 500. The max request/response size is 6mb. Our client library handlese queuing of requests, so we recommend it if you plan to do a lot of bulk requests.
+Convictional offers bulk create/update and read endpoints. You can create/update up to 100 records at once, and read up to 500. The max request/response size is 6mb. Our client library handles queuing of requests, so we recommend it if you plan to do a lot of bulk requests.
 
 ## Client Libraries
 
@@ -74,9 +74,9 @@ convictional.getOrders({}).then((orders) => {
 
 ```
 
-Convictional currenly offers a client library for Node.JS. For more information visit the [client libary on NPM](https://npmjs.com/package/convictional). 
+Convictional offers a client library for Node.JS. For more information visit the [libary on NPM](https://npmjs.com/package/convictional). 
 
-The client library will validate your request, check to make sure the right information is provided and throw a useful error if not. It will also handle queueing of bulk requests so you can make one call for an unlimited number of records. All endpoints can be accessed through the client library.
+The client library will validate your request, check to make sure the right data is provided and throw a useful error if not. It will also handle queueing of bulk requests so you can make one call for an unlimited number of records. All endpoints can be accessed through the client library.
 
 ## Responses
 
@@ -160,9 +160,7 @@ The Convictional API uses the following response codes:
 ]
 ```
 
-Convictional allows use of custom key/value pairs on all records. Over time we will migrate some of our more user-specific fields over to use this format, so you can define your own data.
-
-The three types we currently support are: strings, numbers and JSON. All three will be stored as strings but you can convert them into the right type based on what is in the type field.
+Convictional allows use of custom key/value pairs on all records. The three types we currently support are: strings, numbers and JSON. All three will be stored as strings but you can convert them into the right type based on what is in the type field.
 
 ## Data Types
 
