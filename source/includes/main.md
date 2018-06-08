@@ -4,21 +4,26 @@
 
 ```json
 https://api.convictional.com
+https://api.convictional.com/(resource)/(id)
+https://api.convictional.com/(resource)/(query)
+https://api.convictional.com/(action)
 ```
 
-Welcome to the Convictional API documentation. You can use our API to access various resources on the Convictional platform. We use this API and this documentation every day to build our own applications, so we build it to be as easy to use and scalable as we can.
+Welcome to the Convictional API. You can use our API to access various resources on the Convictional platform. We use this API (and this document) to build our own applications. 
 
-Our goal providing an API for our service is to allow technically inclined customers to take advantage of the infrastructure, business rules, integrations and admin capabilities of our platform. Almost anything you can do in the admin, you can do here too. Let us know what you think.
+Our goal providing an API for our service is to allow technically inclined customers to take advantage of the infrastructure, business rules, integrations and admin capabilities of our platform.
 
 ## Versioning
 
 > Last Updated:
 
 ```json
-{ "2018-05-31" }
+{
+  "2018-06-08"
+}
 ```
 
-When breaking changes happen in the future, we will notify users and migrate you to the new version. 
+When breaking changes happen, we will notify users and migrate you. Our long-term goal is stability: EDI is not something that changes very often and custom fields can be used for anything customer-specific.
 
 ## Authentication
 
@@ -30,7 +35,7 @@ When breaking changes happen in the future, we will notify users and migrate you
 }
 ```
 
-Convictional uses API keys to authenticate your requests. When you register your account, we generate an API key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request.
+Convictional uses API keys to authenticate your requests. When you register your account, we generate an API key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access the resources in your account.
 
 ## Bulk Endpoints
 
@@ -45,7 +50,7 @@ Convictional uses API keys to authenticate your requests. When you register your
 ]
 ```
 
-Convictional offers bulk endpoints. This allows you to create, read and update up to 100 records as once. You can go above 100 records at a time but your request may be rejected on the basis of size. The max data size is 6mb. If you use our client library we handle the queuing and chunking for you. Send an array of records instead of a single record to create, update and delete endpoints to use bulk abilities.
+Convictional offers bulk create/update and read endpoints. You can create/update up to 100 records at once, and read up to 500. The max request/response size is 6mb. Our client library handlese queuing of requests, so we recommend it if you plan to do a lot of bulk requests.
 
 ## Client Libraries
 
@@ -60,12 +65,18 @@ var convictional = require('convictional')({
 // ... later where you want to use it:
 var orderId = '5a692f658f6d524e8282dac7'
 convictional.getOrder(orderId).then((order) => {
-  // Do stuff with record...
+  // Do stuff with this particular order
+}).catch((error) => { console.error(error) })
+
+convictional.getOrders({}).then((orders) => {
+  // Do stuff with all your orders
 }).catch((error) => { console.error(error) })
 
 ```
 
-Convictional currenly offers a client library for Node.JS. For more information visit the [client libary on NPM](https://npmjs.com/package/convictional).
+Convictional currenly offers a client library for Node.JS. For more information visit the [client libary on NPM](https://npmjs.com/package/convictional). 
+
+The client library will validate your request, check to make sure the right information is provided and throw a useful error if not. It will also handle queueing of bulk requests so you can make one call for an unlimited number of records. All endpoints can be accessed through the client library.
 
 ## Responses
 

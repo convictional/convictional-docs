@@ -10,6 +10,7 @@ To view the documentation, please visit our docs site [here](http://docs.convict
 
 * Adding information about getSkuById sync function.
 * Adding properties to partner invite and company vanity name.
+* Adding more information to the main section.
 
 ## 1.5.5 - 2018-05-31
 

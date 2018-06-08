@@ -14,11 +14,11 @@ RPC endpoints that allow you to translate EDI documents, invite partners and mor
 
 This endpoint allows you to initiate a sync method of your choosing.
 
-### Endpoint URL
+### Sync Endpoint
 
 `https://api.convictional.com/sync/:method`
 
-### HTTP Request example
+### Sync Example
 
 `GET https://api.convictional.com/sync/getOrders`
 
@@ -65,11 +65,11 @@ This endpoint allows you to initiate a sync method of your choosing.
 
 This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 
-### Endpoint URL
+### Translate Endpoint
 
 `https://api.convictional.com/translate`
 
-### HTTP Request example
+### Translate Example
 
 `POST https://api.convictional.com/translate`
 
@@ -129,11 +129,11 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 
 This endpoint allows you to send a document via FTP with provided credentials and file name.
 
-### Endpoint URL
+### Transmit Endpoint
 
 `https://api.convictional.com/transmit`
 
-### HTTP Request example
+### Transmit Example
 
 `POST https://api.convictional.com/transmit`
 
@@ -176,11 +176,11 @@ This endpoint allows you to send a document via FTP with provided credentials an
 
 This endpoint invites a single partner by email.
 
-### Endpoint
+### Invite Endpoint
 
 `https://api.convictional.com/partners/invite`
 
-### Request example
+### Invite Example
 
 `POST https://api.convictional.com/partners/invite`
 

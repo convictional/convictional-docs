@@ -89,7 +89,7 @@ This endpoint returns a single log by ID.
 
 This endpoint returns all your logs.
 
-### Endpoint
+### Get
 
 `https://api.convictional.com/logs`
 
