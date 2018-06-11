@@ -35,7 +35,7 @@ When breaking changes happen, we will notify users and migrate you. Our long-ter
 }
 ```
 
-Convictional uses API keys to authenticate your requests. When you register, we generate a key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access your account.
+Convictional uses API keys to authenticate your requests. When you register, we generate a key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access your account. If you need a refresh, contact support.
 
 ## Bulk Endpoints
 
@@ -74,9 +74,11 @@ convictional.getOrders({}).then((orders) => {
 
 ```
 
-Convictional offers a client library for Node.JS. For more information visit the [libary on NPM](https://npmjs.com/package/convictional). 
+Convictional offers a client library for Node.JS. For more information visit the [libary on NPM](https://npmjs.com/package/convictional).
 
-The client library will validate your request, check to make sure the right data is provided and throw a useful error if not. It will also handle queueing of bulk requests so you can make one call for an unlimited number of records. All endpoints can be accessed through the client library.
+The client library will validate your request, check to make sure the right data is provided and throw a useful error if not. We use it to write all of our customer-specific applications, so you can trust it will continue to stay up to date with API changes.
+
+It will also handle queueing of bulk requests so you can make one call for an unlimited number (limited by your machine's memory) of records. All endpoints can be accessed through the client library.
 
 ## Responses
 
@@ -160,7 +162,7 @@ The Convictional API uses the following response codes:
 ]
 ```
 
-Convictional allows use of custom key/value pairs on all records. The three types we currently support are: strings, numbers and JSON. All three will be stored as strings but you can convert them into the right type based on what is in the type field.
+Convictional allows use of custom key/value pairs on all resources. The three types we currently support are: strings, numbers and arbitrary JSON. All three will be stored as strings but you can convert them into the right type based on what is in the type field when you need to use it.
 
 ## Data Types
 
@@ -173,8 +175,6 @@ Convictional allows use of custom key/value pairs on all records. The three type
   "date": "2018-05-31T18:03:24+00:00"
 }
 ```
-
-### Data Types
 
 | Type    | Description |
 | ------- | ----------- |
