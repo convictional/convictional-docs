@@ -24,6 +24,46 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)         |
 | companyId     | String    | Automatic | Your company ID                                     |
 
+### Item Properties
+
+| Property      | Type      | Required  | Description                                             |
+| -----------   | ------    | --------- | ------------------------------------------------------- |
+| \_id          | String    | Automatic <td style="width:100%;"> ID of this record            </td>
+| type          | String    | Required  | What is the line item type (ie. product, tax, shipping) |
+| title         | String    | Optional  | The title or description of the product                 |
+| sku           | String    | Required  | The SKU of the item                                     |
+| quantity      | Number    | Required  | The amount ordered in units (or grams)                  |
+| price         | Number    | Required  | The price, in the order currency, in 100s (ie. 9.99)    |
+| vendor        | String    | Optional  | The source supplier of the product                      |
+
+### Fulfillment Properties
+
+| Property        | Type      | Required  | Description                                             |
+| --------------- | ------    | --------- | ------------------------------------------------------- |
+| \_id            | String    | Automatic <td style="width:100%;"> ID of this record            </td>
+| type            | String    | Required  | What is the fulfillment type (ie. shipment, return)     |
+| status          | String    | Required  | The status of the shipment (complete, pending, hold)    |
+| carrier         | String    | Optional  | The carrier responsible for the shipment                |
+| trackingNumbers | Array     | Optional  | An array of tracking numbers (ie. ['123', '543'])       |
+| urls            | Array     | Optional  | An array of URLs                                        |
+| items           | Array     | Required  | An array of SKUs                                        |
+
+
+### Address Properties
+
+| Property      | Type      | Required  | Description                                             |
+| -----------   | ------    | --------- | ------------------------------------------------------- |
+| \_id          | String    | Automatic <td style="width:100%;"> ID of this record            </td>
+| type          | String    | Required  | What is the address type (ie. shipping, billing, HQ)    |
+| name          | String    | Required  | The full name of the addressee or care/of               |
+| company       | String    | Optional  | The company name of the addressee                       |
+| phone         | String    | Optional  | The phone number attached to this address               |
+| city          | String    | Required  | The city associated with this addressee                 |
+| zip           | String    | Required  | The zip or posal code                                   |
+| country       | String    | Required  | The country                                             |
+| addressOne    | String    | Required  | The address itself, including street and number         |
+| addressTwo    | String    | Optional  | Secondary address information (ie. PO box, unit)        |
+
 ## Get Order by ID
 
 > Returns (JSON):
