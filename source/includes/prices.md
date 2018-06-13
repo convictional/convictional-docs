@@ -7,20 +7,29 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | Property      | Type      | Required  | Description                                   |
 | ------------  | --------- | ----------| --------------------------------------------- |
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record  </td>
-| code          | String    | Required  | Code in your system                           |
 | listName      | String    | Required  | Name of this price list                       |
-| startDate     | String    | Optional  | Start date (in ISO8601 format)                |
-| endDate       | String    | Optional  | End date (in ISO8601 format)                  |
-| currencyName  | String    | Optional  | Name of the currency                          |
+| startDate     | String    | Optional  | Start date (in RFC3339 format)                |
+| endDate       | String    | Optional  | End date (in RFC3339 format)                  |
+| currencyName  | String    | Optional  | Currency code (in ISO4217 format)             |
 | conversion    | Number    | Optional  | Conversion rate from base (default "1")       |
 | markup        | Number    | Optional  | Markup percentage (default "100")             |
 | rounding      | String    | Optional  | Decimals on the prices ("00" is $10.00)       |
-| list          | Array     | Required  | sku, base price, markup, markup type          |
+| list          | Array     | Required  | An object that contains a list item           |
 | custom        | Array     | Optional  | Custom key/value pairs                        |
 | live          | Boolean   | Automatic | True for live mode, false for test mode       |
 | created       | Date      | Automatic | Date record was created (in ISO8601 format)   |
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)   |
 | companyId     | String    | Automatic | Your company ID                               |
+
+### List Properties
+
+| Property      | Type      | Required  | Description                                   |
+| ------------  | --------- | ----------| --------------------------------------------- |
+| \_id          | String    | Automatic <td style="width:100%;"> ID of this record  </td>
+| sku           | String    | Required  | The SKU of the variant to price.              |
+| price         | Number    | Required  | The base (wholesale) price of the item.       |
+| markup        | Number    | Required  | The markup, to arrive at retail price.        |
+| type          | String    | Required  | The markup type ('fixed' or 'percent')        |
 
 ## Get Price by ID
 
@@ -29,10 +38,9 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 ```json
 {
   "_id": "5a692f658f6d524e8282dac7",
-  "code": "12345",
   "listName": "Price List for USA",
-  "startDate": "2018/01/01 00:00:00",
-  "endDate": "2018/01/31 23:59:59",
+  "startDate": "2018/01/01",
+  "endDate": "2018/01/31",
   "currencyName": "USD",
   "conversion": 1.2,
   "markup": 120,
@@ -75,10 +83,9 @@ This endpoint returns a single price by ID.
 [
   {
     "_id": "5a692f658f6d524e8282dac7",
-    "code": "12345",
     "listName": "Price List for USA",
-    "startDate": "2018/01/01 00:00:00",
-    "endDate": "2018/01/31 23:59:59",
+    "startDate": "2018/01/01",
+    "endDate": "2018/01/31",
     "currencyName": "USD",
     "conversion": 1.2,
     "markup": 120,
@@ -104,10 +111,9 @@ This endpoint returns a single price by ID.
   },
   {
     "_id": "5a692f658f6d524e8282dac8",
-    "code": "12346",
     "listName": "Price List for Canada",
-    "startDate": "2018/01/01 00:00:00",
-    "endDate": "2018/01/31 23:59:59",
+    "startDate": "2018/01/01",
+    "endDate": "2018/01/31",
     "currencyName": "CAD",
     "conversion": 1,
     "markup": 100,
@@ -168,10 +174,9 @@ This endpoint returns all your prices.
 
 ```json
 {
-  "code": "12346",
   "listName": "Price List for Canada",
-  "startDate": "2018/01/01 00:00:00",
-  "endDate": "2018/01/31 23:59:59",
+  "startDate": "2018/01/01",
+  "endDate": "2018/01/31",
   "currencyName": "CAD",
   "conversion": 1,
   "markup": 100,
@@ -199,10 +204,9 @@ This endpoint returns all your prices.
 ```json
 {
   "_id": "5a692f658f6d524e8282dac8",
-  "code": "12346",
   "listName": "Price List for Canada",
-  "startDate": "2018/01/01 00:00:00",
-  "endDate": "2018/01/31 23:59:59",
+  "startDate": "2018/01/01",
+  "endDate": "2018/01/31",
   "currencyName": "CAD",
   "conversion": 1,
   "markup": 100,
@@ -254,10 +258,9 @@ This endpoint creates a new price.
 ```json
 {
   "_id": "5a692f658f6d524e8282dac8",
-  "code": "12346",
   "listName": "Price List for Canada",
-  "startDate": "2018/01/01 00:00:00",
-  "endDate": "2018/01/31 23:59:59",
+  "startDate": "2018/01/01",
+  "endDate": "2018/01/31",
   "currencyName": "CAD",
   "conversion": 1,
   "markup": 110,
@@ -301,10 +304,9 @@ This endpoint updates a single price by ID.
 {
   "prices": [
     {
-      "code": "12345",
       "listName": "Price List for USA",
-      "startDate": "2018/01/01 00:00:00",
-      "endDate": "2018/01/31 23:59:59",
+      "startDate": "2018/01/01",
+      "endDate": "2018/01/31",
       "currencyName": "USD",
       "conversion": 1.2,
       "markup": 120,
@@ -326,10 +328,9 @@ This endpoint updates a single price by ID.
       "live": true
     },
     {
-      "code": "12346",
       "listName": "Price List for Canada",
-      "startDate": "2018/01/01 00:00:00",
-      "endDate": "2018/01/31 23:59:59",
+      "startDate": "2018/01/01",
+      "endDate": "2018/01/31",
       "currencyName": "CAD",
       "conversion": 1,
       "markup": 100,

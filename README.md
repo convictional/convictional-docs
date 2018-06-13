@@ -6,6 +6,10 @@ To view the documentation, please visit our docs site [here](http://docs.convict
 
 ## Changelog
 
+## 1.6.0 - 2018-06-12
+
+* Updating pricing: remove 'code', add details.
+
 ## 1.5.6 - 2018-06-04
 
 * Adding information about getSkuById sync function.
