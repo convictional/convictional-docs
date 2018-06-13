@@ -21,14 +21,14 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | updated       | Date      | Automatic | Date record was updated (in ISO8601 format)   |
 | companyId     | String    | Automatic | Your company ID                               |
 
-### List Properties
+### List Item Properties
 
 | Property      | Type      | Required  | Description                                   |
 | ------------  | --------- | ----------| --------------------------------------------- |
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record  </td>
-| sku           | String    | Required  | The SKU of the variant to price.              |
-| price         | Number    | Required  | The base (wholesale) price of the item.       |
-| markup        | Number    | Required  | The markup, to arrive at retail price.        |
+| sku           | String    | Required  | The SKU of the variant to price               |
+| price         | Number    | Required  | The base (wholesale) price of the item        |
+| markup        | Number    | Required  | The markup, to arrive at retail price         |
 | type          | String    | Required  | The markup type ('fixed' or 'percent')        |
 
 ## Get Price by ID
