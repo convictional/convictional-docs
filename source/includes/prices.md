@@ -14,7 +14,7 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | conversion    | Number    | Optional  | Conversion rate from base (default "1")       |
 | markup        | Number    | Optional  | Markup percentage (default "100")             |
 | rounding      | String    | Optional  | Decimals on the prices ("00" is $10.00)       |
-| list          | Array     | Required  | An object that contains a list item           |
+| list          | Array     | Required  | An array containing list items                |
 | custom        | Array     | Optional  | Custom key/value pairs                        |
 | live          | Boolean   | Automatic | True for live mode, false for test mode       |
 | created       | Date      | Automatic | Date record was created (in ISO8601 format)   |
