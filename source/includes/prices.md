@@ -167,6 +167,7 @@ This endpoint returns all your prices.
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
+| live          | Boolean   | Optional  | Filter by active status (true or false)           |
 
 ## Create Price
 
@@ -363,7 +364,7 @@ This endpoint updates a single price by ID.
 }
 ```
 
-This endpoint updates (or creates) prices. If the code matches an existing record, it will update. Otherwise, it will create.
+This endpoint updates (or creates) prices. If the list name matches an existing record, it will update. Otherwise, it will create.
 
 ### Endpoint
 

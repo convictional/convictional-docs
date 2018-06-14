@@ -183,6 +183,7 @@ This endpoint returns all your products.
 
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
+| active        | Boolean   | Optional  | Filter by active status (true or false)           |
 | fields        | String    | Optional  | Return only the specified fields, comma separated |
 | page          | Number    | Optional  | Return only records on a specific page            |
 | limit         | Number    | Optional  | Return up to this number of records               |
@@ -191,6 +192,7 @@ This endpoint returns all your products.
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
+| live          | Boolean   | Optional  | Filter by active status (true or false)           |
 
 ## Create Product
 

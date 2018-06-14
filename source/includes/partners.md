@@ -149,6 +149,7 @@ This endpoint returns all your partners.
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
 | updatedBefore | Date      | Optional  | Filter records updated before this date (ISO8601) |
 | updatedAfter  | Date      | Optional  | Filter records updated after this date (ISO8601)  |
+| live          | Boolean   | Optional  | Filter by active status (true or false)           |
 
 ## Create Partner
 
