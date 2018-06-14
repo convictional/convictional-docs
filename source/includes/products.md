@@ -10,8 +10,8 @@ REST endpoints that allow you to create, retrieve, update and delete products.
 | code        | String  | Required    | The product code in your system               |
 | title       | String  | Required    | The name of the product                       |
 | active      | Boolean | Required    | Is this product active?                       |
-| bodyHtml    | String  | Optional    | HTML for consuming-facing pages               |
-| images      | Array   | Optional    | Contains image source URLs                    |
+| bodyHtml    | String  | Optional    | HTML for consumer-facing pages                |
+| images      | Array   | Optional    | Contains image source URLs and priority       |
 | tags        | Array   | Optional    | Contains tags ie. ['summer', 'beauty']        |
 | type        | String  | Required    | 'item', 'shipping', 'tax' or 'custom'         |
 | variants    | Array   | Required    | All the variations of the product             |
@@ -21,6 +21,24 @@ REST endpoints that allow you to create, retrieve, update and delete products.
 | created     | Date    | Automatic   | Date record was created (in ISO8601 format)   |
 | updated     | Date    | Automatic   | Date record was updated (in ISO8601 format)   |
 | companyId   | String  | Automatic   | Your company ID                               |
+
+### Variants Properties
+
+| Property    | Type    | Required    | Description                                   |
+| ----------- | ------- | ----------- | --------------------------------------------  |
+| \_id        | String  | Automatic   <td style="width:100%;"> ID of this record </td>
+| id          | String  | Required    | The variant code in your system               |
+| title       | String  | Required    | A description of the variant (ie. Black, XL)  |
+| sku         | String  | Required    | The unique for this SKU (affects pricing)     |
+| inventory_quantity | String | Required | The amount you have available to ship      |
+
+### Images Properties
+
+| Property    | Type    | Required    | Description                                   |
+| ----------- | ------- | ----------- | --------------------------------------------  |
+| \_id        | String  | Automatic   <td style="width:100%;"> ID of this record </td>
+| src         | String  | Required    | The URL where the image is hosted             |
+| position    | String  | Optional    | The priority (0-n, 0 is highest priority)     |
 
 ## Get Product by ID
 
@@ -33,8 +51,14 @@ REST endpoints that allow you to create, retrieve, update and delete products.
   "active": true,
   "bodyHtml": "<p>Great product!</p>",
   "images": [
-    { "src": "https://cdn.convictional.com/123abc" },
-    { "src": "https://cdn.convictional.com/987zyx" },
+    { 
+      "src": "https://cdn.convictional.com/a",
+      "position": 0
+    },
+    {
+      "src": "https://cdn.convictional.com/b",
+      "position": 0  
+    },
   ],
   "tags": ["Toronto", "Beauty", "Mens"],
   "title": "Great product",
