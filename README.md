@@ -9,6 +9,7 @@ To view the documentation, please visit our docs site [here](http://docs.convict
 ## 1.6.0 - 2018-06-12
 
 * Updating pricing: remove 'code', add details.
+* Added a copywrite notice to the menu.
 
 ## 1.5.6 - 2018-06-04
 
