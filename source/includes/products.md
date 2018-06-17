@@ -11,6 +11,7 @@ REST endpoints that allow you to create, retrieve, update and delete products.
 | title       | String  | Required    | The name of the product                       |
 | active      | Boolean | Required    | Is this product active?                       |
 | bodyHtml    | String  | Optional    | HTML for consumer-facing pages                |
+| options     | Array   | Optional    | Contains product options                      |
 | images      | Array   | Optional    | Contains image source URLs and priority       |
 | tags        | Array   | Optional    | Contains tags ie. ['summer', 'beauty']        |
 | type        | String  | Required    | 'item', 'shipping', 'tax' or 'custom'         |
@@ -21,6 +22,15 @@ REST endpoints that allow you to create, retrieve, update and delete products.
 | created     | Date    | Automatic   | Date record was created (in ISO8601 format)   |
 | updated     | Date    | Automatic   | Date record was updated (in ISO8601 format)   |
 | companyId   | String  | Automatic   | Your company ID                               |
+
+### Options Properties
+
+| Property    | Type    | Required    | Description                                                |
+| ----------- | ------- | ----------- | ---------------------------------------------------------- |
+| \_id        | String  | Automatic   <td style="width:100%;"> ID of this record               </td>
+| name        | String  | Required    | The name of the product option (ie. size)                  |
+| type        | String  | Optional    | The type of the option (ie. text, select)                  |
+| position    | String  | Optional    | The priority order of the option (lower = higher priority) |
 
 ### Variants Properties
 
