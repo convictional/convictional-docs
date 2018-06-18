@@ -479,6 +479,10 @@ html, body {
     text-shadow: 1px 1px 0 #666;
     background: linear-gradient(to top left, #F7E633 0%, #F1D32F 100%);
   }
+
+  ::placeholder {
+    color: white;
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
