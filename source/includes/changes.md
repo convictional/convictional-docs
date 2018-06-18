@@ -1,4 +1,4 @@
-# Changelog
+# Changes
 
 ## 1.6.0 - 2018-06-12
 
