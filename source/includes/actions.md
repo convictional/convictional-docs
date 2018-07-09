@@ -290,16 +290,16 @@ This endpoint creates an order in a supplier system on behalf of a partner, by e
 
 #### Address Properties
 
-| Property    | Type      | Required  | Description                                          |
-| ----------- | --------- | ----------| ---------------------------------------------------- |
-| name        | string    | Optional  | First and last name of the addressee                 |
-| company     | string    | Optional  | Company name of the addressee                        |
-| phone       | string    | Optional  | Phone number of the addressee                        |
-| email       | string    | Optional  | Email of the addressee                               |
-| type        | string    | Optional  | Type of the addressee                                |
-| city        | string    | Optional  | City of the addressee                                |
-| zip         | string    | Optional  | Zip code or postal code of the addressee             |
-| state       | string    | Optional  | State, province or territory of the addressee        |
-| country     | string    | Optional  | Country of the addressee                             |
-| address     | string    | Optional  | Address of the addressee                             |
-| addressTwo  | string    | Optional  | Address extra line of the addressee                  |
+| Property    | Type   | Required | Description                                          |
+| ----------- | -------| ---------| ---------------------------------------------------- |
+| name        | string | Required | First and last name of the addressee                 |
+| company     | string | Optional | Company name of the addressee                        |
+| phone       | string | Optional | Phone number of the addressee                        |
+| email       | string | Optional | Email of the addressee                               |
+| type        | string | Required | Type of the addressee                                |
+| city        | string | Required | City of the addressee                                |
+| zip         | string | Required | Zip code or postal code of the addressee             |
+| state       | string | Required | State, province or territory of the addressee        |
+| country     | string | Required | Country of the addressee                             |
+| addressOne  | string | Required | Address of the addressee                             |
+| addressTwo  | string | Optional | Address extra line of the addressee                  |
