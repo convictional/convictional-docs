@@ -204,3 +204,96 @@ https://app.convictional.com/sign_up?billing=true&shop=supplier<br><br>
 | email       | string    | Required  | The email of the partner you want to invite.             |
 | companyName | string    | Optional  | Your company name so your partners recognize it.         |
 | billing     | boolean   | Optional  | Default: true. Do you want to get a credit card on file? |
+
+## Quick Order
+
+> Request Body (JSON)
+
+```json
+{
+  "source": "customer@domain.com",
+  "subject": "convictional-wholesale",
+  "items" : [
+    {
+      "sku": "ABC123",
+      "quantity": 1
+    },
+    {
+      "sku": "DEF456",
+      "quantity": 2
+    }
+  ],
+  "address": {
+    "name": "First Last",
+    "company": "Company, Inc",
+    "phone": "4165555555",
+    "email": "orders@customer.com",
+    "type": "shipping",
+    "city": "Toronto",
+    "zip": "M5V4B3",
+    "state": "Ontario",
+    "country": "Canada",
+    "address": "123 St.",
+    "addressTwo": "#101"
+  }
+}
+```
+
+> Success Returns (JSON)
+
+```json
+{
+  "success": true,
+  "id": "1542hhjasdfhj234"
+}
+```
+
+> Error Returns (JSON)
+
+```json
+{
+  "error": "message"
+}
+```
+
+This endpoint creates an order in a supplier system on behalf of a partner, by email.
+
+### Quick Order Endpoint
+
+`https://api.convictional.com/handlers/emails/quickOrder`
+
+### Quick Order Example
+
+`POST https://api.convictional.com/handlers/emails/quickOrder`
+
+### Quick Order Properties
+
+| Property    | Type      | Required  | Description                                              |
+| ----------- | --------- | ----------| -------------------------------------------------------- |
+| source      | string    | Required  | The email of the partner ordering (or sales rep).        |
+| subject     | string    | Required  | The companyId of the supplier / parent partner.          |
+| items       | array     | Required  | The items on the order (properties below)                |
+| address     | object    | Required  | The address to ship the order to.                        |
+
+#### Items Properties
+
+| Property    | Type      | Required  | Description                                              |
+| ----------- | --------- | ----------| -------------------------------------------------------- |
+| sku         | string    | Required  | The SKU of the item.                                     |
+| quantity    | number    | Required  | The number of the item being requested.                  |
+
+#### Address Properties
+
+| Property    | Type      | Required  | Description                                              |
+| ----------- | --------- | ----------| -------------------------------------------------------- |
+| name        | string    | Optional  | The first and last name of the addressee                 |
+| company     | string    | Optional  | The company name of the addressee                        |
+| phone       | string    | Optional  | The phone number of the addressee                        |
+| email       | string    | Optional  | The email of the addressee                               |
+| type        | string    | Optional  | The type of the addressee                                |
+| city        | string    | Optional  | The city of the addressee                                |
+| zip         | string    | Optional  | The zip code or postal code of the addressee             |
+| state       | string    | Optional  | The state, province or territory of the addressee        |
+| country     | string    | Optional  | The country of the addressee                             |
+| address     | string    | Optional  | The address of the addressee                             |
+| addressTwo  | string    | Optional  | The address extra line of the addressee                  |

@@ -4,6 +4,7 @@
 
 * Updating pricing: remove 'code', add details.
 * Added a copywrite notice to the menu.
+* Adding details for the quick order endpoint.
 
 ## 1.5.6 - 2018-06-04
 
