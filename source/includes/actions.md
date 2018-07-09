@@ -244,7 +244,7 @@ https://app.convictional.com/sign_up?billing=true&shop=supplier<br><br>
 ```json
 {
   "success": true,
-  "id": "1542hhjasdfhj234"
+  "_id": "1542hhjasdfhj234"
 }
 ```
 
@@ -268,32 +268,32 @@ This endpoint creates an order in a supplier system on behalf of a partner, by e
 
 ### Quick Order Properties
 
-| Property    | Type      | Required  | Description                                              |
-| ----------- | --------- | ----------| -------------------------------------------------------- |
-| source      | string    | Required  | The email of the partner ordering (or sales rep).        |
-| subject     | string    | Required  | The companyId of the supplier / parent partner.          |
-| items       | array     | Required  | The items on the order (properties below)                |
-| address     | object    | Required  | The address to ship the order to.                        |
+| Property    | Type      | Required  | Description                                          |
+| ----------- | --------- | ----------| ---------------------------------------------------- |
+| source      | string    | Required  | Email of the partner ordering (or sales rep).        |
+| subject     | string    | Required  | CompanyId of the supplier / parent partner.          |
+| items       | array     | Required  | Items on the order (properties below)                |
+| address     | object    | Required  | Address to ship the order to.                        |
 
 #### Items Properties
 
-| Property    | Type      | Required  | Description                                              |
-| ----------- | --------- | ----------| -------------------------------------------------------- |
-| sku         | string    | Required  | The SKU of the item.                                     |
-| quantity    | number    | Required  | The number of the item being requested.                  |
+| Property    | Type      | Required  | Description                                          |
+| ----------- | --------- | ----------| ---------------------------------------------------- |
+| sku         | string    | Required  | SKU of the item.                                     |
+| quantity    | number    | Required  | Number of the item being requested.                  |
 
 #### Address Properties
 
-| Property    | Type      | Required  | Description                                              |
-| ----------- | --------- | ----------| -------------------------------------------------------- |
-| name        | string    | Optional  | The first and last name of the addressee                 |
-| company     | string    | Optional  | The company name of the addressee                        |
-| phone       | string    | Optional  | The phone number of the addressee                        |
-| email       | string    | Optional  | The email of the addressee                               |
-| type        | string    | Optional  | The type of the addressee                                |
-| city        | string    | Optional  | The city of the addressee                                |
-| zip         | string    | Optional  | The zip code or postal code of the addressee             |
-| state       | string    | Optional  | The state, province or territory of the addressee        |
-| country     | string    | Optional  | The country of the addressee                             |
-| address     | string    | Optional  | The address of the addressee                             |
-| addressTwo  | string    | Optional  | The address extra line of the addressee                  |
+| Property    | Type      | Required  | Description                                          |
+| ----------- | --------- | ----------| ---------------------------------------------------- |
+| name        | string    | Optional  | First and last name of the addressee                 |
+| company     | string    | Optional  | Company name of the addressee                        |
+| phone       | string    | Optional  | Phone number of the addressee                        |
+| email       | string    | Optional  | Email of the addressee                               |
+| type        | string    | Optional  | Type of the addressee                                |
+| city        | string    | Optional  | City of the addressee                                |
+| zip         | string    | Optional  | Zip code or postal code of the addressee             |
+| state       | string    | Optional  | State, province or territory of the addressee        |
+| country     | string    | Optional  | Country of the addressee                             |
+| address     | string    | Optional  | Address of the addressee                             |
+| addressTwo  | string    | Optional  | Address extra line of the addressee                  |
