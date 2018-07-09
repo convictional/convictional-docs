@@ -256,7 +256,13 @@ https://app.convictional.com/sign_up?billing=true&shop=supplier<br><br>
 }
 ```
 
-This endpoint creates an order in a supplier system on behalf of a partner, by email.
+This endpoint creates an order in a supplier system on behalf of a partner, by email. The following conditions apply:
+
+* We check the partner, price list and items.
+* If the partner is not setup, it will respond with an 400 error.
+* If the partner doesn't have valid pricing, it will 400 error.
+* If a SKU does not exist, it will log an error and skip it.
+* If the order is empty (no items), it will 400 error.
 
 ### Quick Order Endpoint
 
