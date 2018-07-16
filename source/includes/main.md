@@ -19,7 +19,7 @@ Our goal providing an API for our service is to allow technically inclined custo
 
 ```json
 {
-  "2018-06-08"
+  "2018-06-12"
 }
 ```
 
@@ -36,6 +36,108 @@ When breaking changes happen, we will notify users and migrate you. Our long-ter
 ```
 
 Convictional uses API keys to authenticate your requests. When you register, we generate a key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access your account. If you need a refresh, contact support.
+
+## Response Types
+
+> 200: Returns (String):
+
+```json
+{
+  "OK"
+}
+```
+
+> 400: Returns (String):
+
+```json
+{
+  "error": "not found"
+}
+```
+
+> 401: Returns (String): 
+
+```json
+{
+  "error": "unauthorized"
+}
+```
+
+> 500: Returns (String):
+
+```json
+{
+  "error": "(details)"
+}
+```
+
+The API uses a variety of status codes to indicates success or failure of a particular request. The 200 series means success, the 400 series means something is wrong on your side, and the 500 series means something is wrong on our side.
+
+## Custom Meta Data
+
+> Schema:
+
+```json
+{
+  "_id": "string",
+  "key": "string",
+  "type": "string",
+  "value": "string"
+}
+```
+
+> Example:
+
+```json
+[
+  {
+    "_id": "5425345jh43lkh25jk",
+    "key": "api_key",
+    "type": "string",
+    "value": "123ABC-DEF456"
+  },
+  {
+    "_id": "5425345jh43lkh25jk",
+    "key": "status_code",
+    "type": "number",
+    "value": "123"
+  },
+  {
+    "_id": "5425345jh43lkh25jk",
+    "key": "product_data",
+    "type": "json",
+    "value": "{ code: ABC, quantity: 3 }"
+  }
+]
+```
+
+Convictional allows use of custom key/value pairs on all resources. The three types we currently support are: strings, numbers and JSON strings. All three will be stored as strings but you can convert them into the right type based on what is in the type field when you need to use it.
+
+## Data Types
+
+```json
+{
+  "string": "string",
+  "number": 0,
+  "json": { "this_is": "json" },
+  "boolean": true,
+  "date": "2018-05-31T18:03:24+00:00"
+}
+```
+
+| Type    | Description |
+| ------- | ----------- |
+| string  | A string can be any length and contain alphanumberic characters |
+| number  | A number can be any size and contain numberic characters        |
+| json    | A JSON object can contain arbitrary JSON                        |
+| boolean | A boolean is either true or false                               |
+| date    | A date in ISO 8601 format ("YYYY-MM-DDThh:mm:ss.sss-hh:mm")     |
+
+The API deals in a variety of data types, always encoded in JSON. We support strings, dates, integers and booleans. A JSON schema is provided for each resource and we will reject any incorrectly typed objects to ensure type safety across resources.
+
+## Rate Limits
+
+The API does not have rate limits at this time.
 
 ## Bulk Endpoints
 
@@ -79,107 +181,3 @@ Convictional offers a client library for Node.JS. For more information visit the
 The client library will validate your request, check to make sure the right data is provided and throw a useful error if not. We use it to write all of our customer-specific applications, so you can trust it will continue to stay up to date with API changes.
 
 It will also handle queueing of bulk requests so you can make one call for an unlimited number (limited by your machine's memory) of records. All endpoints can be accessed through the client library.
-
-## Responses
-
-> 200: Returns (String):
-
-```json
-{
-  "OK"
-}
-```
-
-> 400: Returns (String):
-
-```json
-{
-  "Not found"
-}
-```
-
-> 401: Returns (String): 
-
-```json
-{
-  "Not authorized"
-}
-```
-
-> 500: Returns (String):
-
-```json
-{
-  "Bad request"
-}
-```
-
-The Convictional API uses the following response codes:
-
-| Code      | Description     |
-| --------- | --------------- |
-| 200       <td style="width:100%;">OK: means your request was successful.</td> |
-| 307       | Redirect: means this handler wants you to go somewhere else.      |
-| 400       | Not found: means the ID or code of the resource cannot be found.  |
-| 401       | Not authorized: means the "Authorization" header API kye is wrong.|
-| 500       | Bad request: means something about your request body isn't right. |
-
-## Custom Data
-
-> Schema:
-
-```json
-{
-  "_id": "ObjectID",
-  "key": "string",
-  "type": "string",
-  "value": "string"
-}
-```
-
-> Example:
-
-```json
-[
-  {
-    "_id": "5425345jh43lkh25jk",
-    "key": "api_key",
-    "type": "string",
-    "value": "123ABC-DEF456"
-  },
-  {
-    "_id": "5425345jh43lkh25jk",
-    "key": "status_code",
-    "type": "number",
-    "value": "123"
-  },
-  {
-    "_id": "5425345jh43lkh25jk",
-    "key": "product_data",
-    "type": "json",
-    "value": "{ code: ABC, quantity: 3 }"
-  }
-]
-```
-
-Convictional allows use of custom key/value pairs on all resources. The three types we currently support are: strings, numbers and arbitrary JSON. All three will be stored as strings but you can convert them into the right type based on what is in the type field when you need to use it.
-
-## Data Types
-
-```json
-{
-  "string": "string",
-  "number": 0,
-  "json": { "this_is": "json" },
-  "boolean": true,
-  "date": "2018-05-31T18:03:24+00:00"
-}
-```
-
-| Type    | Description |
-| ------- | ----------- |
-| string  | A string can be any length and contain alphanumberic characters |
-| number  | A number can be any size and contain numberic characters        |
-| json    | A JSON object can contain arbitrary JSON                        |
-| boolean | A boolean is either true or false                               |
-| date    | A date in ISO 8601 format ("YYYY-MM-DDThh:mm:ss.sss-hh:mm")     |
