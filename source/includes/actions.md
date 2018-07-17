@@ -1,6 +1,6 @@
 # Actions
 
-Action-oriented (RPC) endpoints that allow you to translate EDI documents, transmit files over FTP, invite your trading partners, run sync workers and more.
+Action-oriented (RPC) endpoints that allow you to translate EDI documents, transmit files over FTP, invite your trading partners, onboard or offboard an account in our system, run sync workers and more.
 
 ## Sync
 

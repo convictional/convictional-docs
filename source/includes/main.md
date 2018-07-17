@@ -9,7 +9,7 @@ https://api.convictional.com/(resource)/(query)
 https://api.convictional.com/(action)
 ```
 
-Welcome to the Convictional API. You can use our API to access various resources on the Convictional platform. We use this API (and this document) to build our own applications. 
+Welcome to the Convictional API. You can use our API to access various resources on the Convictional platform. We use this API (and this document) to build our own applications every day.
 
 Our goal providing an API for our service is to allow technically inclined customers to take advantage of the infrastructure, business rules, integrations and admin capabilities of our platform.
 
@@ -19,11 +19,11 @@ Our goal providing an API for our service is to allow technically inclined custo
 
 ```json
 {
-  "2018-06-12"
+  "2018-07-16"
 }
 ```
 
-When breaking changes happen, we will notify users and migrate you. Our long-term goal is stability: EDI is not something that changes very often and custom fields can be used for anything customer-specific.
+When breaking changes happen, we will notify users and migrate you. Our long-term goal is stability: B2B is not something that changes very often and custom fields can be used for anything customer-specific.
 
 ## Authentication
 
@@ -35,19 +35,35 @@ When breaking changes happen, we will notify users and migrate you. Our long-ter
 }
 ```
 
-Convictional uses API keys to authenticate your requests. When you register, we generate a key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access your account. If you need a refresh, contact support.
+Convictional uses API keys to authenticate your requests. When you register, we generate a key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access your account. If you need an API key refresh, contact support.
 
 ## Response Types
 
-> 200: Returns (String):
+> 200: GET, POST or PUT Returns (JSON):
 
 ```json
 {
-  "OK"
+  "(content)"
 }
 ```
 
-> 400: Returns (String):
+> 200: DELETE Returns (JSON):
+
+```json
+{
+  "deleted": 1
+}
+```
+
+> 200: Bulk PUT Returns (JSON):
+
+```json
+{
+  "updated": 2
+}
+```
+
+> 400: Returns (JSON):
 
 ```json
 {
@@ -55,7 +71,7 @@ Convictional uses API keys to authenticate your requests. When you register, we 
 }
 ```
 
-> 401: Returns (String): 
+> 401: Returns (JSON):
 
 ```json
 {
@@ -63,15 +79,23 @@ Convictional uses API keys to authenticate your requests. When you register, we 
 }
 ```
 
-> 500: Returns (String):
+> 402+: Returns (JSON):
 
 ```json
 {
-  "error": "(details)"
+  "error": "(something you did wrong)"
 }
 ```
 
-The API uses a variety of status codes to indicates success or failure of a particular request. The 200 series means success, the 400 series means something is wrong on your side, and the 500 series means something is wrong on our side.
+> 500+: Returns (JSON):
+
+```json
+{
+  "error": "(something we did wrong)"
+}
+```
+
+The API uses a variety of status codes to indicates success or failure of a particular request. The 200 series means success, the 400 series means something is wrong on your side, and the 500 series means something is wrong on our side. If you need help, contact support.
 
 ## Custom Meta Data
 
@@ -111,7 +135,7 @@ The API uses a variety of status codes to indicates success or failure of a part
 ]
 ```
 
-Convictional allows use of custom key/value pairs on all resources. The three types we currently support are: strings, numbers and JSON strings. All three will be stored as strings but you can convert them into the right type based on what is in the type field when you need to use it.
+Convictional allows use of custom key/value pairs on all resources. The three types we currently support are: strings, numbers and arbitrary JSON. All three will be stored as strings but you can convert them into the right type based on what is in the type field when you need to use it.
 
 ## Data Types
 
@@ -128,16 +152,16 @@ Convictional allows use of custom key/value pairs on all resources. The three ty
 | Type    | Description |
 | ------- | ----------- |
 | string  | A string can be any length and contain alphanumberic characters |
-| number  | A number can be any size and contain numberic characters        |
-| json    | A JSON object can contain arbitrary JSON                        |
+| number  | A number can be any size and contain numberic characters only   |
+| json    | A JSON object can contain arbitrary JSON encoded data           |
 | boolean | A boolean is either true or false                               |
 | date    | A date in ISO 8601 format ("YYYY-MM-DDThh:mm:ss.sss-hh:mm")     |
 
-The API deals in a variety of data types, always encoded in JSON. We support strings, dates, integers and booleans. A JSON schema is provided for each resource and we will reject any incorrectly typed objects to ensure type safety across resources.
+The API deals in a variety of data types, always encoded in JSON. We support strings, dates, numbers and booleans. A JSON schema is provided for each resource and we will reject any incorrectly typed objects to ensure type safety across systems we connect to.
 
 ## Rate Limits
 
-The API does not have rate limits at this time.
+The API does not have rate limits at this time. B2B is not typically something that implicates a lot of requests passing back and forth. If we have a concern we will get in touch with you. Our client library does queuing for you, or you can queue things yourself. If we change this policy in future, we will notify you.
 
 ## Bulk Endpoints
 
@@ -176,8 +200,8 @@ convictional.getOrders({}).then((orders) => {
 
 ```
 
-Convictional offers a client library for Node.JS. For more information visit the [libary on NPM](https://npmjs.com/package/convictional).
+Convictional offers a client library for Node.JS. For more information visit the [libary on NPM](https://npmjs.com/package/convictional). Other languages will be added as needed.
 
-The client library will validate your request, check to make sure the right data is provided and throw a useful error if not. We use it to write all of our customer-specific applications, so you can trust it will continue to stay up to date with API changes.
+The client library will validate your request, check to make sure the right data is provided to perform a successful request and throw a useful error if not. We use it to write all of our customer-specific applications, so you can trust it will continue to stay up to date with API changes.
 
 It will also handle queueing of bulk requests so you can make one call for an unlimited number (limited by your machine's memory) of records. All endpoints can be accessed through the client library.
