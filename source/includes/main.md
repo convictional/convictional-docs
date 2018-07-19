@@ -2,11 +2,8 @@
 
 > API Endpoint:
 
-```json
-https://api.convictional.com
-https://api.convictional.com/(resource)/(id)
-https://api.convictional.com/(resource)/(query)
-https://api.convictional.com/(action)
+```http
+URL: https://api.convictional.com
 ```
 
 Welcome to the Convictional API. You can use our API to access various resources on the Convictional platform. We use this API (and this document) to build our own applications every day.
@@ -17,10 +14,8 @@ Our goal providing an API for our service is to allow technically inclined custo
 
 > Last Updated:
 
-```json
-{
-  "2018-07-16"
-}
+```http
+Date: 2018-07-16
 ```
 
 When breaking changes happen, we will notify users and migrate you. Our long-term goal is stability: B2B is not something that changes very often and custom fields can be used for anything customer-specific.
@@ -29,10 +24,8 @@ When breaking changes happen, we will notify users and migrate you. Our long-ter
 
 > Request Headers:
 
-```json
-{ 
-  "Authentication": "5ba82897-0bff-4e4e-842e"
-}
+```http
+Authentication: 5ba82897-0bff-4e4e-842e
 ```
 
 Convictional uses API keys to authenticate your requests. When you register, we generate a key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access your account. If you need an API key refresh, contact support.
