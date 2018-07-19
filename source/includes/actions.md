@@ -39,6 +39,21 @@ This endpoint allows you to initiate a sync method of your choosing.
 
 ## Translate
 
+> Request Headers:
+
+```http
+Content-Type: application/x12
+Accept: application/json
+```
+
+> Request (Text)
+
+```http
+*segmentID*first*second*third~
+*segmentID>first>second>third~
+*segmentID>first>second>third~
+```
+
 > Returns (JSON):
 
 ```json
@@ -84,6 +99,15 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 | Property      | Type      | Required  | Description                                       |
 | ------------  | --------- | ----------| --------------------------------------------------|
 | raw           | Boolean   | Optional  | Return raw document (default: true)               |
+
+### Document Types
+
+| Property         | Options  | Type | Description                           |
+| ---------------- | -------- | ---- | ------------------------------------- |
+| application/json | in, out  | json | This is a JSON document.              |
+| application/x12  | in, out  | text | This is an EDI X12 document.          |
+
+Use the 'Content-Type' header to signify the type of the inbound document and the 'Accept' header to signify the desired output type.
 
 ## Transmit
 

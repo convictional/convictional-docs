@@ -3,6 +3,7 @@
 ## 1.7 - 2018-07-16
 
 * Cleaning up the main section of the docs.
+* Adding more information to /actions/translate.
 
 ## 1.6 - 2018-06-12
 
