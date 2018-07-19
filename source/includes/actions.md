@@ -42,7 +42,7 @@ This endpoint allows you to initiate a sync method of your choosing.
 > Request Headers:
 
 ```http
-Content-Type: application/x12
+Content-Type: text/plain
 Accept: application/json
 ```
 
@@ -102,10 +102,10 @@ This endpoint allows you to convert an X12 EDI document in raw text into JSON.
 
 ### Document Types
 
-| Property         | Options  | Type | Description                           |
-| ---------------- | -------- | ---- | ------------------------------------- |
-| application/json | in, out  | json | This is a JSON document.              |
-| application/x12  | in, out  | text | This is an EDI X12 document.          |
+| Property | Options  | Header Type      | Description                           |
+| -------- | -------- | ---------------- | ------------------------------------- |
+| json     | in, out  | application/json | This is a JSON document.              |
+| x12      | in, out  | text/plain       | This is an EDI X12 document.          |
 
 Use the 'Content-Type' header to signify the type of the inbound document and the 'Accept' header to signify the desired output type.
 
