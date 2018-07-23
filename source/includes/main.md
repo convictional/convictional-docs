@@ -6,16 +6,14 @@
 URL: https://api.convictional.com
 ```
 
-Welcome to the Convictional API. You can use our API to access various resources on the Convictional platform. We use this API (and this document) to build our own applications every day.
-
-Our goal providing an API for our service is to allow technically inclined customers to take advantage of the infrastructure, business rules, integrations and admin capabilities of our platform.
+Welcome to the Convictional API. The purpose of the API is the same as the rest of our products: to make B2B easier. Our customers and in-house development team use this API every day to develop applications.
 
 ## Versioning
 
 > Last Updated:
 
 ```http
-Date: 2018-07-16
+Date: 2018-07-23
 ```
 
 When breaking changes happen, we will notify users and migrate you. Our long-term goal is stability: B2B is not something that changes very often and custom fields can be used for anything customer-specific.
@@ -28,7 +26,11 @@ When breaking changes happen, we will notify users and migrate you. Our long-ter
 Authentication: 5ba82897-0bff-4e4e-842e
 ```
 
-Convictional uses API keys to authenticate your requests. When you register, we generate a key for you. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your request and access your account. If you need an API key refresh, contact support.
+Convictional uses API keys to authenticate your requests. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your requests.
+
+## Rate Limits
+
+The API does not have rate limits at this time. Our client library does queuing for you, or you can queue things yourself. If we change this policy in future, we will notify all our customers in advance.
 
 ## Response Types
 
@@ -150,11 +152,7 @@ Convictional allows use of custom key/value pairs on all resources. The three ty
 | boolean | A boolean is either true or false                               |
 | date    | A date in ISO 8601 format ("YYYY-MM-DDThh:mm:ss.sss-hh:mm")     |
 
-The API deals in a variety of data types, always encoded in JSON. We support strings, dates, numbers and booleans. A JSON schema is provided for each resource and we will reject any incorrectly typed objects to ensure type safety across systems we connect to.
-
-## Rate Limits
-
-The API does not have rate limits at this time. B2B is not typically something that implicates a lot of requests passing back and forth. If we have a concern we will get in touch with you. Our client library does queuing for you, or you can queue things yourself. If we change this policy in future, we will notify you.
+The API deals in a variety of data types, always encoded in valid JSON. We support strings, dates, numbers and booleans. A JSON schema is provided for each resource and we will reject any incorrectly typed objects to ensure type safety across systems we connect to.
 
 ## Bulk Endpoints
 
@@ -180,7 +178,7 @@ Convictional offers bulk create/update and read endpoints. You can create/update
 var convictional = require('convictional')({
   'apiKey': '86e7ccdc-55b5-4066-a79f-7a1e0e59c690'
 })
- 
+
 // ... later where you want to use it:
 var orderId = '5a692f658f6d524e8282dac7'
 convictional.getOrder(orderId).then((order) => {
