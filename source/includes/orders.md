@@ -763,7 +763,7 @@ This endpoint updates a single order by ID.
 
 ```json
 {
-  "Modified": 2
+  "updated": 2
 }
 ```
 
@@ -783,7 +783,7 @@ This endpoint updates (or creates) orders. If the code matches an existing recor
 
 ```json
 {
-  "Deleted": 1
+  "deleted": 1
 }
 ```
 

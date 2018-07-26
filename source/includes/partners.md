@@ -276,7 +276,7 @@ This endpoint updates a single partner by ID.
 
 ```json
 {
-  "Modified": 2
+  "updated": 2
 }
 ```
 
@@ -296,7 +296,7 @@ This endpoint updates (or creates) partners. If the email matches an existing re
 
 ```json
 {
-  "Deleted": 1
+  "deleted": 1
 }
 ```
 

@@ -360,7 +360,7 @@ This endpoint updates a single price by ID.
 
 ```json
 {
-  "Modified": 2
+  "updated": 2
 }
 ```
 
@@ -380,7 +380,7 @@ This endpoint updates (or creates) prices. If the list name matches an existing 
 
 ```json
 {
-  "Deleted": 1
+  "deleted": 1
 }
 ```
 

@@ -240,7 +240,7 @@ This endpoint updates a single log by ID.
 
 ```json
 {
-  "Modified": 2
+  "updated": 2
 }
 ```
 
@@ -260,7 +260,7 @@ This endpoint updates (or creates) logs. If the ID matches an existing record, i
 
 ```json
 {
-  "Deleted": 1
+  "deleted": 1
 }
 ```
 

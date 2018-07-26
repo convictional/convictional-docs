@@ -416,7 +416,7 @@ This endpoint updates a single product by ID.
 
 ```json
 {
-  "Modified": 2
+  "updated": 2
 }
 ```
 
@@ -436,7 +436,7 @@ This endpoint updates (or creates) products. If the code matches an existing rec
 
 ```json
 {
-  "Deleted": 1
+  "deleted": 1
 }
 ```
 This endpoint deletes a single product by ID.
