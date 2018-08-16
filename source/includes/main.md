@@ -28,6 +28,17 @@ Authentication: 5ba82897-0bff-4e4e-842e
 
 Convictional uses API keys to authenticate your requests. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your requests.
 
+## Other Headers
+
+> Other Headers:
+
+```http
+Content-Type: application/json
+Accept: application/json
+```
+
+We optionally accept Content-Type and Accept headers. We only support JSON, but in certain cases we can also work with text/plain types involving EDI documents. So assume JSON unless specified otherwise.
+
 ## Rate Limits
 
 The API does not have rate limits at this time. Our client library does queuing for you, or you can queue things yourself. If we change this policy in future, we will notify all our customers in advance.
