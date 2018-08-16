@@ -37,7 +37,7 @@ Content-Type: application/json
 Accept: application/json
 ```
 
-We optionally accept Content-Type and Accept headers. We only support JSON, but in certain cases we can also work with text/plain types involving EDI documents. So assume JSON unless specified otherwise.
+We optionally accept Content-Type and Accept headers. We only support JSON, but in certain cases we can also work with text/plain types involving EDI documents. So assume JSON unless specified.
 
 ## Rate Limits
 
