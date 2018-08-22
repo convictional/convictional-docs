@@ -207,3 +207,13 @@ Convictional offers a client library for Node.JS. For more information visit the
 The client library will validate your request, check to make sure the right data is provided to perform a successful request and throw a useful error if not. We use it to write all of our customer-specific applications, so you can trust it will continue to stay up to date with API changes.
 
 It will also handle queueing of bulk requests so you can make one call for an unlimited number (limited by your machine's memory) of records. All endpoints can be accessed through the client library.
+
+## Health & Status
+
+Check the health and status of the API any time.
+
+> GET request:
+
+```http
+https://api.convictional.com
+```
