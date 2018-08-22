@@ -1,4 +1,4 @@
-# Introduction
+# Overview
 
 > API Endpoint:
 
@@ -13,7 +13,7 @@ Welcome to the Convictional API. The purpose of the API is the same as the rest 
 > Last Updated:
 
 ```http
-Date: 2018-07-23
+Date: 2018-08-22
 ```
 
 When breaking changes happen, we will notify users and migrate you. Our long-term goal is stability: B2B is not something that changes very often and custom fields can be used for anything customer-specific.
@@ -42,6 +42,14 @@ We optionally accept Content-Type and Accept headers. We only support JSON, but 
 ## Rate Limits
 
 The API does not have rate limits at this time. Our client library does queuing for you, or you can queue things yourself. If we change this policy in future, we will notify all our customers in advance.
+
+> Rate Limit Headers:
+
+```http
+X-RateLimit-Limit: Unlimited
+X-RateLimit-Remaining: Unlimited
+X-RateLimit-Reset: Unlimited
+```
 
 ## Response Types
 
@@ -213,3 +221,16 @@ It will also handle queueing of bulk requests so you can make one call for an un
 [Click here](https://api.convictional.com) to see the health of the API at any time.
 
 OK means online, anything else means the API is offline.
+
+> Request (HTTP):
+
+```http
+GET https://api.convictional.com
+```
+
+> Response (HTTP):
+
+```http
+Body: OK
+Status: 200
+```
