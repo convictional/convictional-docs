@@ -16,6 +16,7 @@ includes:
   - partners
   - prices
   - logs
+  - users
   - changes
 search: true
 highlight_theme: monokai
