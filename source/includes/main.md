@@ -210,10 +210,6 @@ It will also handle queueing of bulk requests so you can make one call for an un
 
 ## Health & Status
 
-Check the health and status of the API any time.
+[Click here](https://api.convictional.com) to see the health of the API at any time.
 
-> GET request:
-
-```http
-https://api.convictional.com
-```
+OK means online, anything else means the API is offline.
