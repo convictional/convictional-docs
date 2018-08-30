@@ -6,7 +6,7 @@
 URL: https://api.convictional.com
 ```
 
-Welcome to the Convictional API. The purpose of the API is the same as the rest of our products: to make B2B easier. Our customers and in-house development team use this API every day to develop applications.
+Welcome to the Convictional API. The purpose of the API is the same as the rest of our products: make it easier to sell to online retailers. Our customers and in-house development team use this API.
 
 ## Versioning
 
