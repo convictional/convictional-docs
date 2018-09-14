@@ -30,11 +30,9 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | -----------   | ------    | --------- | ------------------------------------------------------- |
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record            </td>
 | type          | String    | Required  | What is the line item type (ie. product, tax, shipping) |
-| title         | String    | Optional  | The title or description of the product                 |
 | sku           | String    | Required  | The SKU of the item                                     |
 | quantity      | Number    | Required  | The amount ordered in units (or grams)                  |
 | price         | Number    | Required  | The price, in the order currency, in 100s (ie. 9.99)    |
-| vendor        | String    | Optional  | The source supplier of the product                      |
 
 ### Fulfillment Properties
 
@@ -85,7 +83,6 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
       "quantity": 2,
       "price": 9.99,
       "sku": "123GRPRODUCT",
-      "vendor": "convictional-wholesale",
       "properties": [
         {
           "type": "custom_engraving",
@@ -99,7 +96,6 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
       "quantity": 1,
       "price": 19.99,
       "sku": "35GRPRODUCT",
-      "vendor": "convictional-wholesale",
       "properties": [],
       "grams": 200
     }
@@ -169,7 +165,6 @@ This endpoint returns a single order by ID.
         "quantity": 2,
         "price": 9.99,
         "sku": "123GRPRODUCT",
-        "vendor": "convictional-wholesale",
         "properties": [
           {
             "type": "custom_engraving",
@@ -183,7 +178,6 @@ This endpoint returns a single order by ID.
         "quantity": 1,
         "price": 19.99,
         "sku": "35GRPRODUCT",
-        "vendor": "convictional-wholesale",
         "properties": [],
         "grams": 200
       }
@@ -252,7 +246,6 @@ This endpoint returns a single order by ID.
         "quantity": 2,
         "price": 9.99,
         "sku": "123GRPRODUCT",
-        "vendor": "convictional-wholesale",
         "properties": [
           {
             "type": "custom_engraving",
@@ -266,7 +259,6 @@ This endpoint returns a single order by ID.
         "quantity": 1,
         "price": 19.99,
         "sku": "35GRPRODUCT",
-        "vendor": "convictional-wholesale",
         "properties": [],
         "grams": 200
       }
@@ -372,7 +364,6 @@ This endpoint returns all your orders.
       "quantity": 2,
       "price": 9.99,
       "sku": "123GRPRODUCT",
-      "vendor": "convictional-wholesale",
       "properties": [
         {
           "type": "custom_engraving",
@@ -386,7 +377,6 @@ This endpoint returns all your orders.
       "quantity": 1,
       "price": 19.99,
       "sku": "35GRPRODUCT",
-      "vendor": "convictional-wholesale",
       "properties": [],
       "grams": 200
     }
@@ -439,7 +429,6 @@ This endpoint returns all your orders.
       "quantity": 2,
       "price": 9.99,
       "sku": "123GRPRODUCT",
-      "vendor": "convictional-wholesale",
       "properties": [
         {
           "type": "custom_engraving",
@@ -453,7 +442,6 @@ This endpoint returns all your orders.
       "quantity": 1,
       "price": 19.99,
       "sku": "35GRPRODUCT",
-      "vendor": "convictional-wholesale",
       "properties": [],
       "grams": 200
     }
@@ -547,7 +535,6 @@ This endpoint creates a new order.
       "quantity": 2,
       "price": 9.99,
       "sku": "123GRPRODUCT",
-      "vendor": "convictional-wholesale",
       "properties": [
         {
           "type": "custom_engraving",
@@ -561,7 +548,6 @@ This endpoint creates a new order.
       "quantity": 1,
       "price": 19.99,
       "sku": "35GRPRODUCT",
-      "vendor": "convictional-wholesale",
       "properties": [],
       "grams": 200
     }
@@ -648,7 +634,6 @@ This endpoint updates a single order by ID.
           "quantity": 2,
           "price": 9.99,
           "sku": "123GRPRODUCT",
-          "vendor": "convictional-wholesale",
           "properties": [
             {
               "type": "custom_engraving",
@@ -662,7 +647,6 @@ This endpoint updates a single order by ID.
           "quantity": 1,
           "price": 19.99,
           "sku": "35GRPRODUCT",
-          "vendor": "convictional-wholesale",
           "properties": [],
           "grams": 200
         }
@@ -709,7 +693,6 @@ This endpoint updates a single order by ID.
           "quantity": 2,
           "price": 9.99,
           "sku": "123GRPRODUCT",
-          "vendor": "convictional-wholesale",
           "properties": [
             {
               "type": "custom_engraving",
@@ -723,7 +706,6 @@ This endpoint updates a single order by ID.
           "quantity": 1,
           "price": 19.99,
           "sku": "35GRPRODUCT",
-          "vendor": "convictional-wholesale",
           "properties": [],
           "grams": 200
         }
