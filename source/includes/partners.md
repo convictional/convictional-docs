@@ -10,7 +10,6 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
 | email        | String   | Required  | The business email for this partner           |
 | active       | Boolean  | Required  | Do you want to sync with them?                |
 | invited      | Boolean  | Automatic | Have they been invited?                       |
-| force        | Boolean  | Optional  | Overwrite products? Excludes prices/inventory.|
 | billing      | Boolean  | Optional  | Do you want to bill them here?                |
 | priceList    | String   | Optional  | The name of their price list                  |
 | relationship | String   | Required  | Relative to you: 'parent', 'child' or 'self'  |
@@ -30,7 +29,6 @@ REST endpoints that allow you to create, retrieve, update and delete partners.
   "_id": "5a692f658f6d524e8282dac7",
   "email": "capartner@example.com",
   "active": true,
-  "force": true,
   "invited": true,
   "billing": true,
   "itemLookup": [
@@ -72,7 +70,6 @@ This endpoint returns a single partner by ID.
     "_id": "5a692f658f6d524e8282dac7",
     "email": "capartner@example.com",
     "active": true,
-    "force": true,
     "invited": true,
     "billing": true,
     "itemLookup": [
@@ -96,7 +93,6 @@ This endpoint returns a single partner by ID.
     "_id": "5a692f658f6d524e8282dac7",
     "email": "uspartner@example.com",
     "active": true,
-    "force": true,
     "invited": true,
     "billing": true,
     "itemLookup": [
@@ -143,7 +139,6 @@ This endpoint returns all your partners.
 | count         | Boolean   | Optional  | Return a count of documents, defaults to false    |
 | active        | Boolean   | Optional  | Filter by active status (true or false)           |
 | invited       | Boolean   | Optional  | Filter by invited status (true or false)          |
-| force         | Boolean   | Optional  | Filter by whether to force overwrite products     |
 | relationship  | String    | Optional  | Filter by relationship (child, self or parent)    |
 | createdBefore | Date      | Optional  | Filter records created before this date (ISO8601) |
 | createdAfter  | Date      | Optional  | Filter records created after this date (ISO8601)  |
@@ -170,7 +165,6 @@ This endpoint returns all your partners.
   "_id": "5a692f658f6d524e8282dac7",
     "email": "capartner@example.com",
     "active": true,
-    "force": true,
     "invited": true,
     "billing": true,
   "itemLookup": [
@@ -219,7 +213,6 @@ This endpoint creates a new partner.
   "_id": "5a692f658f6d524e8282dac7",
   "email": "capartner@example.com",
   "active": true,
-  "force": true,
   "invited": true,
   "billing": true,
   "itemLookup": [
