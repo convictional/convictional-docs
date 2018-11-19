@@ -35,7 +35,6 @@ This endpoint allows you to initiate a sync method of your choosing.
 | getProductUpdates | Get inventory from your system                      |
 | postProductUpdates| Push inventory to your trading partners             |
 | postInvoices      | Invoice and charge for shipped orders               |
-| getSkuById        | Get SKU ID in attached partner shops                |
 
 ## Translate
 
@@ -78,7 +77,7 @@ Accept: application/json
 }
 ```
 
-This endpoint allows you to convert an X12 EDI document in raw text into JSON.
+This endpoint allows you to convert an X12 EDI document in raw text into JSON. 
 
 ### Translate Endpoint
 
