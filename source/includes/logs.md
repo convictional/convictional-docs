@@ -253,23 +253,3 @@ This endpoint updates (or creates) logs. If the ID matches an existing record, i
 ### Request example
 
 `PUT https://api.convictional.com/logs`
-
-## Delete Log
-
-> Returns (JSON):
-
-```json
-{
-  "deleted": 1
-}
-```
-
-This endpoint deletes a single log by ID.
-
-### Endpoint
-
-`https://api.convictional.com/logs/:id`
-
-### Request example
-
-`DELETE https://api.convictional.com/logs/5a692f658f6d524e8282dac7`
