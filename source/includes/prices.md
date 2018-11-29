@@ -8,8 +8,6 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | ------------  | --------- | ----------| --------------------------------------------- |
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record  </td>
 | listName      | String    | Required  | Name of this price list                       |
-| startDate     | String    | Optional  | Start date (in RFC3339 format)                |
-| endDate       | String    | Optional  | End date (in RFC3339 format)                  |
 | currencyName  | String    | Optional  | Currency code (in ISO4217 format)             |
 | conversion    | Number    | Optional  | Conversion rate from base (default "1")       |
 | markup        | Number    | Optional  | Markup percentage (default "100")             |
@@ -39,8 +37,6 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 {
   "_id": "5a692f658f6d524e8282dac7",
   "listName": "Price List for USA",
-  "startDate": "2018/01/01",
-  "endDate": "2018/01/31",
   "currencyName": "USD",
   "conversion": 1.2,
   "markup": 120,
@@ -84,8 +80,6 @@ This endpoint returns a single price by ID.
   {
     "_id": "5a692f658f6d524e8282dac7",
     "listName": "Price List for USA",
-    "startDate": "2018/01/01",
-    "endDate": "2018/01/31",
     "currencyName": "USD",
     "conversion": 1.2,
     "markup": 120,
@@ -112,8 +106,6 @@ This endpoint returns a single price by ID.
   {
     "_id": "5a692f658f6d524e8282dac8",
     "listName": "Price List for Canada",
-    "startDate": "2018/01/01",
-    "endDate": "2018/01/31",
     "currencyName": "CAD",
     "conversion": 1,
     "markup": 100,
@@ -176,8 +168,6 @@ This endpoint returns all your prices.
 ```json
 {
   "listName": "Price List for Canada",
-  "startDate": "2018/01/01",
-  "endDate": "2018/01/31",
   "currencyName": "CAD",
   "conversion": 1,
   "markup": 100,
@@ -206,8 +196,6 @@ This endpoint returns all your prices.
 {
   "_id": "5a692f658f6d524e8282dac8",
   "listName": "Price List for Canada",
-  "startDate": "2018/01/01",
-  "endDate": "2018/01/31",
   "currencyName": "CAD",
   "conversion": 1,
   "markup": 100,
@@ -260,8 +248,6 @@ This endpoint creates a new price.
 {
   "_id": "5a692f658f6d524e8282dac8",
   "listName": "Price List for Canada",
-  "startDate": "2018/01/01",
-  "endDate": "2018/01/31",
   "currencyName": "CAD",
   "conversion": 1,
   "markup": 110,
@@ -306,8 +292,6 @@ This endpoint updates a single price by ID.
   "prices": [
     {
       "listName": "Price List for USA",
-      "startDate": "2018/01/01",
-      "endDate": "2018/01/31",
       "currencyName": "USD",
       "conversion": 1.2,
       "markup": 120,
@@ -330,8 +314,6 @@ This endpoint updates a single price by ID.
     },
     {
       "listName": "Price List for Canada",
-      "startDate": "2018/01/01",
-      "endDate": "2018/01/31",
       "currencyName": "CAD",
       "conversion": 1,
       "markup": 100,
