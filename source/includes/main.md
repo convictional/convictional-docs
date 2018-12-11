@@ -13,7 +13,7 @@ Welcome to the Convictional API. The purpose of the API is the same as the rest 
 > Last Updated:
 
 ```http
-Date: 2018-08-22
+Date: 2018-12-11
 ```
 
 When breaking changes happen, we will notify users and migrate you. Our long-term goal is stability: B2B is not something that changes very often and custom fields can be used for anything customer-specific.
