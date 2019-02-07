@@ -20,8 +20,9 @@ REST endpoints that allow you to create, retrieve, update and delete orders.
 | addresses     | Array     | Optional  | Contains all the customer addresses                 |
 | custom        | Array     | Optional  | Custom key/value pairs                              |
 | live          | Boolean   | Automatic | True for live mode, false for test mode             |
-| created       | Date      | Automatic | Date record was created (in ISO8601 format)         |
-| updated       | Date      | Automatic | Date record was updated (in ISO8601 format)         |
+| shipDate      | Date      | Optional  | Date order is requested for shipment (in ISO801)    |
+| created       | Date      | Automatic | Date record was created (in ISO8601)                |
+| updated       | Date      | Automatic | Date record was updated (in ISO8601)                |
 | companyId     | String    | Automatic | Your company ID                                     |
 
 ### Item Properties

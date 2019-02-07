@@ -26,7 +26,8 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | \_id          | String    | Automatic <td style="width:100%;"> ID of this record  </td>
 | sku           | String    | Required  | The SKU of the variant to price               |
 | price         | Number    | Required  | The base (wholesale) price of the item        |
-| markup        | Number    | Required  | The markup, to arrive at retail price         |
+| markup        | Number    | Required  | The markup, to arrive at final price          |
+| minUnits      | Number    | Optional  | The minimum units ordered for this discount   |
 | type          | String    | Required  | The markup type ('fixed' or 'percent')        |
 
 ## Get Price by ID
