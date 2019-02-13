@@ -236,6 +236,7 @@ https://app.convictional.com/sign_up?billing=true&shop=supplier<br><br>
 {
   "source": "customer@domain.com",
   "subject": "convictional-wholesale",
+  "shipDate": "01/15/2019",
   "items" : [
     {
       "sku": "ABC123",
