@@ -23,7 +23,7 @@ When breaking changes happen, we will notify users and migrate you. Our long-ter
 > Request Headers:
 
 ```http
-Authentication: 5ba82897-0bff-4e4e-842e
+Authorization: 5ba82897-0bff-4e4e-842e
 ```
 
 Convictional uses API keys to authenticate your requests. To find your key, login to Convictional and go to "Settings". Include your API key in the "Authorization" header to authenticate your requests.
