@@ -6,7 +6,7 @@ Run `npm run code` to build the site and deploy it via Netlify.
 
 To view the documentation and change log, please visit our site [here](http://docs.convictional.com).
 
-© 2018 [Convictional Commerce](https://convictional.com), Inc.
+© 2018 [Convictional](https://convictional.com), Inc.
 
 ## Configuration
 
