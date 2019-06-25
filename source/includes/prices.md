@@ -10,7 +10,6 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
 | listName      | String    | Required  | Name of this price list                       |
 | currencyName  | String    | Optional  | Currency code (in ISO4217 format)             |
 | conversion    | Number    | Optional  | Conversion rate from base (default "1")       |
-| markup        | Number    | Optional  | Markup percentage (default "100")             |
 | rounding      | String    | Optional  | Decimals on the prices ("00" is $10.00)       |
 | list          | Array     | Required  | An array containing list items                |
 | custom        | Array     | Optional  | Custom key/value pairs                        |
@@ -40,7 +39,6 @@ REST endpoints that allow you to create, retrieve, update and delete prices.
   "listName": "Price List for USA",
   "currencyName": "USD",
   "conversion": 1.2,
-  "markup": 120,
   "rounding": "99",
   "list": [
     {
@@ -83,7 +81,6 @@ This endpoint returns a single price by ID.
     "listName": "Price List for USA",
     "currencyName": "USD",
     "conversion": 1.2,
-    "markup": 120,
     "rounding": "99",
     "list": [
       {
@@ -109,7 +106,6 @@ This endpoint returns a single price by ID.
     "listName": "Price List for Canada",
     "currencyName": "CAD",
     "conversion": 1,
-    "markup": 100,
     "rounding": "99",
     "list": [
       {
@@ -171,7 +167,6 @@ This endpoint returns all your prices.
   "listName": "Price List for Canada",
   "currencyName": "CAD",
   "conversion": 1,
-  "markup": 100,
   "rounding": "99",
   "list": [
     {
@@ -199,7 +194,6 @@ This endpoint returns all your prices.
   "listName": "Price List for Canada",
   "currencyName": "CAD",
   "conversion": 1,
-  "markup": 100,
   "rounding": "99",
   "list": [
     {
@@ -238,7 +232,6 @@ This endpoint creates a new price.
 
 ```json
 {
-  "markup": 110,
   "rounding": "00",
 }
 ```
@@ -251,7 +244,6 @@ This endpoint creates a new price.
   "listName": "Price List for Canada",
   "currencyName": "CAD",
   "conversion": 1,
-  "markup": 110,
   "rounding": "00",
   "list": [
     {
@@ -295,7 +287,6 @@ This endpoint updates a single price by ID.
       "listName": "Price List for USA",
       "currencyName": "USD",
       "conversion": 1.2,
-      "markup": 120,
       "rounding": "99",
       "list": [
         {
@@ -317,7 +308,6 @@ This endpoint updates a single price by ID.
       "listName": "Price List for Canada",
       "currencyName": "CAD",
       "conversion": 1,
-      "markup": 100,
       "rounding": "99",
       "list": [
         {
