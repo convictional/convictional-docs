@@ -210,7 +210,7 @@ convictional.getOrders({}).then((orders) => {
 
 ```
 
-Convictional offers a client library for Node.JS. For more information visit the [libary on NPM](https://npmjs.com/package/convictional). Other languages will be added as needed.
+Convictional offers a client library for Node.JS. For more information visit the [library on NPM](https://npmjs.com/package/convictional). Other languages will be added as needed.
 
 The client library will validate your request, check to make sure the right data is provided to perform a successful request and throw a useful error if not. We use it to write all of our customer-specific applications, so you can trust it will continue to stay up to date with API changes.
 
