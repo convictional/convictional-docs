@@ -12,4 +12,4 @@ jobs:
     - name: Test
       uses: skx/github-action-tester@master
       with:
-        script: ./deploy.sh
+        script: .github/deploy.sh
