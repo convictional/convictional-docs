@@ -1,10 +1,15 @@
-name: Jekyll site CI
-on: [push]
+on:
+  push:
+    branches:
+    - master
+name: Push Event
 jobs:
-  build:
+  test:
+    name: Run tests
     runs-on: ubuntu-latest
     steps:
-    - uses: lafernando/github-action-bash@v1.0
-    - name: Build the site in the jekyll/builder container
-      run: ./deploy.sh
-  
+    - uses: actions/checkout@master
+    - name: Test
+      uses: skx/github-action-tester@master
+      with:
+        script: ./deploy.sh
