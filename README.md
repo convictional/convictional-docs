@@ -14,4 +14,4 @@ The configuration file is `/source/index.yml` which describes a markdown Jekyll 
 
 ## Status
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/05ab1278-6997-4df0-8049-b99bbfa7fc6d/deploy-status)](https://app.netlify.com/sites/festive-bassi-1f2cae/deploys)
+![Push Event](https://github.com/convictional/convictional-docs/workflows/Push%20Event/badge.svg)
