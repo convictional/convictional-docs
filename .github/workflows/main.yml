@@ -1,0 +1,10 @@
+name: Jekyll site CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: lafernando/github-action-bash@v1.0
+    - name: Build the site in the jekyll/builder container
+      run: ./deploy.sh
+  
