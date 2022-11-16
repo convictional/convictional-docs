@@ -20,7 +20,7 @@
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^3.10.0",
-    "gulp-cli": "^1.2.1",
+    "gulp-cli": "^2.3.0",
     "gulp-concat": "^2.6.0",
     "gulp-ejs": "^3.3.0",
     "gulp-if": "^2.0.0",
@@ -34,6 +34,6 @@
     "highlight.js": "^9.15.6",
     "js-yaml": "^3.13.1",
     "marked": "^0.3.19",
-    "node-sass": "^4.12.0"
+    "node-sass": "^4.14.1"
   }
 }
